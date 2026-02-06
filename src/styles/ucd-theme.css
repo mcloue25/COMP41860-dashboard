@@ -1,0 +1,263 @@
+/* src/styles/ucd-theme.css */
+
+/* Inspired by UCD Current Students / Student Desk:
+   - Navy + Blue are directly visible in the site footer SVG (#002542, #008ACC). */
+:root {
+  --ucd-navy: #002542;
+  --ucd-blue: #008acc;
+
+  /* Approximations for the “quick link” palette used on Student Desk tiles */
+  --ucd-green: #00a651;
+  --ucd-gold: #f2b705;
+
+  --bg: #f6f7f8;
+  --surface: #ffffff;
+  --border: #e5e7eb;
+  --text: #111827;
+  --muted: #6b7280;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* App shell */
+.ucd-shell {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+/* Sidebar */
+.ucd-sidebar {
+  background: var(--ucd-navy);
+  color: white;
+  padding: 14px;
+  border-right: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ucd-brand {
+  display: grid;
+  gap: 4px;
+}
+
+.ucd-brand-title {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.ucd-brand-subtitle {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* Buttons */
+.ucd-btn {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.ucd-btn-primary {
+  background: var(--ucd-blue);
+  color: white;
+}
+
+.ucd-btn-ghost {
+  background: transparent;
+  border-color: rgba(255,255,255,0.25);
+  color: white;
+}
+
+.ucd-section-label {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* Chat list item */
+.ucd-chatlist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.ucd-chatitem {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.ucd-chatitem.is-active {
+  background: rgba(0,138,204,0.16);
+  border-color: rgba(0,138,204,0.40);
+}
+
+.ucd-chatitem-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: white;
+  text-align: left;
+  padding: 6px 6px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.ucd-chatitem-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: white;
+  opacity: 0.9;
+}
+
+.ucd-chatitem-title {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 175px;
+}
+
+.ucd-kebab {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.20);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+/* Popup menu */
+.ucd-menu {
+  position: absolute;
+  right: 10px;
+  top: 48px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 6px;
+  min-width: 160px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.ucd-menu button {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: white;
+  cursor: pointer;
+}
+
+/* Main chat area */
+.ucd-main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  background: var(--bg);
+}
+
+.ucd-topbar {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.ucd-topbar-title {
+  font-weight: 800;
+}
+
+.ucd-topbar-subtitle {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.ucd-status {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Messages */
+.ucd-messages {
+  padding: 16px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ucd-bubble {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  max-width: 900px;
+}
+
+.ucd-bubble-meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.ucd-composer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.ucd-input {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+}
+
+.ucd-send {
+  background: var(--ucd-blue);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
