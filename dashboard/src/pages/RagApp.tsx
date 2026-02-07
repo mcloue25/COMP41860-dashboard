@@ -72,13 +72,8 @@ export default function RagApp() {
   } = useChat();
 
   const [prompt, setPrompt] = useState("");
-
-  // UI mode:
-  // - false => landing mode (Welcome + Quick prompts)
-  // - true  => chat mode (ChatGPT-style)
   const [hasStartedChat, setHasStartedChat] = useState(false);
 
-  // Only switch UI mode when user sends or selects an existing chat
   const isChatMode = hasStartedChat;
 
   function onSend(e: React.FormEvent) {
@@ -91,13 +86,11 @@ export default function RagApp() {
     setPrompt("");
   }
 
-  // Selecting an existing chat should immediately enter chat mode
   function onSelectChatAndEnter(chatId: string) {
     setHasStartedChat(true);
     selectChat(chatId);
   }
 
-  // Creating a new chat should return to landing mode
   function onNewChatAndReset() {
     newChat();
     setHasStartedChat(false);
@@ -105,20 +98,19 @@ export default function RagApp() {
   }
 
   function onQuickLinkClick(p: string) {
-    // Clicking a quick prompt should enter chat mode and send immediately
     setHasStartedChat(true);
     sendMessage(p);
-
-    // If you prefer "prefill only", replace the two lines above with:
-    // setPrompt(p);
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className={`${isChatMode ? "h-screen" : "min-h-screen"} flex flex-col bg-white`}>
       <UcdHeader />
 
       {/* Page body */}
-      <div className="flex-1 ucd-shell" onClick={closeMenus}>
+      <div
+        className={["flex-1 ucd-shell", isChatMode ? "overflow-hidden" : ""].join(" ")}
+        onClick={closeMenus}
+      >
         <Sidebar
           chats={chats}
           activeChatId={activeChatId}
@@ -130,89 +122,93 @@ export default function RagApp() {
         />
 
         {/* Right side content */}
-        <div className="flex-1 flex flex-col">
-          {/* Welcome (keep mounted so it can animate out) */}
-          <section
-            className={[
-              "bg-white ui-transition duration-700 overflow-hidden",
-              isChatMode
-                ? "opacity-0 -translate-y-4 max-h-0"
-                : "opacity-100 translate-y-0 max-h-[400px]",
-            ].join(" ")}
-          >
-            <div className="mx-auto w-full max-w-5xl px-4 py-10 text-center">
-              <h1 className="text-4xl font-semibold text-slate-900">
-                Welcome to the Student Support Assistant
-              </h1>
-              <p className="mt-4 text-lg text-slate-600">
-                Ask questions about fees, timetables, supports, exams, campus services,
-                and more. This assistant will use your college knowledge base to help you
-                find the right information quickly.
-              </p>
-            </div>
-          </section>
-
-          {/* Chat + Quick prompts */}
-          <section className="flex-1 bg-white">
-            <div
+        <div
+          className={["flex-1 flex flex-col", isChatMode ? "min-h-0" : ""].join(" ")}
+        >
+          {/* In landing mode, allow scrolling; in chat mode, lock height */}
+          <div className={isChatMode ? "flex-1 min-h-0 flex flex-col" : "flex-1 overflow-y-auto"}>
+            {/* Welcome */}
+            <section
               className={[
-                "mx-auto w-full px-4 py-6 transition-all duration-700",
-                isChatMode ? "max-w-6xl" : "max-w-5xl",
-                isChatMode ? "flex flex-col h-full" : "space-y-6",
+                "bg-white ui-transition duration-700 overflow-hidden",
+                isChatMode
+                  ? "opacity-0 -translate-y-4 max-h-0"
+                  : "opacity-100 translate-y-0 max-h-[400px]",
               ].join(" ")}
             >
-              {/* ChatWindow */}
-              <div
-                className={[
-                  "rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden transition-all duration-700",
-                  isChatMode ? "flex-1 min-h-[60vh]" : "",
-                  // NEW: subtle lift-in animation when chat mode begins
-                  isChatMode ? "animate-[fadeInUp_0.4s_ease-out]" : "",
-                ].join(" ")}
-              >
-                <ChatWindow
-                  chat={activeChat}
-                  status={status}
-                  prompt={prompt}
-                  onPromptChange={setPrompt}
-                  onSend={onSend}
-                />
-              </div>
-
-              {/* Quick prompts (keep mounted so it can animate out) */}
-              <div
-                className={[
-                  "ui-transition duration-500 overflow-hidden",
-                  isChatMode
-                    ? "opacity-0 translate-y-2 max-h-0 pointer-events-none"
-                    : "opacity-100 translate-y-0 max-h-[600px]",
-                ].join(" ")}
-              >
-                <h2 className="text-sm font-semibold text-slate-900">Quick prompts</h2>
-                <p className="text-sm text-slate-600 mt-1">
-                  Click a topic to prefill your message.
+              <div className="mx-auto w-full max-w-5xl px-4 py-10 text-center">
+                <h1 className="text-4xl font-semibold text-slate-900">
+                  Welcome to the Student Support Assistant
+                </h1>
+                <p className="mt-4 text-lg text-slate-600">
+                  Ask questions about fees, timetables, supports, exams, campus services,
+                  and more. This assistant will use your college knowledge base to help you
+                  find the right information quickly.
                 </p>
+              </div>
+            </section>
 
-                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {QUICK_LINKS.map((item) => (
-                    <button
-                      key={item.title}
-                      type="button"
-                      onClick={() => onQuickLinkClick(item.prompt)}
-                      className="text-left rounded-2xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow transition-shadow"
-                    >
-                      <div className="font-semibold text-slate-900">{item.title}</div>
-                      <div className="mt-1 text-sm text-slate-600">{item.description}</div>
-                    </button>
-                  ))}
+            {/* Chat + Quick prompts */}
+            <section className={["bg-white", isChatMode ? "flex-1 min-h-0 flex flex-col" : ""].join(" ")}>
+              <div
+                className={[
+                  "mx-auto w-full px-4 py-6 transition-all duration-700",
+                  isChatMode ? "max-w-6xl" : "max-w-5xl",
+                  isChatMode ? "flex flex-col flex-1 min-h-0" : "space-y-6",
+                ].join(" ")}
+              >
+                {/* ChatWindow */}
+                <div
+                  className={[
+                    "rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden transition-all duration-700",
+                    isChatMode ? "flex-1 min-h-0" : "",
+                    isChatMode ? "animate-[fadeInUp_0.4s_ease-out]" : "",
+                  ].join(" ")}
+                >
+                  <ChatWindow
+                    chat={activeChat}
+                    status={status}
+                    prompt={prompt}
+                    onPromptChange={setPrompt}
+                    onSend={onSend}
+                  />
+                </div>
+
+                {/* Quick prompts */}
+                <div
+                  className={[
+                    "ui-transition duration-500 overflow-hidden",
+                    isChatMode
+                      ? "opacity-0 translate-y-2 max-h-0 pointer-events-none"
+                      : "opacity-100 translate-y-0 max-h-[600px]",
+                  ].join(" ")}
+                >
+                  <h2 className="text-sm font-semibold text-slate-900">Quick prompts</h2>
+                  <p className="text-sm text-slate-600 mt-1">
+                    Click a topic to prefill your message.
+                  </p>
+
+                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {QUICK_LINKS.map((item) => (
+                      <button
+                        key={item.title}
+                        type="button"
+                        onClick={() => onQuickLinkClick(item.prompt)}
+                        className="text-left rounded-2xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow transition-shadow"
+                      >
+                        <div className="font-semibold text-slate-900">{item.title}</div>
+                        <div className="mt-1 text-sm text-slate-600">{item.description}</div>
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
       </div>
 
-      <UcdFooter />
+      {!isChatMode && <UcdFooter />}
     </div>
   );
 }
