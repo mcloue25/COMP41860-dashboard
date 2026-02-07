@@ -103,14 +103,11 @@ export default function RagApp() {
   }
 
   return (
-    <div className={`${isChatMode ? "h-screen" : "min-h-screen"} flex flex-col bg-white`}>
+    <div className="min-h-screen flex flex-col bg-white">
       <UcdHeader />
 
       {/* Page body */}
-      <div
-        className={["flex-1 ucd-shell", isChatMode ? "overflow-hidden" : ""].join(" ")}
-        onClick={closeMenus}
-      >
+      <div className="flex-1 ucd-shell" onClick={closeMenus}>
         <Sidebar
           chats={chats}
           activeChatId={activeChatId}
@@ -141,9 +138,10 @@ export default function RagApp() {
                   Welcome to the Student Support Assistant
                 </h1>
                 <p className="mt-4 text-lg text-slate-600">
-                  Ask questions about fees, timetables, supports, exams, campus services,
+                  {/* Ask questions about fees, timetables, supports, exams, campus services,
                   and more. This assistant will use your college knowledge base to help you
-                  find the right information quickly.
+                  find the right information quickly. */}
+                  Help & support for current students, alumni, applicants & third parties
                 </p>
               </div>
             </section>
@@ -153,7 +151,7 @@ export default function RagApp() {
               <div
                 className={[
                   "mx-auto w-full px-4 py-6 transition-all duration-700",
-                  isChatMode ? "max-w-6xl" : "max-w-5xl",
+                  isChatMode ? "max-w-[92vw]" : "max-w-5xl",
                   isChatMode ? "flex flex-col flex-1 min-h-0" : "space-y-6",
                 ].join(" ")}
               >
@@ -161,7 +159,7 @@ export default function RagApp() {
                 <div
                   className={[
                     "rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden transition-all duration-700",
-                    isChatMode ? "flex-1 min-h-0" : "",
+                    isChatMode ? "max-h-[90vh] w-full" : "",
                     isChatMode ? "animate-[fadeInUp_0.4s_ease-out]" : "",
                   ].join(" ")}
                 >
@@ -208,7 +206,7 @@ export default function RagApp() {
         </div>
       </div>
 
-      {!isChatMode && <UcdFooter />}
+      <UcdFooter />
     </div>
   );
 }

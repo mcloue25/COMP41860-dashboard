@@ -110,8 +110,8 @@ export function UcdHeader() {
       className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white"
     >
       {/* ✅ Full-width container (no max-w-7xl cap) */}
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center gap-4">
+      <div className="w-full px-2 sm:px-4 lg:px-6">
+        <div className="flex h-[120px] items-center gap-4">
           {/* Brand */}
           <a
             className="flex items-center gap-3"
@@ -119,15 +119,20 @@ export function UcdHeader() {
             title="Go to 'Home' page"
           >
             <img
-              className="hidden h-10 w-auto sm:block"
+              className="hidden h-[70px] w-auto sm:block"
               src="/crest-ucd.svg"
               alt="University College Dublin"
             />
             <div className="leading-tight">
-              <div className="text-sm font-semibold text-slate-900">
+              <div className="w-[180px] whitespace-nowrap text-[clamp(14px,1.5vw,20.4px)] leading-[20.4px] font-semibold text-[#004377]">
                 UCD Current Students
               </div>
-              <div className="text-xs text-slate-500">Mic Léinn Reatha UCD</div>
+              <div className="w-[180px] whitespace-nowrap text-[clamp(14px,1.5vw,20.4px)] leading-[20.4px] font-semibold text-[#007db8]">
+                Mic Léinn Reatha UCD
+              </div>
+              {/* <div className="w-[180px] text-[20.4px] leading-[20.4px] text-[#007db8]">
+                Mic Léinn Reatha UCD
+              </div> */}
             </div>
           </a>
 
