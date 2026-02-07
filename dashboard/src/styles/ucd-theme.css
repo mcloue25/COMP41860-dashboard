@@ -23,6 +23,11 @@ html, body, #root {
   height: 100%;
 }
 
+.ui-transition {
+  transition-property: opacity, transform, max-height;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;

@@ -13,40 +13,6 @@ type QuickLink = {
   prompt: string;
 };
 
-// const QUICK_LINKS: QuickLink[] = [
-//   {
-//     title: "Fees & Payments",
-//     description: "Deadlines, payment methods, tuition info.",
-//     prompt: "Can you help me find information about fees and how to pay?",
-//   },
-//   {
-//     title: "Timetables",
-//     description: "Where to find your timetable and key dates.",
-//     prompt: "Where can I find my timetable and important academic dates?",
-//   },
-//   {
-//     title: "Student Supports",
-//     description: "Wellbeing, counselling, disability supports.",
-//     prompt: "What student supports are available and how do I access them?",
-//   },
-//   {
-//     title: "IT Help",
-//     description: "Password resets, Wi-Fi, email, account access.",
-//     prompt: "I need IT help. How do I reset my password and access services?",
-//   },
-//   {
-//     title: "Library",
-//     description: "Opening hours, borrowing, online resources.",
-//     prompt: "How do I access library resources and what are the opening hours?",
-//   },
-//   {
-//     title: "Exam Info",
-//     description: "Exam timetables, venues, regulations.",
-//     prompt: "Where do I find exam timetables and exam regulations?",
-//   },
-// ];
-
-
 const QUICK_LINKS: QuickLink[] = [
   {
     title: "New Students",
@@ -90,7 +56,6 @@ const QUICK_LINKS: QuickLink[] = [
   },
 ];
 
-
 export default function RagApp() {
   const {
     chats,
@@ -108,18 +73,44 @@ export default function RagApp() {
 
   const [prompt, setPrompt] = useState("");
 
+  // UI mode:
+  // - false => landing mode (Welcome + Quick prompts)
+  // - true  => chat mode (ChatGPT-style)
+  const [hasStartedChat, setHasStartedChat] = useState(false);
+
+  // Only switch UI mode when user sends or selects an existing chat
+  const isChatMode = hasStartedChat;
+
   function onSend(e: React.FormEvent) {
     e.preventDefault();
-    if (!prompt.trim()) return;
-    sendMessage(prompt);
+    const text = prompt.trim();
+    if (!text) return;
+
+    setHasStartedChat(true);
+    sendMessage(text);
+    setPrompt("");
+  }
+
+  // Selecting an existing chat should immediately enter chat mode
+  function onSelectChatAndEnter(chatId: string) {
+    setHasStartedChat(true);
+    selectChat(chatId);
+  }
+
+  // Creating a new chat should return to landing mode
+  function onNewChatAndReset() {
+    newChat();
+    setHasStartedChat(false);
     setPrompt("");
   }
 
   function onQuickLinkClick(p: string) {
-    // Put text into the prompt box (so user can edit), or send immediately:
-    setPrompt(p);
-    // If you prefer "one click sends it", use:
-    // sendMessage(p);
+    // Clicking a quick prompt should enter chat mode and send immediately
+    setHasStartedChat(true);
+    sendMessage(p);
+
+    // If you prefer "prefill only", replace the two lines above with:
+    // setPrompt(p);
   }
 
   return (
@@ -132,21 +123,28 @@ export default function RagApp() {
           chats={chats}
           activeChatId={activeChatId}
           openMenuForChatId={openMenuForChatId}
-          onNewChat={newChat}
-          onSelectChat={selectChat}
+          onNewChat={onNewChatAndReset}
+          onSelectChat={onSelectChatAndEnter}
           onToggleMenu={toggleMenu}
           onDeleteChat={deleteChat}
         />
 
-        {/* Right side content (sections) */}
+        {/* Right side content */}
         <div className="flex-1 flex flex-col">
-          {/* SECTION 1: Welcome */}
-          <section className="border-b border-slate-200 bg-white">
-            <div className="mx-auto w-full max-w-5xl px-4 py-6">
-              <h1 className="text-2xl font-semibold text-slate-900">
+          {/* Welcome (keep mounted so it can animate out) */}
+          <section
+            className={[
+              "bg-white ui-transition duration-700 overflow-hidden",
+              isChatMode
+                ? "opacity-0 -translate-y-4 max-h-0"
+                : "opacity-100 translate-y-0 max-h-[400px]",
+            ].join(" ")}
+          >
+            <div className="mx-auto w-full max-w-5xl px-4 py-10 text-center">
+              <h1 className="text-4xl font-semibold text-slate-900">
                 Welcome to the Student Support Assistant
               </h1>
-              <p className="mt-2 text-slate-600">
+              <p className="mt-4 text-lg text-slate-600">
                 Ask questions about fees, timetables, supports, exams, campus services,
                 and more. This assistant will use your college knowledge base to help you
                 find the right information quickly.
@@ -154,11 +152,24 @@ export default function RagApp() {
             </div>
           </section>
 
-          {/* SECTION 2: Chat on top, quick boxes underneath */}
-          <section className="flex-1 bg-slate-50">
-            <div className="mx-auto w-full max-w-5xl px-4 py-6 space-y-6">
-              {/* ChatWindow on top */}
-              <div className="rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden">
+          {/* Chat + Quick prompts */}
+          <section className="flex-1 bg-white">
+            <div
+              className={[
+                "mx-auto w-full px-4 py-6 transition-all duration-700",
+                isChatMode ? "max-w-6xl" : "max-w-5xl",
+                isChatMode ? "flex flex-col h-full" : "space-y-6",
+              ].join(" ")}
+            >
+              {/* ChatWindow */}
+              <div
+                className={[
+                  "rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden transition-all duration-700",
+                  isChatMode ? "flex-1 min-h-[60vh]" : "",
+                  // NEW: subtle lift-in animation when chat mode begins
+                  isChatMode ? "animate-[fadeInUp_0.4s_ease-out]" : "",
+                ].join(" ")}
+              >
                 <ChatWindow
                   chat={activeChat}
                   status={status}
@@ -168,11 +179,16 @@ export default function RagApp() {
                 />
               </div>
 
-              {/* Clickable boxes underneath */}
-              <div>
-                <h2 className="text-sm font-semibold text-slate-900">
-                  Quick prompts
-                </h2>
+              {/* Quick prompts (keep mounted so it can animate out) */}
+              <div
+                className={[
+                  "ui-transition duration-500 overflow-hidden",
+                  isChatMode
+                    ? "opacity-0 translate-y-2 max-h-0 pointer-events-none"
+                    : "opacity-100 translate-y-0 max-h-[600px]",
+                ].join(" ")}
+              >
+                <h2 className="text-sm font-semibold text-slate-900">Quick prompts</h2>
                 <p className="text-sm text-slate-600 mt-1">
                   Click a topic to prefill your message.
                 </p>
@@ -185,12 +201,8 @@ export default function RagApp() {
                       onClick={() => onQuickLinkClick(item.prompt)}
                       className="text-left rounded-2xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow transition-shadow"
                     >
-                      <div className="font-semibold text-slate-900">
-                        {item.title}
-                      </div>
-                      <div className="mt-1 text-sm text-slate-600">
-                        {item.description}
-                      </div>
+                      <div className="font-semibold text-slate-900">{item.title}</div>
+                      <div className="mt-1 text-sm text-slate-600">{item.description}</div>
                     </button>
                   ))}
                 </div>
