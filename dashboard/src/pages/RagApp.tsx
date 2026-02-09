@@ -159,8 +159,8 @@ export default function RagApp() {
             >
               <div
                 className={[
-                  "mx-auto w-full px-4 py-6 transition-all duration-700",
-                  isChatMode ? "max-w-[92vw]" : "max-w-5xl",
+                  "mx-auto w-full px-4 transition-all duration-700",
+                  isChatMode ? "pt-2 pb-2 max-w-[92vw]" : "py-6 max-w-5xl",
                   isChatMode ? "flex flex-col flex-1 min-h-0" : "space-y-6",
                 ].join(" ")}
               >

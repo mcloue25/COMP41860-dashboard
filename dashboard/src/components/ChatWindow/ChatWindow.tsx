@@ -1,31 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import type { Chat, Status } from "../../types/chat";
 import { MessageBubble } from "./MessageBubble";
 import { Composer } from "./Composer";
-
-function StatusPill({ status }: { status: Status }) {
-  const label = String(status);
-
-  const className =
-    label.toLowerCase().includes("error")
-      ? "bg-red-50 text-red-700 ring-red-200"
-      : label.toLowerCase().includes("thinking") ||
-        label.toLowerCase().includes("loading")
-      ? "bg-amber-50 text-amber-700 ring-amber-200"
-      : "bg-slate-50 text-slate-700 ring-slate-200";
-
-  return (
-    <span
-      className={[
-        "inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium ring-1 ring-inset",
-        className,
-      ].join(" ")}
-      title={label}
-    >
-      {label}
-    </span>
-  );
-}
 
 export function ChatWindow(props: {
   chat: Chat;
@@ -39,40 +15,44 @@ export function ChatWindow(props: {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const bottomRef = useRef<HTMLDivElement | null>(null);
 
-  const prevLenRef = useRef<number>(0);
-  const didMountRef = useRef(false);
+  // Whether we should auto-follow new messages
+  const [stickToBottom, setStickToBottom] = useState(true);
 
-  function isNearBottom(el: HTMLElement, thresholdPx = 120) {
+  function isNearBottom(el: HTMLElement, thresholdPx = 140) {
     return el.scrollHeight - el.scrollTop - el.clientHeight < thresholdPx;
   }
 
-  useEffect(() => {
+  // Update stickiness when the user scrolls
+  function onScroll() {
     const el = scrollRef.current;
-    const len = chat.messages.length;
+    if (!el) return;
+    setStickToBottom(isNearBottom(el));
+  }
 
-    // First mount: record but don't scroll (prevents page jump)
-    if (!didMountRef.current) {
-      didMountRef.current = true;
-      prevLenRef.current = len;
-      return;
-    }
+  // Scroll to bottom helper (use rAF so layout is settled)
+  function scrollToBottom(smooth = true) {
+    requestAnimationFrame(() => {
+      bottomRef.current?.scrollIntoView({
+        behavior: smooth ? "smooth" : "auto",
+        block: "end",
+      });
+    });
+  }
 
-    const prevLen = prevLenRef.current;
-    const addedMessage = len > prevLen;
+  // On first mount, jump to bottom (no animation)
+  useEffect(() => {
+    scrollToBottom(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-    // Only autoscroll if a new message was added AND user is near bottom
-    if (addedMessage && el && isNearBottom(el)) {
-      bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
-    }
-
-    prevLenRef.current = len;
-  }, [chat.messages.length]);
+  // When messages change, follow if user is (or was) at the bottom
+  useLayoutEffect(() => {
+    if (stickToBottom) scrollToBottom(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chat.messages.length, stickToBottom]);
 
   return (
-    <section
-      className="h-full min-h-0 flex flex-col"
-      onClick={(e) => e.stopPropagation()}
-    >
+    <section className="h-full min-h-0 flex flex-col" onClick={(e) => e.stopPropagation()}>
       {/* Header */}
       <header className="shrink-0 border-b border-slate-200 bg-white">
         <div className="flex items-center justify-between px-4 py-2">
@@ -95,10 +75,10 @@ export function ChatWindow(props: {
         </div>
       </header>
 
-
-      {/* Messages: THIS is the scroll container */}
+      {/* Messages (scroll container) */}
       <main
         ref={scrollRef}
+        onScroll={onScroll}
         className="flex-1 min-h-0 overflow-y-auto overscroll-contain bg-white"
       >
         <div className="mx-auto w-full max-w-4xl px-4 py-4">
@@ -121,16 +101,12 @@ export function ChatWindow(props: {
         </div>
       </main>
 
-      {/* Composer always visible */}
+      {/* Composer */}
       <footer className="shrink-0 border-t border-slate-200 bg-white">
         <div className="mx-auto w-full max-w-4xl px-4 py-3">
           <Composer value={prompt} onChange={onPromptChange} onSubmit={onSend} />
-          <p className="mt-2 text-[11px] leading-4 text-slate-500">
-            Responses are generated from the student helpdesk knowledge base and may be imperfect.
-          </p>
         </div>
       </footer>
     </section>
   );
-
 }

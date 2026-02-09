@@ -109,10 +109,10 @@ export function UcdHeader() {
 
   // ✅ Block-style nav items that turn UCD dark blue on hover (like the real site)
   const navBlock =
-    "inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold " +
-    "text-[#004377] transition " +
-    "hover:bg-[#004377] hover:text-white " +
-    "focus:outline-none focus:ring-2 focus:ring-blue-600/30";
+  "inline-flex h-full self-stretch items-center gap-2 px-4 text-sm font-semibold " +
+  "leading-none text-[#004377] transition " +
+  "hover:bg-[#004377] hover:text-white " +
+  "focus:outline-none focus:ring-2 focus:ring-blue-600/30";
 
   const navBlockOpen = "bg-[#004377] text-white";
 
@@ -122,7 +122,7 @@ export function UcdHeader() {
       className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white"
     >
       {/* Full-width container */}
-      <div className="w-full px-2 sm:px-4 lg:px-6">
+      <div className="w-full pl-2 sm:pl-4 lg:pl-6 pr-0">
         {/* smaller + responsive header height */}
         <div className="flex h-[clamp(56px,6vh,76px)] items-center gap-3">
           {/* Brand */}
@@ -143,7 +143,7 @@ export function UcdHeader() {
           </a>
 
           {/* Desktop nav */}
-          <nav className="ml-auto hidden items-center gap-1 lg:flex">
+          <nav className="ml-auto hidden h-full items-stretch lg:flex">
             {navItems.map((item) => {
               if (item.type === "link") {
                 return (
@@ -162,7 +162,7 @@ export function UcdHeader() {
               const isOpen = openDropdown === item.label;
 
               return (
-                <div key={item.label} className="relative">
+                <div key={item.label} className="relative h-full flex">
                   <button
                     type="button"
                     onClick={() => setOpenDropdown(isOpen ? null : item.label)}
@@ -170,24 +170,29 @@ export function UcdHeader() {
                     aria-expanded={isOpen}
                   >
                     {item.label}
-                    <span className={`transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden="true">
+                    <span
+                      className={`leading-none transition-transform ${isOpen ? "rotate-180" : ""}`}
+                      aria-hidden="true"
+                      >
                       ▾
                     </span>
                   </button>
 
                   {isOpen && (
                     <div
-                      className="absolute right-0 top-full z-50 mt-2 w-72 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl"
+                      className="absolute left-0 top-full z-50 min-w-full overflow-hidden
+                                border-x border-b border-slate-200 bg-white"
                       role="menu"
                     >
-                      <ul className="p-1">
+                      <ul className="divide-y divide-slate-200">
                         {item.items.map((sub) => (
                           <li key={sub.href}>
                             <a
                               href={sub.href}
                               target={sub.target}
                               rel={relForTarget(sub.target)}
-                              className="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                              className="block px-4 py-1.5 text-sm font-medium text-[#004377]
+                                hover:bg-[#004377] hover:text-white transition"
                             >
                               {sub.label}
                             </a>
@@ -201,13 +206,13 @@ export function UcdHeader() {
             })}
 
             {/* Explore / Connect boxes */}
-            <div className="ml-2 hidden items-stretch gap-2 lg:flex">
+            <div className="hidden items-stretch gap-0 lg:flex">
               {/* Explore UCD */}
               <a
                 href="/"
-                className="group flex items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-white
-                           bg-[#004377] hover:bg-[#00365f] transition
-                           focus:outline-none focus:ring-2 focus:ring-blue-600/30"
+                className="group h-full flex items-center gap-2 px-4 text-sm font-semibold text-white
+                  bg-[#004377] hover:bg-[#00365f] transition
+                  focus:outline-none focus:ring-2 focus:ring-blue-600/30"
                 title="Explore UCD"
               >
                 <span
@@ -222,9 +227,9 @@ export function UcdHeader() {
               {/* UCD Connect */}
               <a
                 href="/connect/"
-                className="group flex items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold
-                           text-[#00365f] bg-[#F2C200] hover:bg-[#E3B400] transition
-                           focus:outline-none focus:ring-2 focus:ring-yellow-500/30"
+                className="group h-full flex items-center gap-2 px-4 text-sm font-semibold
+                  text-[#00365f] bg-[#F2C200] hover:bg-[#E3B400] transition
+                  focus:outline-none focus:ring-2 focus:ring-yellow-500/30"
                 title="UCD Connect"
               >
                 <span
