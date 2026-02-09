@@ -104,35 +104,41 @@ export function UcdHeader() {
     []
   );
 
+  const relForTarget = (target?: "_self" | "_blank") =>
+    target === "_blank" ? "noopener noreferrer" : undefined;
+
+  // ✅ Block-style nav items that turn UCD dark blue on hover (like the real site)
+  const navBlock =
+    "inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold " +
+    "text-[#004377] transition " +
+    "hover:bg-[#004377] hover:text-white " +
+    "focus:outline-none focus:ring-2 focus:ring-blue-600/30";
+
+  const navBlockOpen = "bg-[#004377] text-white";
+
   return (
     <header
       ref={headerRef}
       className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white"
     >
-      {/* ✅ Full-width container (no max-w-7xl cap) */}
+      {/* Full-width container */}
       <div className="w-full px-2 sm:px-4 lg:px-6">
-        <div className="flex h-[120px] items-center gap-4">
+        {/* smaller + responsive header height */}
+        <div className="flex h-[clamp(56px,6vh,76px)] items-center gap-3">
           {/* Brand */}
-          <a
-            className="flex items-center gap-3"
-            href="/students/"
-            title="Go to 'Home' page"
-          >
+          <a className="flex items-center gap-3" href="/students/" title="Go to 'Home' page">
             <img
-              className="hidden h-[70px] w-auto sm:block"
+              className="hidden h-[clamp(34px,4.2vh,48px)] w-auto sm:block"
               src="/crest-ucd.svg"
               alt="University College Dublin"
             />
             <div className="leading-tight">
-              <div className="w-[180px] whitespace-nowrap text-[clamp(14px,1.5vw,20.4px)] leading-[20.4px] font-semibold text-[#004377]">
+              <div className="w-[180px] whitespace-nowrap text-[clamp(13px,1.2vw,18px)] leading-[1.1] font-semibold text-[#004377]">
                 UCD Current Students
               </div>
-              <div className="w-[180px] whitespace-nowrap text-[clamp(14px,1.5vw,20.4px)] leading-[20.4px] font-semibold text-[#007db8]">
+              <div className="w-[180px] whitespace-nowrap text-[clamp(13px,1.2vw,18px)] leading-[1.1] font-semibold text-[#007db8]">
                 Mic Léinn Reatha UCD
               </div>
-              {/* <div className="w-[180px] text-[20.4px] leading-[20.4px] text-[#007db8]">
-                Mic Léinn Reatha UCD
-              </div> */}
             </div>
           </a>
 
@@ -145,7 +151,8 @@ export function UcdHeader() {
                     key={item.label}
                     href={item.href}
                     target={item.target}
-                    className="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600/30"
+                    rel={relForTarget(item.target)}
+                    className={navBlock}
                   >
                     {item.label}
                   </a>
@@ -159,16 +166,11 @@ export function UcdHeader() {
                   <button
                     type="button"
                     onClick={() => setOpenDropdown(isOpen ? null : item.label)}
-                    className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600/30"
+                    className={`${navBlock} ${isOpen ? navBlockOpen : ""}`}
                     aria-expanded={isOpen}
                   >
                     {item.label}
-                    <span
-                      className={`text-slate-500 transition-transform ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
-                      aria-hidden="true"
-                    >
+                    <span className={`transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden="true">
                       ▾
                     </span>
                   </button>
@@ -184,6 +186,7 @@ export function UcdHeader() {
                             <a
                               href={sub.href}
                               target={sub.target}
+                              rel={relForTarget(sub.target)}
                               className="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
                             >
                               {sub.label}
@@ -197,22 +200,39 @@ export function UcdHeader() {
               );
             })}
 
-            <div className="ml-2 flex items-center gap-2">
+            {/* Explore / Connect boxes */}
+            <div className="ml-2 hidden items-stretch gap-2 lg:flex">
+              {/* Explore UCD */}
               <a
-                href="#"
-                className="inline-flex items-center gap-2 rounded-lg bg-blue-700 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600/30"
+                href="/"
+                className="group flex items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold text-white
+                           bg-[#004377] hover:bg-[#00365f] transition
+                           focus:outline-none focus:ring-2 focus:ring-blue-600/30"
                 title="Explore UCD"
               >
-                <span aria-hidden="true">▾</span>
+                <span
+                  aria-hidden="true"
+                  className="grid h-6 w-6 place-items-center rounded bg-white/15 group-hover:bg-white/20 transition"
+                >
+                  ▾
+                </span>
                 <span>Explore UCD</span>
               </a>
 
+              {/* UCD Connect */}
               <a
                 href="/connect/"
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-3 py-2 text-sm font-semibold text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600/30"
+                className="group flex items-center gap-2 rounded-md px-3 py-2 text-sm font-semibold
+                           text-[#00365f] bg-[#F2C200] hover:bg-[#E3B400] transition
+                           focus:outline-none focus:ring-2 focus:ring-yellow-500/30"
                 title="UCD Connect"
               >
-                <span aria-hidden="true">▦</span>
+                <span
+                  aria-hidden="true"
+                  className="grid h-6 w-6 place-items-center rounded bg-black/10 group-hover:bg-black/15 transition"
+                >
+                  ▦
+                </span>
                 <span>UCD Connect</span>
               </a>
             </div>
@@ -234,7 +254,6 @@ export function UcdHeader() {
       {/* Mobile panel */}
       {mobileOpen && (
         <div className="border-t border-slate-200 bg-white lg:hidden">
-          {/* ✅ Also full width here */}
           <div className="w-full px-4 sm:px-6 lg:px-8 py-3">
             <div className="flex flex-col gap-2">
               {navItems.map((item) => {
@@ -244,7 +263,8 @@ export function UcdHeader() {
                       key={item.label}
                       href={item.href}
                       target={item.target}
-                      className="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                      rel={relForTarget(item.target)}
+                      className="rounded-lg px-3 py-2 text-sm font-semibold text-[#004377] hover:bg-[#004377] hover:text-white transition"
                     >
                       {item.label}
                     </a>
@@ -254,18 +274,18 @@ export function UcdHeader() {
                 const isOpen = openDropdown === item.label;
 
                 return (
-                  <div
-                    key={item.label}
-                    className="overflow-hidden rounded-lg border border-slate-200"
-                  >
+                  <div key={item.label} className="overflow-hidden rounded-lg border border-slate-200">
                     <button
                       type="button"
                       onClick={() => setOpenDropdown(isOpen ? null : item.label)}
-                      className="flex w-full items-center justify-between px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
+                      className={`flex w-full items-center justify-between px-3 py-2 text-sm font-semibold transition
+                                  text-[#004377] hover:bg-[#004377] hover:text-white ${
+                                    isOpen ? "bg-[#004377] text-white" : ""
+                                  }`}
                       aria-expanded={isOpen}
                     >
                       {item.label}
-                      <span className={`transition-transform ${isOpen ? "rotate-180" : ""}`}>
+                      <span className={`transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden="true">
                         ▾
                       </span>
                     </button>
@@ -277,6 +297,7 @@ export function UcdHeader() {
                             key={sub.href}
                             href={sub.href}
                             target={sub.target}
+                            rel={relForTarget(sub.target)}
                             className="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900"
                           >
                             {sub.label}
@@ -289,16 +310,20 @@ export function UcdHeader() {
               })}
             </div>
 
-            <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+            {/* Mobile Explore / Connect boxes */}
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
               <a
-                href="#"
-                className="inline-flex items-center justify-center rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800"
+                href="/"
+                className="block rounded-md bg-[#004377] px-4 py-3 text-sm font-semibold text-white
+                           hover:bg-[#00365f] transition focus:outline-none focus:ring-2 focus:ring-blue-600/30"
               >
                 Explore UCD
               </a>
+
               <a
                 href="/connect/"
-                className="inline-flex items-center justify-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800"
+                className="block rounded-md bg-[#F2C200] px-4 py-3 text-sm font-semibold text-[#00365f]
+                           hover:bg-[#E3B400] transition focus:outline-none focus:ring-2 focus:ring-yellow-500/30"
               >
                 UCD Connect
               </a>

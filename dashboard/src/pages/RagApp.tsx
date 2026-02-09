@@ -107,7 +107,11 @@ export default function RagApp() {
       <UcdHeader />
 
       {/* Page body */}
-      <div className="flex-1 ucd-shell" onClick={closeMenus}>
+      {/* ✅ Make the shared body the scroll container so sidebar + content match height */}
+      <div
+        className="flex-1 ucd-shell min-h-0 overflow-y-auto"
+        onClick={closeMenus}
+      >
         <Sidebar
           chats={chats}
           activeChatId={activeChatId}
@@ -120,10 +124,12 @@ export default function RagApp() {
 
         {/* Right side content */}
         <div
-          className={["flex-1 flex flex-col", isChatMode ? "min-h-0" : ""].join(" ")}
+          className={["flex-1 flex flex-col", isChatMode ? "min-h-0" : ""].join(
+            " "
+          )}
         >
-          {/* In landing mode, allow scrolling; in chat mode, lock height */}
-          <div className={isChatMode ? "flex-1 min-h-0 flex flex-col" : "flex-1 overflow-y-auto"}>
+          {/* ✅ Remove right-side-only scrolling; let the shell scroll instead */}
+          <div className="flex-1 min-h-0 flex flex-col">
             {/* Welcome */}
             <section
               className={[
@@ -138,16 +144,19 @@ export default function RagApp() {
                   Welcome to the Student Support Assistant
                 </h1>
                 <p className="mt-4 text-lg text-slate-600">
-                  {/* Ask questions about fees, timetables, supports, exams, campus services,
-                  and more. This assistant will use your college knowledge base to help you
-                  find the right information quickly. */}
-                  Help & support for current students, alumni, applicants & third parties
+                  Help & support for current students, alumni, applicants & third
+                  parties
                 </p>
               </div>
             </section>
 
             {/* Chat + Quick prompts */}
-            <section className={["bg-white", isChatMode ? "flex-1 min-h-0 flex flex-col" : ""].join(" ")}>
+            <section
+              className={[
+                "bg-white",
+                isChatMode ? "flex-1 min-h-0 flex flex-col" : "",
+              ].join(" ")}
+            >
               <div
                 className={[
                   "mx-auto w-full px-4 py-6 transition-all duration-700",
@@ -181,7 +190,9 @@ export default function RagApp() {
                       : "opacity-100 translate-y-0 max-h-[600px]",
                   ].join(" ")}
                 >
-                  <h2 className="text-sm font-semibold text-slate-900">Quick prompts</h2>
+                  <h2 className="text-sm font-semibold text-slate-900">
+                    Quick prompts
+                  </h2>
                   <p className="text-sm text-slate-600 mt-1">
                     Click a topic to prefill your message.
                   </p>
@@ -194,8 +205,12 @@ export default function RagApp() {
                         onClick={() => onQuickLinkClick(item.prompt)}
                         className="text-left rounded-2xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow transition-shadow"
                       >
-                        <div className="font-semibold text-slate-900">{item.title}</div>
-                        <div className="mt-1 text-sm text-slate-600">{item.description}</div>
+                        <div className="font-semibold text-slate-900">
+                          {item.title}
+                        </div>
+                        <div className="mt-1 text-sm text-slate-600">
+                          {item.description}
+                        </div>
                       </button>
                     ))}
                   </div>

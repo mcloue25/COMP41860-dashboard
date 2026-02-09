@@ -74,29 +74,27 @@ export function ChatWindow(props: {
       onClick={(e) => e.stopPropagation()}
     >
       {/* Header */}
-      <header className="shrink-0 border-b border-slate-200 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="flex items-start justify-between gap-4 px-4 py-3">
-          <div className="min-w-0">
-            <div className="flex items-center gap-2">
-              <h2 className="truncate text-sm font-semibold text-slate-900">
-                {chat.title || "Student Support Assistant"}
-              </h2>
-              <span className="hidden sm:inline text-xs text-slate-400">•</span>
-              <p className="hidden sm:block truncate text-xs text-slate-500">
-                Fees, registration, timetables, IT, exams, services
-              </p>
-            </div>
+      <header className="shrink-0 border-b border-slate-200 bg-white">
+        <div className="flex items-center justify-between px-4 py-2">
+          <h2 className="truncate text-sm font-medium text-slate-900">
+            {chat.title || "Student Support Assistant"}
+          </h2>
 
-            <p className="mt-1 text-xs text-slate-500 sm:hidden">
-              Fees, registration, timetables, IT, exams, services
-            </p>
-          </div>
-
-          <div className="shrink-0">
-            <StatusPill status={status} />
-          </div>
+          <span
+            className={[
+              "inline-block h-2 w-2 rounded-full",
+              status.toLowerCase().includes("error")
+                ? "bg-red-500"
+                : status.toLowerCase().includes("thinking") ||
+                  status.toLowerCase().includes("loading")
+                ? "bg-amber-400"
+                : "bg-emerald-500",
+            ].join(" ")}
+            title={String(status)}
+          />
         </div>
       </header>
+
 
       {/* Messages: THIS is the scroll container */}
       <main

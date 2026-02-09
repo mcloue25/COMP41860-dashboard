@@ -24,7 +24,7 @@ export function Sidebar(props: {
   return (
     <aside
       onClick={(e) => e.stopPropagation()}
-      className="flex h-screen w-[280px] flex-col gap-3 border-r border-white/10 bg-[#002542] p-3 text-white"
+      className="flex h-full min-h-0 w-[280px] flex-col gap-3 border-r border-white/10 bg-[#002542] p-3 text-white"
     >
       {/* Brand */}
       <div className="grid gap-1">
