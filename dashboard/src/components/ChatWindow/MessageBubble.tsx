@@ -11,7 +11,7 @@ export function MessageBubble({ message }: { message: Message }) {
           "max-w-[80%] rounded-2xl px-4 py-3 text-sm shadow-sm",
           isUser
             ? "bg-blue-600 text-white"
-            : "bg-slate-50 text-slate-900 border border-slate-200",
+            : "bg-slate-100 text-slate-900 border border-slate-300",
         ].join(" ")}
       >
         {/* Meta row */}

@@ -5,6 +5,7 @@ import { ChatWindow } from "../components/ChatWindow/ChatWindow";
 import { UcdHeader } from "../components/UcdHeader/UcdHeader";
 
 import "../styles/ucd-theme.css";
+import { UcdFooter } from "../components/UcdFooter/UcdFooter";
 
 type QuickLink = {
   title: string;
@@ -247,6 +248,7 @@ export default function RagApp() {
           </section>
         </div>
       </div>
+      {/* <UcdFooter/> */}
     </div>
   );
 }
