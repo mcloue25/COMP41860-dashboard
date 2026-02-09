@@ -24,12 +24,12 @@ export function Sidebar(props: {
   return (
     <aside
       onClick={(e) => e.stopPropagation()}
-      className="flex h-full min-h-0 w-[280px] flex-col gap-3 border-r border-white/10 bg-[#002542] p-3 text-white"
+      className="flex self-stretch min-h-0 w-[280px] flex-col gap-3 border-r border-white/10 bg-[#002542] p-3 text-white"
     >
       {/* Brand */}
       <div className="grid gap-1">
         <div className="font-extrabold tracking-[0.2px]">University Helpdesk</div>
-        <div className="text-xs text-white/75">Iteration 1 (barebones)</div>
+        {/* <div className="text-xs text-white/75">Iteration 1 (barebones)</div> */}
       </div>
 
       {/* New chat button — styled to match chat list items */}
@@ -43,7 +43,7 @@ export function Sidebar(props: {
       <div className="text-xs text-white/75">Chats</div>
 
       {/* Chat list */}
-      <div className="flex flex-1 flex-col gap-1.5 overflow-auto pr-1">
+      <div className="flex flex-1 flex-col gap-1.5 overflow-y-auto pr-1">
         {chats.map((chat) => (
           <ChatListItem
             key={chat.id}

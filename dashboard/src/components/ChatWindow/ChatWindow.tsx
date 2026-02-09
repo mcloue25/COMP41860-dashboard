@@ -22,6 +22,15 @@ export function ChatWindow(props: {
     return el.scrollHeight - el.scrollTop - el.clientHeight < thresholdPx;
   }
 
+  useLayoutEffect(() => {
+    // When first message appears, jump to bottom without smooth animation
+    if (chat.messages.length === 1) {
+      scrollToBottom(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [chat.messages.length]);
+
+
   // Update stickiness when the user scrolls
   function onScroll() {
     const el = scrollRef.current;
@@ -104,7 +113,12 @@ export function ChatWindow(props: {
       {/* Composer */}
       <footer className="shrink-0 border-t border-slate-200 bg-white">
         <div className="mx-auto w-full max-w-4xl px-4 py-3">
-          <Composer value={prompt} onChange={onPromptChange} onSubmit={onSend} />
+          <Composer
+            value={prompt}
+            onChange={onPromptChange}
+            onSubmit={onSend}
+            disabled={status.toLowerCase().includes("thinking") || status.toLowerCase().includes("loading")}
+          />
         </div>
       </footer>
     </section>

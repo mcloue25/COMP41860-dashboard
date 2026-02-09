@@ -6,26 +6,31 @@ import { fakeRagAnswer } from "../lib/fakeRag";
 function makeFreshChat(): Chat {
   return {
     id: uid(),
-    title: "New chat",
-    messages: [
-      {
-        id: uid(),
-        role: "assistant",
-        content:
-          "Hi! I’m the University Helpdesk (demo). Ask something about fees, timetables, modules, IT support, etc.",
-        ts: Date.now(),
-      },
-    ],
+    title: "Student Support",
+    // ✅ Start empty — UI already guides user
+    messages: [],
   };
 }
 
 export function useChat() {
   const [chats, setChats] = useState<Chat[]>(() => [makeFreshChat()]);
-  const [activeChatId, setActiveChatId] = useState<string>(() => chats[0].id);
+  const [activeChatId, setActiveChatId] = useState<string>(() => {
+    const first = makeFreshChat();
+    // initialize in a single place
+    return first.id;
+  });
+
+  // Ensure chats + activeChatId are in sync on first render
+  // (This avoids subtle mismatches if you later change init logic)
+  const [initialized] = useState(() => {
+    const first = makeFreshChat();
+    setChats([first]);
+    setActiveChatId(first.id);
+    return true;
+  });
+
   const [status, setStatus] = useState<Status>("Idle");
-  const [openMenuForChatId, setOpenMenuForChatId] = useState<string | null>(
-    null
-  );
+  const [openMenuForChatId, setOpenMenuForChatId] = useState<string | null>(null);
 
   const activeChat = useMemo(() => {
     return chats.find((c) => c.id === activeChatId) ?? chats[0];
@@ -59,7 +64,6 @@ export function useChat() {
     setChats((prev) => {
       const next = prev.filter((c) => c.id !== chatId);
 
-      // If deleting active chat, choose another or create a new one
       if (activeChatId === chatId) {
         if (next.length > 0) {
           setActiveChatId(next[0].id);
@@ -90,11 +94,15 @@ export function useChat() {
     };
 
     updateChat(activeChatId, (c) => {
-      const nextTitle = c.title === "New chat" ? text.slice(0, 24) : c.title;
+      // Professional: only auto-title if it's still the default and first user msg
+      const shouldTitle =
+        (c.title === "Student Support" || c.title === "New chat") && c.messages.length === 0;
+
+      const nextTitle = shouldTitle ? text.slice(0, 32) : c.title;
+
       return { ...c, title: nextTitle, messages: [...c.messages, userMsg] };
     });
 
-    // Fake assistant response delay
     window.setTimeout(() => {
       const assistantMsg: Message = {
         id: uid(),
@@ -112,6 +120,15 @@ export function useChat() {
     }, 400);
   }
 
+  // Optional helper
+  function resetChats() {
+    const fresh = makeFreshChat();
+    setChats([fresh]);
+    setActiveChatId(fresh.id);
+    setOpenMenuForChatId(null);
+    setStatus("Idle");
+  }
+
   return {
     // state
     chats,
@@ -127,5 +144,9 @@ export function useChat() {
     closeMenus,
     deleteChat,
     sendMessage,
+    resetChats,
+
+    // internal
+    initialized,
   };
 }

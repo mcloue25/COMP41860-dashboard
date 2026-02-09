@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useChat } from "../hooks/useChat";
 import { Sidebar } from "../components/Sidebar/Sidebar";
-import { UcdFooter } from "../components/UcdFooter/UcdFooter";
 import { ChatWindow } from "../components/ChatWindow/ChatWindow";
 import { UcdHeader } from "../components/UcdHeader/UcdHeader";
 
@@ -11,6 +10,8 @@ type QuickLink = {
   title: string;
   description: string;
   prompt: string;
+  bgColor: string;
+  accentColor: string;
 };
 
 const QUICK_LINKS: QuickLink[] = [
@@ -18,43 +19,61 @@ const QUICK_LINKS: QuickLink[] = [
     title: "New Students",
     description: "Deadlines, payment methods, tuition info.",
     prompt: "Can you help me find information about fees and how to pay?",
+    bgColor: "#004377",
+    accentColor: "#FFFFFF",
   },
   {
     title: "Registration",
     description: "Where to find your timetable and key dates.",
     prompt: "Where can I find my timetable and important academic dates?",
+    bgColor: "#6bbe51",
+    accentColor: "#004377",
   },
   {
     title: "Fees & Grants",
     description: "Wellbeing, counselling, disability supports.",
     prompt: "What student supports are available and how do I access them?",
+    bgColor: "#007db8",
+    accentColor: "#FFFFFF",
   },
   {
-    title: "Frequently asked Questions",
+    title: "Frequently Asked Questions",
     description: "Password resets, Wi-Fi, email, account access.",
     prompt: "I need IT help. How do I reset my password and access services?",
+    bgColor: "#fad239",
+    accentColor: "#004377",
   },
   {
     title: "Freshers Guide",
     description: "Opening hours, borrowing, online resources.",
     prompt: "How do I access library resources and what are the opening hours?",
+    bgColor: "#007db8",
+    accentColor: "#FFFFFF",
   },
   {
     title: "Exams & Assessments",
     description: "Exam timetables, venues, regulations.",
     prompt: "Where do I find exam timetables and exam regulations?",
+    bgColor: "#fad239",
+    accentColor: "#1c5370",
   },
   {
     title: "Official Documents",
-    description: "Opening hours, borrowing, online resources.",
-    prompt: "How do I access library resources and what are the opening hours?",
+    description: "Transcripts, letters, certificates.",
+    prompt: "How do I request official university documents?",
+    bgColor: "#6bbe51",
+    accentColor: "#004377",
   },
   {
     title: "Admissions",
-    description: "Exam timetables, venues, regulations.",
-    prompt: "Where do I find exam timetables and exam regulations?",
+    description: "Offers, requirements, timelines.",
+    prompt: "Can you help me with admissions-related questions?",
+    bgColor: "#004377",
+    accentColor: "#FFFFFF",
   },
 ];
+
+
 
 export default function RagApp() {
   const {
@@ -103,13 +122,21 @@ export default function RagApp() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div
+      className={[
+        isChatMode ? "h-screen" : "min-h-screen",
+        "flex flex-col bg-white",
+      ].join(" ")}
+    >
       <UcdHeader />
 
-      {/* Page body */}
-      {/* ✅ Make the shared body the scroll container so sidebar + content match height */}
       <div
-        className="flex-1 ucd-shell min-h-0 overflow-y-auto"
+        className={[
+          // ✅ important: min-h-0 always
+          "ucd-shell w-full min-h-0",
+          // ✅ chat mode locks layout; landing mode allows page growth
+          isChatMode ? "flex-1 overflow-hidden" : "overflow-visible",
+        ].join(" ")}
         onClick={closeMenus}
       >
         <Sidebar
@@ -122,74 +149,60 @@ export default function RagApp() {
           onDeleteChat={deleteChat}
         />
 
-        {/* Right side content */}
+        {/* Right side */}
         <div
-          className={["flex-1 flex flex-col", isChatMode ? "min-h-0" : ""].join(
-            " "
-          )}
+          className={[
+            "flex-1",
+            // ✅ force a definite height chain in chat mode
+            isChatMode ? "min-h-0 h-full flex flex-col" : "",
+          ].join(" ")}
         >
-          {/* ✅ Remove right-side-only scrolling; let the shell scroll instead */}
-          <div className="flex-1 min-h-0 flex flex-col">
-            {/* Welcome */}
-            <section
-              className={[
-                "bg-white ui-transition duration-700 overflow-hidden",
-                isChatMode
-                  ? "opacity-0 -translate-y-4 max-h-0"
-                  : "opacity-100 translate-y-0 max-h-[400px]",
-              ].join(" ")}
-            >
+          {!isChatMode && (
+            <section className="bg-white">
               <div className="mx-auto w-full max-w-5xl px-4 py-10 text-center">
                 <h1 className="text-4xl font-semibold text-slate-900">
                   Welcome to the Student Support Assistant
                 </h1>
                 <p className="mt-4 text-lg text-slate-600">
-                  Help & support for current students, alumni, applicants & third
-                  parties
+                  Help & support for current students, alumni, applicants & third parties
                 </p>
               </div>
             </section>
+          )}
 
-            {/* Chat + Quick prompts */}
-            <section
+          <section
+            className={[
+              "bg-white",
+              // ✅ force section to fill remaining height in chat mode
+              isChatMode ? "flex-1 min-h-0 h-full" : "",
+            ].join(" ")}
+          >
+            <div
               className={[
-                "bg-white",
-                isChatMode ? "flex-1 min-h-0 flex flex-col" : "",
+                "mx-auto w-full px-4",
+                isChatMode
+                  ? "pt-2 pb-2 max-w-[92vw] flex flex-col flex-1 min-h-0 h-full"
+                  : "py-6 max-w-5xl space-y-6",
               ].join(" ")}
             >
+              {/* ✅ Chat card: fixed to available height in chat mode */}
               <div
                 className={[
-                  "mx-auto w-full px-4 transition-all duration-700",
-                  isChatMode ? "pt-2 pb-2 max-w-[92vw]" : "py-6 max-w-5xl",
-                  isChatMode ? "flex flex-col flex-1 min-h-0" : "space-y-6",
+                  "rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden w-full",
+                  isChatMode ? "flex-1 min-h-0 h-full max-h-full" : "",
                 ].join(" ")}
               >
-                {/* ChatWindow */}
-                <div
-                  className={[
-                    "rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden transition-all duration-700",
-                    isChatMode ? "max-h-[90vh] w-full" : "",
-                    isChatMode ? "animate-[fadeInUp_0.4s_ease-out]" : "",
-                  ].join(" ")}
-                >
-                  <ChatWindow
-                    chat={activeChat}
-                    status={status}
-                    prompt={prompt}
-                    onPromptChange={setPrompt}
-                    onSend={onSend}
-                  />
-                </div>
+                <ChatWindow
+                  chat={activeChat}
+                  status={status}
+                  prompt={prompt}
+                  onPromptChange={setPrompt}
+                  onSend={onSend}
+                />
+              </div>
 
-                {/* Quick prompts */}
-                <div
-                  className={[
-                    "ui-transition duration-500 overflow-hidden",
-                    isChatMode
-                      ? "opacity-0 translate-y-2 max-h-0 pointer-events-none"
-                      : "opacity-100 translate-y-0 max-h-[600px]",
-                  ].join(" ")}
-                >
+              {!isChatMode && (
+                <div>
                   <h2 className="text-sm font-semibold text-slate-900">
                     Quick prompts
                   </h2>
@@ -203,25 +216,37 @@ export default function RagApp() {
                         key={item.title}
                         type="button"
                         onClick={() => onQuickLinkClick(item.prompt)}
-                        className="text-left rounded-2xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow transition-shadow"
+                        className="text-left rounded-2xl border border-slate-200 p-4 shadow-sm transition
+                                  hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2"
+                        style={{
+                          backgroundColor: item.bgColor,
+                          // optional: subtle focus ring tinted to accent
+                          // @ts-ignore
+                          "--tw-ring-color": item.accentColor,
+                        }}
                       >
-                        <div className="font-semibold text-slate-900">
+                        <div
+                          className="font-semibold"
+                          style={{ color: item.accentColor }}
+                        >
                           {item.title}
                         </div>
-                        <div className="mt-1 text-sm text-slate-600">
+
+                        <div
+                          className="mt-1 text-sm"
+                          style={{ color: `${item.accentColor}B3` }} // ~70% opacity
+                        >
                           {item.description}
                         </div>
                       </button>
                     ))}
                   </div>
                 </div>
-              </div>
-            </section>
-          </div>
+              )}
+            </div>
+          </section>
         </div>
       </div>
-
-      <UcdFooter />
     </div>
   );
 }

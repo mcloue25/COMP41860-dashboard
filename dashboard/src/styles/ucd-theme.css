@@ -50,12 +50,10 @@ body {
   background: var(--bg);
 }
 
-/* App shell */
 .ucd-shell {
-  height: 100%;       /* NOT 100vh */
   min-height: 0;
-  display: grid;
-  grid-template-columns: 280px 1fr;
+  display: flex;
+  align-items: stretch;
 }
 
 /* Sidebar should fill the shell height and scroll internally */
