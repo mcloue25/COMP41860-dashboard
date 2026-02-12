@@ -107,12 +107,12 @@ export function UcdHeader() {
   const relForTarget = (target?: "_self" | "_blank") =>
     target === "_blank" ? "noopener noreferrer" : undefined;
 
-  // ✅ Block-style nav items that turn UCD dark blue on hover (like the real site)
+  // ✅ Equal-width top-level nav items
   const navBlock =
-  "inline-flex h-full self-stretch items-center gap-2 px-4 text-sm font-semibold " +
-  "leading-none text-[#004377] transition " +
-  "hover:bg-[#004377] hover:text-white " +
-  "focus:outline-none focus:ring-2 focus:ring-blue-600/30";
+    "flex h-full w-full items-center justify-center gap-2 px-2 text-sm font-semibold " +
+    "leading-none text-[#004377] transition " +
+    "hover:bg-[#004377] hover:text-white " +
+    "focus:outline-none focus:ring-2 focus:ring-blue-600/30";
 
   const navBlockOpen = "bg-[#004377] text-white";
 
@@ -121,11 +121,10 @@ export function UcdHeader() {
       ref={headerRef}
       className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white"
     >
-      {/* Full-width container */}
-      <div className="w-full pl-2 sm:pl-4 lg:pl-6 pr-0">
-        {/* smaller + responsive header height */}
-        <div className="flex h-[clamp(56px,6vh,76px)] items-center gap-3">
-          {/* Brand */}
+      {/* ✅ Match page shell: 280px sidebar + remaining content */}
+      <div className="w-full lg:grid lg:grid-cols-[280px_1fr]">
+        {/* LEFT column (desktop): aligns with Sidebar width */}
+        <div className="hidden lg:flex h-[clamp(56px,6vh,76px)] items-center px-3">
           <a className="flex items-center gap-3" href="/students/" title="Go to 'Home' page">
             <img
               className="hidden h-[clamp(34px,4.2vh,48px)] w-auto sm:block"
@@ -141,118 +140,148 @@ export function UcdHeader() {
               </div>
             </div>
           </a>
+        </div>
 
-          {/* Desktop nav */}
-          <nav className="ml-auto hidden h-full items-stretch lg:flex">
-            {navItems.map((item) => {
-              if (item.type === "link") {
-                return (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    target={item.target}
-                    rel={relForTarget(item.target)}
-                    className={navBlock}
-                  >
-                    {item.label}
-                  </a>
-                );
-              }
-
-              const isOpen = openDropdown === item.label;
-
-              return (
-                <div key={item.label} className="relative h-full flex">
-                  <button
-                    type="button"
-                    onClick={() => setOpenDropdown(isOpen ? null : item.label)}
-                    className={`${navBlock} ${isOpen ? navBlockOpen : ""}`}
-                    aria-expanded={isOpen}
-                  >
-                    {item.label}
-                    <span
-                      className={`leading-none transition-transform ${isOpen ? "rotate-180" : ""}`}
-                      aria-hidden="true"
-                      >
-                      ▾
-                    </span>
-                  </button>
-
-                  {isOpen && (
-                    <div
-                      className="absolute left-0 top-full z-50 min-w-full overflow-hidden
-                                border-x border-b border-slate-200 bg-white"
-                      role="menu"
-                    >
-                      <ul className="divide-y divide-slate-200">
-                        {item.items.map((sub) => (
-                          <li key={sub.href}>
-                            <a
-                              href={sub.href}
-                              target={sub.target}
-                              rel={relForTarget(sub.target)}
-                              className="block px-4 py-1.5 text-sm font-medium text-[#004377]
-                                hover:bg-[#004377] hover:text-white transition"
-                            >
-                              {sub.label}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+        {/* RIGHT column */}
+        <div className="w-full pl-2 sm:pl-4 lg:pl-6 pr-0">
+          <div className="flex h-[clamp(56px,6vh,76px)] items-center gap-3">
+            {/* Mobile/tablet brand */}
+            <a
+              className="flex items-center gap-3 lg:hidden"
+              href="/students/"
+              title="Go to 'Home' page"
+            >
+              <img
+                className="hidden h-[clamp(34px,4.2vh,48px)] w-auto sm:block"
+                src="/crest-ucd.svg"
+                alt="University College Dublin"
+              />
+              <div className="leading-tight">
+                <div className="w-[180px] whitespace-nowrap text-[clamp(13px,1.2vw,18px)] leading-[1.1] font-semibold text-[#004377]">
+                  UCD Current Students
                 </div>
-              );
-            })}
+                <div className="w-[180px] whitespace-nowrap text-[clamp(13px,1.2vw,18px)] leading-[1.1] font-semibold text-[#007db8]">
+                  Mic Léinn Reatha UCD
+                </div>
+              </div>
+            </a>
 
-            {/* Explore / Connect boxes */}
-            <div className="hidden items-stretch gap-0 lg:flex">
-              {/* Explore UCD */}
-              <a
-                href="/"
-                className="group h-full flex items-center gap-2 px-4 text-sm font-semibold text-white
-                  bg-[#004377] hover:bg-[#00365f] transition
-                  focus:outline-none focus:ring-2 focus:ring-blue-600/30"
-                title="Explore UCD"
-              >
-                <span
-                  aria-hidden="true"
-                  className="grid h-6 w-6 place-items-center rounded bg-white/15 group-hover:bg-white/20 transition"
-                >
-                  ▾
-                </span>
-                <span>Explore UCD</span>
-              </a>
+            {/* ✅ Desktop row: main nav (equal) + Explore/Connect pinned right */}
+            <div className="hidden h-full flex-1 items-stretch lg:flex">
+              {/* Main nav items take remaining space and are equal width */}
+              <nav className="flex h-full flex-1 items-stretch justify-between">
+                {navItems.map((item) => {
+                  if (item.type === "link") {
+                    return (
+                      <div key={item.label} className="flex h-full flex-1">
+                        <a
+                          href={item.href}
+                          target={item.target}
+                          rel={relForTarget(item.target)}
+                          className={navBlock}
+                        >
+                          {item.label}
+                        </a>
+                      </div>
+                    );
+                  }
 
-              {/* UCD Connect */}
-              <a
-                href="/connect/"
-                className="group h-full flex items-center gap-2 px-4 text-sm font-semibold
-                  text-[#00365f] bg-[#F2C200] hover:bg-[#E3B400] transition
-                  focus:outline-none focus:ring-2 focus:ring-yellow-500/30"
-                title="UCD Connect"
-              >
-                <span
-                  aria-hidden="true"
-                  className="grid h-6 w-6 place-items-center rounded bg-black/10 group-hover:bg-black/15 transition"
+                  const isOpen = openDropdown === item.label;
+
+                  return (
+                    <div key={item.label} className="relative flex h-full flex-1">
+                      <button
+                        type="button"
+                        onClick={() => setOpenDropdown(isOpen ? null : item.label)}
+                        className={`${navBlock} ${isOpen ? navBlockOpen : ""}`}
+                        aria-expanded={isOpen}
+                      >
+                        {item.label}
+                        <span
+                          className={`leading-none transition-transform ${
+                            isOpen ? "rotate-180" : ""
+                          }`}
+                          aria-hidden="true"
+                        >
+                          ▾
+                        </span>
+                      </button>
+
+                      {isOpen && (
+                        <div
+                          className="absolute left-0 top-full z-50 min-w-full overflow-hidden
+                                     border-x border-b border-slate-200 bg-white"
+                          role="menu"
+                        >
+                          <ul className="divide-y divide-slate-200">
+                            {item.items.map((sub) => (
+                              <li key={sub.href}>
+                                <a
+                                  href={sub.href}
+                                  target={sub.target}
+                                  rel={relForTarget(sub.target)}
+                                  className="block px-4 py-1.5 text-sm font-medium text-[#004377]
+                                             hover:bg-[#004377] hover:text-white transition"
+                                >
+                                  {sub.label}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </nav>
+
+              {/* Explore / Connect pinned on the right, does NOT affect equal widths */}
+              <div className="hidden h-full shrink-0 items-stretch lg:flex">
+                <a
+                  href="/"
+                  className="group h-full flex items-center gap-2 px-4 text-sm font-semibold text-white
+                             bg-[#004377] hover:bg-[#00365f] transition
+                             focus:outline-none focus:ring-2 focus:ring-blue-600/30"
+                  title="Explore UCD"
                 >
-                  ▦
-                </span>
-                <span>UCD Connect</span>
-              </a>
+                  <span
+                    aria-hidden="true"
+                    className="grid h-6 w-6 place-items-center rounded bg-white/15 group-hover:bg-white/20 transition"
+                  >
+                    ▾
+                  </span>
+                  <span>Explore UCD</span>
+                </a>
+
+                <a
+                  href="/connect/"
+                  className="group h-full flex items-center gap-2 px-4 text-sm font-semibold
+                             text-[#00365f] bg-[#F2C200] hover:bg-[#E3B400] transition
+                             focus:outline-none focus:ring-2 focus:ring-yellow-500/30"
+                  title="UCD Connect"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="grid h-6 w-6 place-items-center rounded bg-black/10 group-hover:bg-black/15 transition"
+                  >
+                    ▦
+                  </span>
+                  <span>UCD Connect</span>
+                </a>
+              </div>
             </div>
-          </nav>
 
-          {/* Mobile hamburger */}
-          <button
-            type="button"
-            onClick={() => setMobileOpen((v) => !v)}
-            className="ml-auto inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600/30 lg:hidden"
-            aria-expanded={mobileOpen}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          >
-            {mobileOpen ? "Close" : "Menu"}
-          </button>
+            {/* Mobile hamburger */}
+            <button
+              type="button"
+              onClick={() => setMobileOpen((v) => !v)}
+              className="ml-auto inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-600/30 lg:hidden"
+              aria-expanded={mobileOpen}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            >
+              {mobileOpen ? "Close" : "Menu"}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -279,7 +308,10 @@ export function UcdHeader() {
                 const isOpen = openDropdown === item.label;
 
                 return (
-                  <div key={item.label} className="overflow-hidden rounded-lg border border-slate-200">
+                  <div
+                    key={item.label}
+                    className="overflow-hidden rounded-lg border border-slate-200"
+                  >
                     <button
                       type="button"
                       onClick={() => setOpenDropdown(isOpen ? null : item.label)}
@@ -290,7 +322,10 @@ export function UcdHeader() {
                       aria-expanded={isOpen}
                     >
                       {item.label}
-                      <span className={`transition-transform ${isOpen ? "rotate-180" : ""}`} aria-hidden="true">
+                      <span
+                        className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
+                        aria-hidden="true"
+                      >
                         ▾
                       </span>
                     </button>

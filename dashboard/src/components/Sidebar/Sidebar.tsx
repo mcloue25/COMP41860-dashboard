@@ -28,7 +28,7 @@ export function Sidebar(props: {
     >
       {/* Brand */}
       <div className="grid gap-1">
-        <div className="font-extrabold tracking-[0.2px]">University Helpdesk</div>
+        <div className="font-extrabold tracking-[0.2px] text-center">University Helpdesk</div>
         {/* <div className="text-xs text-white/75">Iteration 1 (barebones)</div> */}
       </div>
 
