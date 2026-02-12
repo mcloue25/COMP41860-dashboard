@@ -133,10 +133,8 @@ export default function RagApp() {
 
       <div
         className={[
-          // ✅ important: min-h-0 always
-          "ucd-shell w-full min-h-0",
-          // ✅ chat mode locks layout; landing mode allows page growth
-          isChatMode ? "flex-1 overflow-hidden" : "overflow-visible",
+          "ucd-shell w-full flex flex-1 min-h-0", // ✅ key change
+          isChatMode ? "overflow-hidden" : "overflow-visible",
         ].join(" ")}
         onClick={closeMenus}
       >
