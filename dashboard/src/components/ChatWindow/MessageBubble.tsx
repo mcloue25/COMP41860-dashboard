@@ -3,6 +3,7 @@ import type { Message } from "../../types/chat";
 
 export function MessageBubble({ message }: { message: Message }) {
   const isUser = message.role === "user";
+  const state = message.state;
 
   return (
     <div className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
@@ -23,6 +24,11 @@ export function MessageBubble({ message }: { message: Message }) {
         >
           {isUser ? "Student" : "Helpdesk"} •{" "}
           {new Date(message.ts).toLocaleTimeString()}
+          {state === "pending"
+            ? " • sending…"
+            : state === "failed"
+            ? " • failed"
+            : null}
         </div>
 
         {/* Message content */}
