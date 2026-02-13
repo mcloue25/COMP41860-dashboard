@@ -24,15 +24,23 @@ export function Sidebar(props: {
   return (
     <aside
       onClick={(e) => e.stopPropagation()}
-      className="w-[280px] h-full self-stretch min-h-0 flex flex-col gap-3 border-r border-white/10 bg-[#002542] p-3 text-white"
+      className={[
+        "w-[280px] flex flex-col gap-3 p-3 text-white",
+        "border-r border-white/10 bg-[#002542]",
+        "min-h-screen",          // ✅ always reaches bottom of viewport
+        "self-stretch",
+        "overflow-hidden",       // ✅ only the chat list scrolls
+        "sticky top-0",          // ✅ stays pinned while page scrolls (optional but nice)
+      ].join(" ")}
     >
       {/* Brand */}
       <div className="grid gap-1">
-        <div className="font-extrabold tracking-[0.2px] text-center">University Helpdesk</div>
-        {/* <div className="text-xs text-white/75">Iteration 1 (barebones)</div> */}
+        <div className="text-center font-extrabold tracking-[0.2px]">
+          University Helpdesk
+        </div>
       </div>
 
-      {/* New chat button — styled to match chat list items */}
+      {/* New chat button */}
       <button
         onClick={onNewChat}
         className="rounded-lg border border-[rgba(255,255,255,0.12)] bg-[rgba(255,255,255,0.06)] px-3 py-2 text-sm font-semibold text-white hover:bg-[rgba(255,255,255,0.08)]"
@@ -42,8 +50,8 @@ export function Sidebar(props: {
 
       <div className="text-xs text-white/75">Chats</div>
 
-      {/* Chat list */}
-      <div className="flex flex-1 flex-col gap-1.5 overflow-y-auto pr-1">
+      {/* Chat list (scrolls) */}
+      <div className="flex-1 min-h-0 flex flex-col gap-1.5 overflow-y-auto pr-1">
         {chats.map((chat) => (
           <ChatListItem
             key={chat.id}
@@ -57,7 +65,7 @@ export function Sidebar(props: {
         ))}
       </div>
 
-      {/* Footer */}
+      {/* Footer (optional) */}
       {/* <div className="mt-auto text-xs text-white/70">Fake RAG: lorem ipsum</div> */}
     </aside>
   );

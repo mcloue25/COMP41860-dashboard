@@ -246,7 +246,7 @@ export default function RagApp() {
           </section>
         </div>
       </div>
-      {/* <UcdFooter/> */}
+      <UcdFooter/>
     </div>
   );
 }
