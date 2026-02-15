@@ -121,9 +121,11 @@ def extract_media(answer_node: Tag, base_url: str):
             out.append(m)
     return out
 
+
 def looks_like_section_heading(tag: Tag) -> bool:
     # On many UCD pages, section headings are h2 with an id (anchors for “Jump to”)
     return tag.name in ("h2", "h3") and bool(tag.get_text(strip=True)) and bool(tag.get("id"))
+
 
 def find_faq_items_within(section_root: Tag):
     """
