@@ -95,7 +95,6 @@ async function request<T>(
     headers: {
       "Content-Type": "application/json",
       ...(init?.headers ?? {}),
-      // Later: Authorization: `Bearer ${token}`
     },
   });
 
@@ -118,7 +117,6 @@ async function request<T>(
   logDebug(`${debugLabel} response`, data);
 
   if (!res.ok) {
-    // FastAPI often returns {"detail": "..."} or {"detail":[...]} for validation
     let detail = `HTTP ${res.status}`;
 
     if (data && typeof data === "object" && "detail" in data) {
@@ -141,7 +139,6 @@ async function request<T>(
 
 /** ===== Mapping backend -> your frontend types ===== */
 
-// Backend messages don’t include ids/timestamps; for MVP we generate them deterministically.
 function mapHistoryToMessages(history: ApiChatMessage[]): Message[] {
   const baseTs = Date.now();
 
@@ -180,6 +177,7 @@ export async function createChat(params: {
     title: params.title ?? null,
   };
 
+  // ✅ backend route is /chat/sessions (no trailing slash needed)
   const data = await request<ApiCreateChatSessionResponse>("/chat/sessions", {
     method: "POST",
     body: JSON.stringify(body),
@@ -194,10 +192,6 @@ export async function createChat(params: {
   };
 }
 
-/**
- * GET /chat/sessions/recent?user_id=...&limit=...&preview_chars=...
- * Sidebar endpoint. Backend requires user_id.
- */
 export async function listChats(params: {
   userId: string;
   limit?: number;
@@ -225,10 +219,6 @@ export async function listChats(params: {
   }));
 }
 
-/**
- * GET /chat/sessions/{session_id}?user_id=...
- * Fetch full history. Backend requires user_id.
- */
 export async function getChat(params: {
   chatId: string;
   userId: string;
@@ -244,11 +234,11 @@ export async function getChat(params: {
 }
 
 /**
- * POST /chat
+ * POST /chat/
  * Send a message. Backend requires user_id, session_id, message.
  */
 export async function sendMessage(params: {
-  chatId: string;
+  chatId: string; // <-- this is the backend session_id
   text: string;
   userId: string;
   signal?: AbortSignal;
@@ -259,12 +249,12 @@ export async function sendMessage(params: {
   assistantMessage: Message;
   history: Message[];
 }> {
-  const userId = requireUserId(params.userId, "POST /chat");
+  const userId = requireUserId(params.userId, "POST /chat/");
   const chatId = (params.chatId ?? "").trim();
   const text = (params.text ?? "").trim();
 
-  if (!chatId) throw new Error("Missing chatId for POST /chat");
-  if (!text) throw new Error("Missing text for POST /chat");
+  if (!chatId) throw new Error("Missing chatId (session_id) for POST /chat/");
+  if (!text) throw new Error("Missing text for POST /chat/");
 
   const body = {
     user_id: userId,
@@ -272,11 +262,11 @@ export async function sendMessage(params: {
     message: text,
   };
 
-  const data = await request<ApiChatResponse>("/chat", {
+  const data = await request<ApiChatResponse>("/chat/", {
     method: "POST",
     body: JSON.stringify(body),
     signal: params.signal,
-    debugLabel: "POST /chat",
+    debugLabel: "POST /chat/",
   });
 
   const assistantMessage: Message = {

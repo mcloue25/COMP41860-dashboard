@@ -1,3 +1,4 @@
+// src/hooks/useChat.ts
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Chat, Message, Status } from "../types/chat";
 import { uid } from "../lib/ids";
@@ -22,6 +23,9 @@ function makeLocalChat(overrides?: Partial<Chat>): Chat {
 }
 
 export function useChat() {
+  // Backend session id (created lazily on first send)
+  const [sessionId, setSessionId] = useState<string | null>(null);
+
   const [chats, setChats] = useState<Chat[]>(() => [makeLocalChat()]);
   const [activeChatId, setActiveChatId] = useState<string>(() => chats[0]?.id ?? "");
 
@@ -31,34 +35,35 @@ export function useChat() {
   // Abort in-flight send when user sends again quickly
   const sendAbortRef = useRef<AbortController | null>(null);
 
+  // ✅ Single-flight session creation: prevents 2 POST /chat/sessions if user double-clicks send
+  const createSessionPromiseRef = useRef<Promise<string> | null>(null);
+
   const activeChat = useMemo(() => {
     return chats.find((c) => c.id === activeChatId) ?? chats[0];
   }, [chats, activeChatId]);
 
   /**
-   * Initial load: fetch recent sessions for sidebar.
-   * If none exist, create one session so the UI has a real chat id.
+   * Initial load: fetch recent sessions for sidebar (no auto-create).
    */
   useEffect(() => {
     let cancelled = false;
 
     (async () => {
       try {
-        const recent = await chatApi.listChats({ userId: USER_ID, limit: 20, previewChars: 80 });
+        const recent = await chatApi.listChats({
+          userId: USER_ID,
+          limit: 20,
+          previewChars: 80,
+        });
         if (cancelled) return;
 
         if (recent.length === 0) {
-          // No sessions yet → create one
-          const created = await chatApi.createChat({ userId: USER_ID, title: null });
-          if (cancelled) return;
-
-          const initial: Chat = { id: created.chatId, title: created.title ?? "New chat", messages: [] };
+          const initial: Chat = { id: uid(), title: "New chat", messages: [] };
           setChats([initial]);
           setActiveChatId(initial.id);
           return;
         }
 
-        // Populate sidebar from recent sessions (messages lazy-loaded on select)
         const sidebarChats: Chat[] = recent.map((s) => ({
           id: s.id,
           title: s.title,
@@ -68,7 +73,6 @@ export function useChat() {
         setChats(sidebarChats);
         setActiveChatId(sidebarChats[0].id);
       } catch (e) {
-        // Backend unreachable → keep local fallback
         // eslint-disable-next-line no-console
         console.warn("Failed to load recent chats (using local fallback):", e);
       }
@@ -79,7 +83,7 @@ export function useChat() {
     };
   }, []);
 
-  // Optional quick API test only when VITE_API_DEBUG=true (keeps your earlier behavior)
+  // Optional quick API test only when VITE_API_DEBUG=true
   useEffect(() => {
     const debugEnabled =
       String((import.meta as any).env?.VITE_API_DEBUG ?? "false").toLowerCase() === "true";
@@ -116,30 +120,25 @@ export function useChat() {
     setOpenMenuForChatId(null);
     setStatus("Idle");
 
-    try {
-      const created = await chatApi.createChat({ userId: USER_ID, title: null });
+    // reset backend session so next send triggers POST /chat/sessions
+    setSessionId(null);
+    createSessionPromiseRef.current = null;
 
-      const chat: Chat = {
-        id: created.chatId,
-        title: created.title ?? "New chat",
-        messages: [],
-      };
+    // UI: insert a fresh local chat tab
+    const chat: Chat = {
+      id: uid(),
+      title: "New chat",
+      messages: [],
+    };
 
-      setChats((prev) => [chat, ...prev]);
-      setActiveChatId(chat.id);
-    } catch (e) {
-      // backend failed → local chat fallback
-      const chat = makeLocalChat({ title: "New chat (offline)" });
-      setChats((prev) => [chat, ...prev]);
-      setActiveChatId(chat.id);
-    }
+    setChats((prev) => [chat, ...prev]);
+    setActiveChatId(chat.id);
   }
 
   async function selectChat(chatId: string) {
     setActiveChatId(chatId);
     setOpenMenuForChatId(null);
 
-    // If already loaded messages, don't refetch
     const existing = chats.find((c) => c.id === chatId);
     if (existing && existing.messages.length > 0) return;
 
@@ -161,26 +160,22 @@ export function useChat() {
   }
 
   function deleteChat(chatId: string) {
-    // Local delete always works (backend delete not implemented yet)
     setChats((prev) => {
       const next = prev.filter((c) => c.id !== chatId);
 
       if (activeChatId === chatId) {
-        if (next.length > 0) {
-          setActiveChatId(next[0].id);
-        } else {
+        if (next.length > 0) setActiveChatId(next[0].id);
+        else {
           const fresh = makeLocalChat();
           setActiveChatId(fresh.id);
           return [fresh];
         }
       }
-
       return next;
     });
 
     setOpenMenuForChatId(null);
 
-    // Backend delete not implemented; keep behavior explicit
     void (async () => {
       try {
         await chatApi.deleteChat();
@@ -190,12 +185,34 @@ export function useChat() {
     })();
   }
 
+  // ✅ ensures correct order: POST /chat/sessions then POST /chat/
+  async function ensureBackendSession(): Promise<string> {
+    if (sessionId) return sessionId;
+
+    if (!createSessionPromiseRef.current) {
+      createSessionPromiseRef.current = (async () => {
+        const created = await chatApi.createChat({ userId: USER_ID, title: null });
+        const sid = created.chatId;
+        setSessionId(sid);
+        return sid;
+      })().finally(() => {
+        // allow future retries if creation fails
+        // (if successful, sessionId is now set so ensureBackendSession returns early anyway)
+        createSessionPromiseRef.current = null;
+      });
+    }
+
+    return createSessionPromiseRef.current;
+  }
+
+  /**
+   * Flow on first send:
+   * 1) POST /chat/sessions -> get session_id
+   * 2) POST /chat/ with message + session_id
+   */
   async function sendMessage(textRaw: string) {
     const text = textRaw.trim();
     if (!text) return;
-
-    const chatId = activeChatId || chats[0]?.id;
-    if (!chatId) return;
 
     setStatus("Thinking");
 
@@ -204,37 +221,41 @@ export function useChat() {
     const ac = new AbortController();
     sendAbortRef.current = ac;
 
-    const localUserMsg: Message = {
-      id: uid(),
-      role: "user",
-      content: text,
-      ts: Date.now(),
-      state: "pending",
-    };
-
-    // optimistic append
-    updateChat(chatId, (c) => {
-      const shouldTitle =
-        (c.title === "Student Support" || c.title === "New chat") && c.messages.length === 0;
-      const nextTitle = shouldTitle ? text.slice(0, 32) : c.title;
-
-      return { ...c, title: nextTitle, messages: [...c.messages, localUserMsg] };
-    });
+    const uiChatId = activeChatId || chats[0]?.id;
+    if (!uiChatId) return;
 
     try {
+      // ✅ 1) create/get backend session BEFORE we append and send
+      const sid = await ensureBackendSession();
+
+      // optimistic user message (only after we have a real sid)
+      const localUserMsg: Message = {
+        id: uid(),
+        role: "user",
+        content: text,
+        ts: Date.now(),
+        state: "pending",
+      };
+
+      updateChat(uiChatId, (c) => {
+        const shouldTitle =
+          (c.title === "Student Support" || c.title === "New chat") && c.messages.length === 0;
+        const nextTitle = shouldTitle ? text.slice(0, 32) : c.title;
+        return { ...c, title: nextTitle, messages: [...c.messages, localUserMsg] };
+      });
+
+      // ✅ 2) immediately POST /chat/ with the new session_id
       const res = await chatApi.sendMessage({
         userId: USER_ID,
-        chatId,
+        chatId: sid,
         text,
         signal: ac.signal,
       });
 
-      // mark user sent + append assistant
-      updateChat(chatId, (c) => {
+      updateChat(uiChatId, (c) => {
         const msgs = c.messages.map((m) =>
           m.id === localUserMsg.id ? { ...m, state: "sent" } : m
         );
-
         return {
           ...c,
           messages: [...msgs, { ...res.assistantMessage, state: "sent" }],
@@ -245,14 +266,6 @@ export function useChat() {
     } catch (e) {
       // eslint-disable-next-line no-console
       console.error("sendMessage failed:", e);
-
-      updateChat(chatId, (c) => ({
-        ...c,
-        messages: c.messages.map((m) =>
-          m.id === localUserMsg.id ? { ...m, state: "failed" } : m
-        ),
-      }));
-
       setStatus("Error");
     }
   }
@@ -263,6 +276,8 @@ export function useChat() {
     setActiveChatId(fresh.id);
     setOpenMenuForChatId(null);
     setStatus("Idle");
+    setSessionId(null);
+    createSessionPromiseRef.current = null;
   }
 
   return {

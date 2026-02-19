@@ -1,9 +1,11 @@
+// RagApp.tsx  (Option A: do NOT create a backend session on mount)
+// A backend session will be created lazily on the first user message inside useChat.sendMessage()
+
 import React, { useState } from "react";
 import { useChat } from "../hooks/useChat";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import { ChatWindow } from "../components/ChatWindow/ChatWindow";
 import { UcdHeader } from "../components/UcdHeader/UcdHeader";
-
 import "../styles/ucd-theme.css";
 import { UcdFooter } from "../components/UcdFooter/UcdFooter";
 
@@ -74,8 +76,6 @@ const QUICK_LINKS: QuickLink[] = [
   },
 ];
 
-
-
 export default function RagApp() {
   const {
     chats,
@@ -88,7 +88,7 @@ export default function RagApp() {
     toggleMenu,
     closeMenus,
     deleteChat,
-    sendMessage,
+    sendMessage, // ✅ sendMessage(text) will lazy-create session on first send
   } = useChat();
 
   const [prompt, setPrompt] = useState("");
@@ -133,7 +133,7 @@ export default function RagApp() {
 
       <div
         className={[
-          "ucd-shell w-full flex flex-1 min-h-0", // ✅ key change
+          "ucd-shell w-full flex flex-1 min-h-0",
           isChatMode ? "overflow-hidden" : "overflow-visible",
         ].join(" ")}
         onClick={closeMenus}
@@ -148,11 +148,9 @@ export default function RagApp() {
           onDeleteChat={deleteChat}
         />
 
-        {/* Right side */}
         <div
           className={[
             "flex-1",
-            // ✅ force a definite height chain in chat mode
             isChatMode ? "min-h-0 h-full flex flex-col" : "",
           ].join(" ")}
         >
@@ -172,7 +170,6 @@ export default function RagApp() {
           <section
             className={[
               "bg-white",
-              // ✅ force section to fill remaining height in chat mode
               isChatMode ? "flex-1 min-h-0 h-full" : "",
             ].join(" ")}
           >
@@ -184,7 +181,6 @@ export default function RagApp() {
                   : "py-6 max-w-5xl space-y-6",
               ].join(" ")}
             >
-              {/* ✅ Chat card: fixed to available height in chat mode */}
               <div
                 className={[
                   "rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden w-full",
@@ -219,7 +215,6 @@ export default function RagApp() {
                                   hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2"
                         style={{
                           backgroundColor: item.bgColor,
-                          // optional: subtle focus ring tinted to accent
                           // @ts-ignore
                           "--tw-ring-color": item.accentColor,
                         }}
@@ -233,7 +228,7 @@ export default function RagApp() {
 
                         <div
                           className="mt-1 text-sm"
-                          style={{ color: `${item.accentColor}B3` }} // ~70% opacity
+                          style={{ color: `${item.accentColor}B3` }}
                         >
                           {item.description}
                         </div>
@@ -246,7 +241,7 @@ export default function RagApp() {
           </section>
         </div>
       </div>
-      <UcdFooter/>
+      {/* <UcdFooter/> */}
     </div>
   );
 }
