@@ -226,12 +226,18 @@ def scrape():
                     continue
 
                 parts = []
-                cur = node.find_next()
+                cur = node.next_sibling
 
-                while cur and not (isinstance(cur, Tag) and cur.name in ("h2", "h3")):
+                while cur:
+                    # stop if we hit the next question/section heading
+                    if isinstance(cur, Tag) and cur.name in ("h2", "h3"):
+                        break
+
+                    # keep only real element nodes (skip whitespace strings)
                     if isinstance(cur, Tag) and cur.name not in ("script", "style"):
                         parts.append(str(cur))
-                    cur = cur.find_next()
+
+                    cur = cur.next_sibling
 
                 answer_html = "".join(parts).strip()
                 answer_soup = BeautifulSoup(answer_html or "<div></div>", "html.parser")
@@ -308,10 +314,10 @@ if __name__ == "__main__":
     ''' Main function for scraping data from the Student helpdesk FAQ page
     '''
     # Scrape FAQ data
-    scrape_helpdesk_data('ucd_studentdesk_faqs.json')
+    scrape_helpdesk_data('data/ucd_studentdesk_faqs.json')
     
     # Evaluation
-    data = load_JSON_object('ucd_studentdesk_faqs.json')
+    data = load_JSON_object('data/ucd_studentdesk_faqs.json')
     pretty_print_json(data[0])
     print("-"*30)
     pretty_print_json(data[-1])

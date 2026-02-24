@@ -1,0 +1,429 @@
+[
+  {
+    "section": "UCD Connect",
+    "question": "How do I log in to UCD IT Systems including SISWeb, Brightspace or UCD Email?",
+    "answer_text": "Log in by selecting Current Student or All Other Users . Current Students use their @ucdconnect.ie email; All Other Users use their username (i.e. student number). If you do not know your student number, please AskUs. Password = 6-digit DOB (DDMMYY) unless ​you changed​ it. Full info below: When accessing UCD IT Systems, users will see a splash screen with two buttons: \"Current Students\" and \"All Other Users\". For Current Students Once Current Students is selected from the screen, students will log in using their @ucdconnect.ie email address rather than their UCD Connect Username. After entering the email address and clicking next, there will be a second prompt for the password to be entered. For All Others Users (including Alumni and Applicants) Once All Other Users is selected from the screen shown above, all other users will proceed to the username and password screen where you log in using your username and, if required, receive your regular Duo MFA notification as per the current process. For a detailed step-by-step guide, watch our video How to Log in to UCD IT Systems here. FAQ Who does the Current Student option cover? “Current Students” refers to individuals who are presently enrolled and actively pursuing their academic studies in UCD. This group includes students registered in various academic programs for example undergraduate, postgraduate, diploma, or certificate courses. (All who have not yet completed or withdrawn from their studies.) Who does the All Other Users option cover? “All Other Users” refers to Faculty & Staff, Casual Hourly Claimant, Non Contractual Appointee (incl Adjunct), Post Retirement Contracts & Research Teaching Active Retired (RTA)*, Retired Staff & Emeritus, Visitor/Affiliates that have IT access Alumni (Students who have graduated) and Direct Applicants. When do I move from a Current Student to All Other Users? Once Current Students complete their studies in UCD and become Alumni, they will login to the Alumni Portal using the \"All Other Users\" option. What happens if I click the wrong option? If you choose the incorrect option for your account you will not be able to log in and will receive an error message.",
+    "answer_html": "<div aria-labelledby=\"heading682880\" class=\"accordion-collapse collapse\" id=\"collapse682880\">\n<div class=\"accordion-body\">\n<p><span style=\"font-weight: 400\">Log in </span><span style=\"font-weight: 400\">by selecting </span><strong>Current Student</strong><span style=\"font-weight: 400\"> or </span><strong>All Other Users</strong><span style=\"font-weight: 400\">. Current Students use their @ucdconnect.ie email; All Other Users use their username (i.e. student number). If you do not know your student number, </span><a href=\"https://www.ucd.ie/students/studentdesk/contact/\" title=\"Go to '&lt;span style=&quot;font-weight: 400&quot;&gt;please AskUs.&lt;/span&gt;' page\"><span style=\"font-weight: 400\">please AskUs.</span></a><span style=\"font-weight: 400\"> </span><span style=\"font-weight: 400\"><br/></span><span style=\"font-weight: 400\">Password = 6-digit DOB (DDMMYY) unless ​you changed​ it. <br/><br/>Full info below:<br/></span><br/>When accessing UCD IT Systems, users will see a splash screen with two buttons: \"Current Students\" and \"All Other Users\".<br/><img height=\"245\" src=\"https://fujitsuireland.service-now.com/sys_attachment.do?sys_id=98ccda219345ba102b3bf5a08bba103c\" width=\"492\"/><br/><br/><br/>For Current Students</p>\n<p><span>Once </span><strong><span>Current Students</span></strong><span> is selected from the screen, students will log in using their </span><strong><span>@ucdconnect.ie email address</span></strong><span> rather than their UCD Connect Username. After entering the email address and clicking next, there will be a second prompt for the password to be entered.<br/><br/><br/><img height=\"301\" src=\"https://fujitsuireland.service-now.com/sys_attachment.do?sys_id=cdc00a619341ba102b3bf5a08bba1009\" width=\"491\"/><img height=\"329\" src=\"https://fujitsuireland.service-now.com/sys_attachment.do?sys_id=4cf04a619341ba102b3bf5a08bba100b\" width=\"505\"/></span></p>\n<p><br/><br/>For All Others Users (including Alumni and Applicants)</p>\n<p><span>Once </span><strong><span>All Other Users </span></strong><span>is selected from the screen shown above, all other users will proceed to the </span><strong><span>username and password</span></strong><span> screen where you log in using your username and, if required, receive your regular Duo MFA notification as per the current process.<br/><img height=\"229\" src=\"https://fujitsuireland.service-now.com/sys_attachment.do?sys_id=1fbd8d01c3493e1006553dd60501315f\" width=\"502\"/><br/></span></p>\n<p><br/><br/>For a detailed step-by-step guide, watch our video <a href=\"https://www.ucd.ie/students/videos/#h699389:~:text=happy%20to%20help.-,How%20to%20Log%20in%20to%20UCD%20IT%20Systems,-UCD%20Connect\" title=\"Go to 'How to Log in to UCD IT Systems here.' page\">How to Log in to UCD IT Systems here.</a></p>\n<p><strong><span>FAQ</span></strong><strong></strong></p>\n<ul>\n<li> <p><span><strong>Who does the Current Student option cover?<br/></strong></span><span><strong><br/></strong></span>“Current Students” refers to individuals who are presently enrolled and actively pursuing their academic studies in UCD. This group includes students registered in various academic programs for example undergraduate, postgraduate, diploma, or certificate courses. (All who have not yet completed or withdrawn from their studies.)</p> </li>\n<li> <p><strong>Who does the All Other Users option cover?<br/><br/></strong>“All Other Users” refers to Faculty &amp; Staff, Casual Hourly Claimant, Non Contractual Appointee (incl Adjunct), Post Retirement Contracts &amp;  Research Teaching Active Retired (RTA)*, Retired Staff &amp; Emeritus, Visitor/Affiliates that have IT access  Alumni (Students who have graduated) and Direct Applicants.</p> </li>\n<li> <p><strong>When do I move from a Current Student to All Other Users?<br/><br/></strong>Once Current Students complete their studies in UCD and become Alumni, they will login to the Alumni Portal using the \"All Other Users\" option.</p> </li>\n<li> <p><strong>What happens if I click the wrong option?<br/></strong><strong><br/></strong>If you choose the incorrect option for your account you will not be able to log in and will receive an error message.</p> </li>\n</ul>\n</div>\n</div>",
+    "links": [
+      {
+        "url": "https://www.ucd.ie/students/studentdesk/contact/",
+        "text": "please AskUs.",
+        "target": null
+      },
+      {
+        "url": "https://www.ucd.ie/students/videos/#h699389:~:text=happy%20to%20help.-,How%20to%20Log%20in%20to%20UCD%20IT%20Systems,-UCD%20Connect",
+        "text": "How to Log in to UCD IT Systems here.",
+        "target": null
+      }
+    ],
+    "contacts": {
+      "emails": [],
+      "phones": []
+    },
+    "media": [
+      {
+        "type": "image",
+        "title": null,
+        "url": "https://fujitsuireland.service-now.com/sys_attachment.do?sys_id=98ccda219345ba102b3bf5a08bba103c"
+      },
+      {
+        "type": "image",
+        "title": null,
+        "url": "https://fujitsuireland.service-now.com/sys_attachment.do?sys_id=cdc00a619341ba102b3bf5a08bba1009"
+      },
+      {
+        "type": "image",
+        "title": null,
+        "url": "https://fujitsuireland.service-now.com/sys_attachment.do?sys_id=4cf04a619341ba102b3bf5a08bba100b"
+      },
+      {
+        "type": "image",
+        "title": null,
+        "url": "https://fujitsuireland.service-now.com/sys_attachment.do?sys_id=1fbd8d01c3493e1006553dd60501315f"
+      }
+    ],
+    "source_url": "https://www.ucd.ie/students/studentdesk/faqs/",
+    "section_order": 1,
+    "question_order": 1,
+    "id": "06015524abfb12e15ae01220483b6705b73c6679"
+  },
+  {
+    "section": "Fees",
+    "question": "What do I need to know about my SUSI Grant?",
+    "answer_text": "There are 2 types of SUSI grants: Student Contribution charge payment Maintenance payment (not all grant students are awarded maintenance). You must apply every academic year for your grant, it does not renew automatically. SUSI will only pay a grant for the standard duration of your programme (e.g. if your programme is 3 years you will receive grant payments for 3 years only). If you are taking a lesser or greater credit load than the standard 60 credits per academic year, contact your college office & student desk as this may impact your grant. Note, SUSI will not pay for any stage over 3 trimesters. If you plan to withdraw from modules, either before or after week 8, you must AskUs first. If you are taking a Leave of Absence for a trimester, or a year, you must tell SUSI & AskUs for guidance. SUSI will not pay for repeat students (if you are in the same stage you were in last year). Payment of the SUSI grant each year is if dependent on progression to the next stage of your programme (min of 50 credits per stage). If you are a student who is repeating a trimester/ year on the same course then you are not eligible for a grant until you progress. If you have not progressed to the next stage of your programme by the start of the next academic year you would be eligible for the grant if you mid-year progress when you reach 50 credits. It is important to note, that your grant will be frozen until you pass 50 credits. If you mid-year progress after the Christmas exams your grant will be applied in late January/early February. Only passed modules are counted towards progression. Incomplete IX (extenuating) grades do not count towards progression. SUSI will pay a maximum of €2000 per year towards the Student Contribution Charge. If your student contribution exceeds this amount you will have to pay the excess. Note that if you withdraw from a module after the week 8 deadline (WN grades only) this charge will be covered by SUSI in the current year but there will be no charge to take the module again subsequently. If you register for more than 60 credits per year you would be liable for a €166.67 Student Contribution charge per 5 credit module. Note that SUSI does not pay for repeat/resit modules and these do not count towards the 60 credit maximum of student contribution. Students repeating may apply to SUSI for Exceptional Circumstances. (Note this is not related to UCD Exceptional Circumstances). If you are awarded any IX grades, due to extenuating circumstances , you have the opportunity to remediate (complete) the module/s at the next available opportunity with no additional charge (within two trimesters). If you do not progress to the next stage of your programme due to being awarded IX grades, you must contact the Student Desk for advice at the beginning of the year. If you are expecting to receive the SUSI Grant please do not be concerned about meeting the September Payment deadline. Your grant does not cover the Student Centre Levy of €254. You will need to pay for this yourself. New SUSI Support Tel no: 0818 888 777/ Email: (opens in a new window) support@susi.ie",
+    "answer_html": "<div aria-labelledby=\"heading682674\" class=\"accordion-collapse collapse\" id=\"collapse682674\">\n<div class=\"accordion-body\">\n<p>There are <strong>2 types </strong>of SUSI grants: </p>\n<ol>\n<li><strong> Student Contribution charge payment</strong></li>\n<li><strong> Maintenance payment </strong>(not all grant students are awarded maintenance).</li>\n</ol>\n<ul>\n<li>You must apply every academic year for your grant, it does not renew automatically. SUSI will only pay a grant for the standard duration of your programme (e.g. if your programme is 3 years you will receive grant payments for 3 years only).</li>\n</ul>\n<ul>\n<li><strong><span>If you are taking a lesser or greater credit load than the standard 60 credits per academic year, contact your college office &amp; student desk as this may impact your grant. </span></strong>Note, SUSI will not pay for any stage over 3 trimesters.</li>\n<li>If you plan to <strong>withdraw from modules,</strong>either before or after week 8, you must <a href=\"/students/studentdesk/contact/\" title=\"Go to 'AskUs' page\">AskUs</a> first.</li>\n<li>If you are taking a Leave of Absence for a trimester, or a year, you must tell SUSI &amp; <a href=\"/students/studentdesk/contact/\" title=\"Go to 'AskUs' page\">AskUs</a> for guidance.</li>\n<li><strong><span>SUSI will not pay for repeat students</span> </strong>(if you are in the same stage you were in last year).</li>\n</ul>\n<ul>\n<li>Payment of the SUSI grant each year is<strong><span>  if </span>dependent on progression</strong> to the next stage of your programme (min of 50 credits per stage). <span>If you are a student who is repeating a trimester/</span><span>year on the same course then you are not eligible for a grant until you progress.</span></li>\n</ul>\n<ul>\n<li><span>If you have not progressed to the next stage of your programme by the start of the next academic year you would be eligible for the grant if you <strong>mid-year progress </strong>when you reach 50 credits. It is important to note, that your grant will be frozen until you pass 50 credits.</span></li>\n</ul>\n<ul>\n<li>If you<strong> </strong>mid-year progress after the Christmas exams your grant will be applied in late January/early February.</li>\n</ul>\n<ul>\n<li>Only passed modules are counted towards progression. Incomplete IX (extenuating) grades do not count towards progression. </li>\n</ul>\n<ul>\n<li><strong><span>SUSI will pay a maximum of €2000 per year towards the Student Contribution Charge.</span></strong> If your student contribution exceeds this amount you will have to pay the excess. Note that if you withdraw from a module after the week 8 deadline (WN grades only) this charge will be covered by SUSI in the current year but there will be no charge to take the module again subsequently.</li>\n</ul>\n<ul>\n<li>If you register for more than 60 credits per year you would be liable for a €166.67 Student Contribution charge per 5 credit module.</li>\n</ul>\n<ul>\n<li>Note that<strong><span>SUSI does not pay for repeat/resit modules</span></strong> and these do not count towards the 60 credit maximum of student contribution.</li>\n</ul>\n<ul>\n<li>Students repeating may apply to SUSI for Exceptional Circumstances. (Note this is not related to UCD Exceptional Circumstances).</li>\n</ul>\n<ul>\n<li>If you are awarded any IX grades, due to <strong>extenuating circumstances</strong>, you have the opportunity to remediate (complete) the module/s at the next available opportunity with no additional charge (within two trimesters). <strong><span>If you do not progress to the next stage of your programme due to being awarded IX grades, you must contact the Student Desk for advice at the beginning of the year. </span></strong> </li>\n</ul>\n<ul>\n<li>If you are expecting to receive the SUSI Grant please do not be concerned about meeting the September Payment deadline.</li>\n</ul>\n<ul>\n<li>Your grant does not cover the Student Centre Levy of €254. You will need to pay for this yourself.</li>\n</ul>\n<ul>\n<li>New SUSI Support Tel no:  <strong>0818 888 777/ <span lang=\"EN-US\">Email: </span><a href=\"mailto:support@susi.ie\" rel=\"noopener\" tabindex=\"0\" target=\"_blank\" title=\"Go to '&lt;span lang=&quot;EN-US&quot;&gt;support@susi.ie&lt;/span&gt;' page\"><span class=\"sr-only\">(opens in a new window)</span><span lang=\"EN-US\">support@susi.ie</span></a></strong></li>\n</ul>\n</div>\n</div>",
+    "links": [
+      {
+        "url": "https://www.ucd.ie/students/studentdesk/contact/",
+        "text": "AskUs",
+        "target": null
+      },
+      {
+        "url": "mailto:support@susi.ie",
+        "text": "(opens in a new window) support@susi.ie",
+        "target": "_blank"
+      }
+    ],
+    "contacts": {
+      "emails": [
+        "support@susi.ie"
+      ],
+      "phones": [
+        "0818 888 777"
+      ]
+    },
+    "media": [],
+    "source_url": "https://www.ucd.ie/students/studentdesk/faqs/",
+    "section_order": 2,
+    "question_order": 1,
+    "id": "5b0c1b81cecee20be10148f2213b9bde5a4fdbad"
+  },
+  {
+    "section": "Official Documents",
+    "question": "Where can I access my online Electronic Documents?",
+    "answer_text": "Students who began their programme from 2000 onward can access electronic documents in SISWeb free of charge as follows: Log into SISWeb (username is your UCD student number. Password: if you have never changed your password, it will be your 6-digit date of birth, format DDMMYY) Go to the Registration, Fees & Assessment (Alumni, use Academic Services tab) My Official Documents Electronic Documents For a detailed step-by-step guide, watch our video How to Access your Electronic Official Documents here. Documents from SISWeb can be verified by a third party through UCD'sonline verification system . Before you give your electronic documents to any third party, ensure that you \"enable\" the documents by clicking the \"enable access\" button as this will allow the verification process to work properly. Forgotten your SISWeb log-in details? AskUs. More info on electronic documents.",
+    "answer_html": "<div aria-labelledby=\"heading682713\" class=\"accordion-collapse collapse\" id=\"collapse682713\">\n<div class=\"accordion-body\">\n<p>Students who began their programme from 2000 onward can <a href=\"/students/studentdesk/documents/onlinedocuments/\" title=\"Go to 'access electronic' page\">access electronic</a> documents in <a href=\"https://hub.ucd.ie/usis/W_WEB_WELCOME_PAGE\" title=\"Go to 'SISWeb' page\">SISWeb</a> free of charge as follows: </p>\n<ul>\n<li>Log into <a href=\"https://hub.ucd.ie/usis/W_WEB_WELCOME_PAGE\" title=\"Go to 'SISWeb' page\">SISWeb</a>(username is your UCD student number. </li>\n<li>Password: if you have never changed your password, it will be your 6-digit date of birth, format DDMMYY)</li>\n<li>Go to the Registration, Fees &amp; Assessment (Alumni, use Academic Services tab)</li>\n<li>My Official Documents</li>\n<li>Electronic Documents</li>\n</ul>\n<p>For a detailed step-by-step guide, watch our video <a href=\"https://www.ucd.ie/students/videos/#h699431:~:text=78.9KB-,How%20to%20Access%20your%20Electronic%20Official%20Documents,-SISWeb%20Log%20in\" rel=\"noopener\" target=\"_blank\" title=\"Go to 'How to Access your Electronic Official Documents here.' page\">How to Access your Electronic Official Documents here.</a></p>\n<p>Documents from SISWeb can be verified by a third party through <a href=\"https://hub.ucd.ie/usis/W_SD_WEBSERVICE.P_EXT_DISPLAY\" title=\"Go to 'UCD'sonline verification system' page\">UCD'sonline verification system</a>.<strong>Before you give your electronic documents to any third party, ensure that you \"enable\" the documents by clicking the \"enable access\" button </strong>as this will allow the verification process to work properly.</p>\n<ul>\n<li>Forgotten your SISWeb log-in details?<a href=\"/students/studentdesk/contact/\" title=\"Go to '&lt;span&gt;&lt;/span&gt;AskUs.' page\"><span></span>AskUs.</a></li>\n<li><a href=\"/students/studentdesk/documents/onlinedocuments/\" title=\"Go to 'More info' page\">More info</a> on electronic documents.</li>\n</ul>\n</div>\n</div>",
+    "links": [
+      {
+        "url": "https://www.ucd.ie/students/studentdesk/documents/onlinedocuments/",
+        "text": "access electronic",
+        "target": null
+      },
+      {
+        "url": "https://hub.ucd.ie/usis/W_WEB_WELCOME_PAGE",
+        "text": "SISWeb",
+        "target": null
+      },
+      {
+        "url": "https://www.ucd.ie/students/videos/#h699431:~:text=78.9KB-,How%20to%20Access%20your%20Electronic%20Official%20Documents,-SISWeb%20Log%20in",
+        "text": "How to Access your Electronic Official Documents here.",
+        "target": "_blank"
+      },
+      {
+        "url": "https://hub.ucd.ie/usis/W_SD_WEBSERVICE.P_EXT_DISPLAY",
+        "text": "UCD'sonline verification system",
+        "target": null
+      },
+      {
+        "url": "https://www.ucd.ie/students/studentdesk/contact/",
+        "text": "AskUs.",
+        "target": null
+      },
+      {
+        "url": "https://www.ucd.ie/students/studentdesk/documents/onlinedocuments/",
+        "text": "More info",
+        "target": null
+      }
+    ],
+    "contacts": {
+      "emails": [],
+      "phones": []
+    },
+    "media": [],
+    "source_url": "https://www.ucd.ie/students/studentdesk/faqs/",
+    "section_order": 3,
+    "question_order": 1,
+    "id": "eab5ed846f26855fee5f353ee410dce685b9034d"
+  },
+  {
+    "section": "Form Stamping",
+    "question": "How do I get a form stamped?",
+    "answer_text": "Submit forms via email: If you would like to submit a form via email, please use the Student Desk Connector . When asked \"What is the nature of your query?\" select \"I would like to submit documentation (form stamping, grant letter)\" and attach the form that you need us to complete or stamp. Send us the form as a pdf or Microsoft Word document rather than as an image. Before you send us the form, please ensure that you complete all of the sections pertaining to your personal details and sign the form (if your signature is required). Submit forms via post: If you would like to submit a form via post, please send the form to Student Desk, Tierney Building, UCD, Belfield, Dublin 4. Submit forms via Student Desk: Students can visit the Student Desk in person or use the drop-box located in the foyer of the Tierney Building.",
+    "answer_html": "<div aria-labelledby=\"heading682744\" class=\"accordion-collapse collapse\" id=\"collapse682744\">\n<div class=\"accordion-body\">\n<p><strong>Submit forms via email:</strong><span> If you would like to submit a form via email, please use the </span><a href=\"/students/studentdesk/contact/\" title=\"Go to 'Student Desk Connector' page\">Student Desk Connector</a><span>. When asked \"What is the nature of your query?\" select \"I would like to submit documentation (form stamping, grant letter)\" and attach the form that you need us to complete or stamp. Send us the form as a </span><strong>pdf</strong><span> or </span><strong>Microsoft Word document</strong><span> rather than as an image. Before you send us the form, please ensure that you complete all of the sections pertaining to your personal details and sign the form (if your signature is required).</span><br/><br/><strong>Submit forms via post:</strong><span> If you would like to submit a form via post, please send the form to Student Desk, Tierney Building, UCD, Belfield, Dublin 4.</span><br/><br/><strong>Submit forms via Student Desk:</strong><span> Students can visit the Student Desk in person or use the drop-box located in the foyer of the Tierney Building.</span></p>\n</div>\n</div>",
+    "links": [
+      {
+        "url": "https://www.ucd.ie/students/studentdesk/contact/",
+        "text": "Student Desk Connector",
+        "target": null
+      }
+    ],
+    "contacts": {
+      "emails": [],
+      "phones": []
+    },
+    "media": [],
+    "source_url": "https://www.ucd.ie/students/studentdesk/faqs/",
+    "section_order": 4,
+    "question_order": 1,
+    "id": "51e17a414973dadc5d11f953495b48f4e19e9732"
+  },
+  {
+    "section": "Registration",
+    "question": "Can I drop a module when online registration is 'closed'?",
+    "answer_text": "Your college office can drop modules after online registration closes in SISWeb. Online registration closes for all students on 6 Feb 2024 at 17:00 *You should drop unwanted Spring modules by 29 March 2024* Drop any modules by 29 March 2024 to avoid being charged. If you withdraw from a module after 29 March 2024, you will still be charged for that module in the 2023/24 academic year No additional fee will apply if you retake the same module again the following year. You can withdraw from a module before the last day of teaching in a trimester, with no academic implications. An automatic withdrawn grade (WN) will go onto your record should you withdraw after 29 March 2024. Potential progression issues may arise should you withdraw from modules late in the trimester so always check with your College Office. SUSI grant students should contact the Student Desk before dropping modules so we can explain possible financial implications. Note, the Student Desk is not authorized to drop/swap or register modules, please contact your College/School Office .",
+    "answer_html": "<div aria-labelledby=\"heading682758\" class=\"accordion-collapse collapse\" id=\"collapse682758\">\n<div class=\"accordion-body\">\n<p>Your <a href=\"https://www.ucd.ie/collegesandschools/\" title=\"Go to 'college office' page\">college office</a>can drop modules after online registration closes in SISWeb.  Online registration closes for all students on 6 Feb 2024 at 17:00                                 </p>\n<p><strong>*You should drop unwanted Spring modules by 29 March 2024*</strong></p>\n<ul>\n<li>Drop any modules by 29 March 2024 to avoid being charged.</li>\n<li><strong>If you withdraw from a module after 29 March 2024, you will still be charged for that module in the 2023/24 academic year</strong></li>\n<li>No additional fee will apply if you retake the same module again the following year.</li>\n<li>You can withdraw from a module before the last day of teaching in a trimester, with no academic implications.</li>\n<li>An automatic withdrawn grade (WN) will go onto your record should you withdraw after 29 March 2024. Potential progression issues may arise should you withdraw from modules late in the trimester so always check with your <a href=\"https://www.ucd.ie/collegesandschools/\" title=\"Go to 'College Office.' page\">College Office.</a></li>\n<li><strong>SUSI grant students should contact the Student Desk before dropping modules</strong>so we can explain possible financial implications.</li>\n</ul>\n<p>Note, the Student Desk is not authorized to drop/swap or register modules, please contact your<a href=\"https://www.ucd.ie/collegesandschools/\" title=\"Go to 'College/School Office' page\">College/School Office</a>.</p>\n</div>\n</div>",
+    "links": [
+      {
+        "url": "https://www.ucd.ie/collegesandschools/",
+        "text": "college office",
+        "target": null
+      },
+      {
+        "url": "https://www.ucd.ie/collegesandschools/",
+        "text": "College Office.",
+        "target": null
+      },
+      {
+        "url": "https://www.ucd.ie/collegesandschools/",
+        "text": "College/School Office",
+        "target": null
+      }
+    ],
+    "contacts": {
+      "emails": [],
+      "phones": []
+    },
+    "media": [],
+    "source_url": "https://www.ucd.ie/students/studentdesk/faqs/",
+    "section_order": 5,
+    "question_order": 1,
+    "id": "7bc4684722fd268e18ec94e0a93827d7b1b2af79"
+  },
+  {
+    "section": "Exams",
+    "question": "When are the end of term exams and when are results released?",
+    "answer_text": "Please refer to the Assessment Key Dates",
+    "answer_html": "<div aria-labelledby=\"heading682844\" class=\"accordion-collapse collapse\" id=\"collapse682844\">\n<div class=\"accordion-body\">\n<p><span>Please refer to the </span><a href=\"https://www.ucd.ie/registry/staff/registryservices/assessment/assessmentkeydates/\" title=\"Go to 'Assessment Key Dates' page\">Assessment Key Dates</a></p>\n</div>\n</div>",
+    "links": [
+      {
+        "url": "https://www.ucd.ie/registry/staff/registryservices/assessment/assessmentkeydates/",
+        "text": "Assessment Key Dates",
+        "target": null
+      }
+    ],
+    "contacts": {
+      "emails": [],
+      "phones": []
+    },
+    "media": [],
+    "source_url": "https://www.ucd.ie/students/studentdesk/faqs/",
+    "section_order": 6,
+    "question_order": 1,
+    "id": "58bf7420371a120439ca9db06ef029abbb5184ef"
+  },
+  {
+    "section": "Graduate Research Theses",
+    "question": "Can I submit my thesis electronically?",
+    "answer_text": "Yes, y ou can submit your thesis for examination on the eThesis Exam System via SISWeb. 1 a) electronic thesis upload to the eThesis system for examination 1 b) revised version of the thesis uploaded post-examination (if applicable) AND 2. Final hard-bound thesis submitted to the UCD Student Desk for the UCD Library Once this has been reviewed by your examination committee & you have been requested to make revisions (if applicable), you will upload the revised version of the thesis to the eThesis Exam System. The Exam committee nominee will certify that your revisions are complete & uploaded to the eThesis system. You will then submit your hard-bound thesis to the UCD Student Desk. See Student e Thesis Submission Thesis Website & Student Desk FAQ for further info.",
+    "answer_html": "<div aria-labelledby=\"heading682851\" class=\"accordion-collapse collapse\" id=\"collapse682851\">\n<div class=\"accordion-body\">\n<p>Yes, y<span>ou can submit your thesis for examination on the eThesis Exam System via </span><a href=\"https://hub.ucd.ie/usis/W_WEB_WELCOME_PAGE\" title=\"Go to '&lt;span&gt;SISWeb.&lt;/span&gt;' page\"><span>SISWeb.</span></a></p>\n<div>\n  1 a) electronic thesis upload to the eThesis system for examination \n</div>\n<div>\n  1 b) revised version of the thesis uploaded post-examination (if applicable) \n</div>\n<div>\n  AND \n <br/>2. Final hard-bound thesis submitted to the UCD Student Desk for the UCD Library \n <br/>\n<br/>\n</div>\n<p><span>Once this has been reviewed by your examination committee &amp; you have been requested to make revisions (if applicable), you will upload the revised version of the thesis to the eThesis Exam System. The Exam committee nominee will certify that your revisions are complete &amp; uploaded to the eThesis system. You will then submit your hard-bound thesis to the UCD Student Desk. </span></p>\n<p><span>See </span><span>Student e<a href=\"/students/studentdesk/thesissubmission/\" title=\"Go to 'Thesis Submission' page\">Thesis Submission</a>Thesis Website</span><span> &amp; </span><span><a href=\"/students/studentdesk/faqs/\" title=\"Go to 'Student Desk FAQ' page\">Student Desk FAQ</a></span> <span>for further info.</span></p>\n</div>\n</div>",
+    "links": [
+      {
+        "url": "https://hub.ucd.ie/usis/W_WEB_WELCOME_PAGE",
+        "text": "SISWeb.",
+        "target": null
+      },
+      {
+        "url": "https://www.ucd.ie/students/studentdesk/thesissubmission/",
+        "text": "Thesis Submission",
+        "target": null
+      },
+      {
+        "url": "https://www.ucd.ie/students/studentdesk/faqs/",
+        "text": "Student Desk FAQ",
+        "target": null
+      }
+    ],
+    "contacts": {
+      "emails": [],
+      "phones": []
+    },
+    "media": [],
+    "source_url": "https://www.ucd.ie/students/studentdesk/faqs/",
+    "section_order": 7,
+    "question_order": 1,
+    "id": "0e2356f65b64096b2ead818b2dc96f54cd51deec"
+  },
+  {
+    "section": "Accommodation",
+    "question": "Where can I find information on both on-campus and off-campus accommodation?",
+    "answer_text": "If you have questions about booking on-campus accommodation , email (opens in a new window) residences@ucd.ie . If you have any questions about booking off-campus accommodation , email (opens in a new window) residences@ucd.ie .",
+    "answer_html": "<div aria-labelledby=\"heading682894\" class=\"accordion-collapse collapse\" id=\"collapse682894\">\n<div class=\"accordion-body\">\n<p>If you have questions about  <a href=\"https://www.ucd.ie/residences/\" title=\"Go to 'booking on-campus accommodation' page\">booking on-campus accommodation</a>,   email<a href=\"mailto:residences@ucd.ie\" rel=\"noopener\" tabindex=\"0\" target=\"_blank\" title=\"Go to 'residences@ucd.ie' page\"><span class=\"sr-only\">(opens in a new window)</span>residences@ucd.ie</a>.</p>\n<p>If you have any questions about  <a href=\"https://www.ucd.ie/global/study-at-ucd/accommodation/offcampusaccommodation/\" title=\"Go to 'booking off-campus accommodation' page\">booking off-campus accommodation</a>,    email<a href=\"mailto:residences@ucd.ie\" rel=\"noopener\" tabindex=\"0\" target=\"_blank\" title=\"Go to 'residences@ucd.ie' page\"><span class=\"sr-only\">(opens in a new window)</span>residences@ucd.ie</a>.</p>\n</div>\n</div>",
+    "links": [
+      {
+        "url": "https://www.ucd.ie/residences/",
+        "text": "booking on-campus accommodation",
+        "target": null
+      },
+      {
+        "url": "mailto:residences@ucd.ie",
+        "text": "(opens in a new window) residences@ucd.ie",
+        "target": "_blank"
+      },
+      {
+        "url": "https://www.ucd.ie/global/study-at-ucd/accommodation/offcampusaccommodation/",
+        "text": "booking off-campus accommodation",
+        "target": null
+      }
+    ],
+    "contacts": {
+      "emails": [
+        "residences@ucd.ie"
+      ],
+      "phones": []
+    },
+    "media": [],
+    "source_url": "https://www.ucd.ie/students/studentdesk/faqs/",
+    "section_order": 8,
+    "question_order": 1,
+    "id": "725ce4ddc43c561e956d8ee826dc467d0e754aa5"
+  },
+  {
+    "section": "Lost Property",
+    "question": "Where can I search for lost property?",
+    "answer_text": "Lost property found on Campus is generally handed into the (opens in a new window) Estate Services office. If you have lost or found an item please contact them on 01 716 7000 or via on (opens in a new window) estates@ucd.ie .",
+    "answer_html": "<div aria-labelledby=\"heading682896\" class=\"accordion-collapse collapse\" id=\"collapse682896\">\n<div class=\"accordion-body\">\n<p>Lost property found on Campus is generally handed into the<strong><a href=\"https://ucdestates.ie/\" rel=\"noopener\" tabindex=\"0\" target=\"_blank\" title=\"Go to 'Estate Services' page\"><span class=\"sr-only\">(opens in a new window)</span>Estate Services</a></strong> office.</p>\n<p>If you have lost or found an item please contact them on 01 716 7000 or via on<a href=\"mailto:estates@ucd.ie\" rel=\"noopener\" tabindex=\"0\" target=\"_blank\" title=\"Go to 'estates@ucd.ie' page\"><span class=\"sr-only\">(opens in a new window)</span>estates@ucd.ie</a>.</p>\n</div>\n</div>",
+    "links": [
+      {
+        "url": "https://ucdestates.ie/",
+        "text": "(opens in a new window) Estate Services",
+        "target": "_blank"
+      },
+      {
+        "url": "mailto:estates@ucd.ie",
+        "text": "(opens in a new window) estates@ucd.ie",
+        "target": "_blank"
+      }
+    ],
+    "contacts": {
+      "emails": [
+        "estates@ucd.ie"
+      ],
+      "phones": [
+        "01 716 7000"
+      ]
+    },
+    "media": [],
+    "source_url": "https://www.ucd.ie/students/studentdesk/faqs/",
+    "section_order": 9,
+    "question_order": 1,
+    "id": "8462fe3b012badb28a481faaa0d6950e94073ebb"
+  },
+  {
+    "section": "Information for International Students",
+    "question": "How do I apply for a Scholarship?",
+    "answer_text": "There are a range of Global Scholarships available for international students studying at UCD. UCD Global also offers international students a number of 50% and 100% Global Excellence Scholarships . Applications for Global Scholarships open in November each year - before applying for a scholarship, you must first apply online to your chosen UCD programmes at www.ucd.ie/apply . UCD offers academic scholarships on entry as well as an extensive range of scholarships, awards & prizes to students as they continue through their studies.",
+    "answer_html": "<div aria-labelledby=\"heading682898\" class=\"accordion-collapse collapse\" id=\"collapse682898\">\n<div class=\"accordion-body\">\n<p>There are a range of <a href=\"https://www.ucd.ie/global/scholarships/\" title=\"Go to 'Global Scholarships' page\">Global Scholarships</a>available for international students studying at UCD. UCD Global also offers international students a number of 50% and 100% <a href=\"https://www.ucd.ie/global/scholarships/globalexcellencescholarships/\" rel=\"noopener\" target=\"_blank\" title=\"Go to 'Global Excellence Scholarships' page\">Global Excellence Scholarships</a>. Applications for Global Scholarships open in November each year - before applying for a scholarship, you must first apply online to your chosen UCD programmes at <a href=\"http://www.ucd.ie/apply\" rel=\"noopener\" target=\"_blank\" title=\"Go to 'www.ucd.ie/apply' page\">www.ucd.ie/apply</a>.</p>\n<p>UCD offers academic scholarships on entry as well as an extensive range of  <a href=\"https://www.ucd.ie/students/scholarships/\" title=\"Go to 'scholarships, awards &amp;amp; prizes' page\">scholarships, awards &amp; prizes </a>  to students as they continue through their studies.</p>\n</div>\n</div>",
+    "links": [
+      {
+        "url": "https://www.ucd.ie/global/scholarships/",
+        "text": "Global Scholarships",
+        "target": null
+      },
+      {
+        "url": "https://www.ucd.ie/global/scholarships/globalexcellencescholarships/",
+        "text": "Global Excellence Scholarships",
+        "target": "_blank"
+      },
+      {
+        "url": "http://www.ucd.ie/apply",
+        "text": "www.ucd.ie/apply",
+        "target": "_blank"
+      },
+      {
+        "url": "https://www.ucd.ie/students/scholarships/",
+        "text": "scholarships, awards & prizes",
+        "target": null
+      }
+    ],
+    "contacts": {
+      "emails": [],
+      "phones": []
+    },
+    "media": [],
+    "source_url": "https://www.ucd.ie/students/studentdesk/faqs/",
+    "section_order": 10,
+    "question_order": 1,
+    "id": "b8d7e15de20cc4f7f25ab793b63654c7a342c259"
+  },
+  {
+    "section": "Garda Vetting",
+    "question": "How do I complete my Garda Vetting Application?",
+    "answer_text": "To get your official documents verified for Garda Vetting, please come to the Student Desk with the following: Passport (along with a photocopy of the biometric page) Proof of Address (eg. tenancy agreement or bank statement) If you live on campus please use your Certificate of Attendance from your SISWeb (does not need stamping) Original Police Certificate if you have lived outside Ireland for 6 months or more since the age of 18",
+    "answer_html": "<div aria-labelledby=\"heading682904\" class=\"accordion-collapse collapse\" id=\"collapse682904\">\n<div class=\"accordion-body\">\n<div>\n  To get your official documents verified for Garda Vetting, please come to the Student Desk with the following: \n</div>\n<div></div>\n<ul>\n<li>Passport (along with a photocopy of the biometric page)</li>\n<li>Proof of Address (eg. tenancy agreement or bank statement)</li>\n<li>If you live on campus please use your Certificate of Attendance from your SISWeb (does not need stamping)</li>\n<li>Original <a href=\"https://www.ucd.ie/registry/prospectivestudents/admissions/policiesandgeneralregulations/vettingrequirements/policecertificates/\" title=\"Go to 'Police Certificate' page\">Police Certificate</a> if you have lived outside Ireland for 6 months or more since the age of 18</li>\n</ul>\n</div>\n</div>",
+    "links": [
+      {
+        "url": "https://www.ucd.ie/registry/prospectivestudents/admissions/policiesandgeneralregulations/vettingrequirements/policecertificates/",
+        "text": "Police Certificate",
+        "target": null
+      }
+    ],
+    "contacts": {
+      "emails": [],
+      "phones": []
+    },
+    "media": [],
+    "source_url": "https://www.ucd.ie/students/studentdesk/faqs/",
+    "section_order": 11,
+    "question_order": 1,
+    "id": "6ccbcbe81c68d497330ae8fa12221d268c80aa40"
+  },
+  {
+    "section": "Conferring",
+    "question": "Where can I find further information about conferring?",
+    "answer_text": "Conferring related information can be found on the Conferring website. Some of the most frequently sought information is linked below: Conferring procedures Conferring schedule Conferring FAQs For a detailed step-by-step guide, watch our video UCD Conferring Ceremonies here.",
+    "answer_html": "<div aria-labelledby=\"heading767206\" class=\"accordion-collapse collapse\" id=\"collapse767206\">\n<div class=\"accordion-body\">\n<p><span style=\"font-weight: 400\">Conferring related information can be found on the </span><a href=\"https://www.ucd.ie/confer/\" title=\"Go to '&lt;span&gt;Conferring website.&lt;/span&gt;' page\"><span>Conferring website.</span></a></p>\n<p>Some of the most frequently sought information is linked below:</p>\n<ul>\n<li><a href=\"https://www.ucd.ie/confer/procedures/\" title=\"Go to '&lt;span style=&quot;font-weight: 400&quot;&gt;Conferring procedures&lt;/span&gt;' page\"><span style=\"font-weight: 400\">Conferring procedures</span></a></li>\n<li><a href=\"https://www.ucd.ie/confer/schedule/\" title=\"Go to '&lt;span style=&quot;font-weight: 400&quot;&gt;Conferring schedule&lt;/span&gt;' page\"><span style=\"font-weight: 400\">Conferring schedule</span></a></li>\n<li><a href=\"https://www.ucd.ie/confer/faqs/\" title=\"Go to '&lt;span style=&quot;font-weight: 400&quot;&gt;Conferring FAQs&lt;/span&gt;' page\"><span style=\"font-weight: 400\">Conferring FAQs</span></a></li>\n</ul>\n<p><span style=\"font-weight: 400\">For a detailed step-by-step guide, watch our video <a href=\"https://www.ucd.ie/students/videos/#h763630:~:text=60.1KB-,UCD%20Conferring%20Ceremonies,-Conferring%20Schedule\" rel=\"noopener\" target=\"_blank\" title=\"Go to 'UCD Conferring Ceremonies' page\">UCD Conferring Ceremonies</a></span><a href=\"https://www.ucd.ie/students/videos/#h763630:~:text=60.1KB-,UCD%20Conferring%20Ceremonies,-Conferring%20Schedule\" rel=\"noopener\" target=\"_blank\" title=\"Go to 'here.&amp;nbsp;' page\"> here. </a></p>\n</div>\n</div>",
+    "links": [
+      {
+        "url": "https://www.ucd.ie/confer/",
+        "text": "Conferring website.",
+        "target": null
+      },
+      {
+        "url": "https://www.ucd.ie/confer/procedures/",
+        "text": "Conferring procedures",
+        "target": null
+      },
+      {
+        "url": "https://www.ucd.ie/confer/schedule/",
+        "text": "Conferring schedule",
+        "target": null
+      },
+      {
+        "url": "https://www.ucd.ie/confer/faqs/",
+        "text": "Conferring FAQs",
+        "target": null
+      },
+      {
+        "url": "https://www.ucd.ie/students/videos/#h763630:~:text=60.1KB-,UCD%20Conferring%20Ceremonies,-Conferring%20Schedule",
+        "text": "UCD Conferring Ceremonies",
+        "target": "_blank"
+      },
+      {
+        "url": "https://www.ucd.ie/students/videos/#h763630:~:text=60.1KB-,UCD%20Conferring%20Ceremonies,-Conferring%20Schedule",
+        "text": "here.",
+        "target": "_blank"
+      }
+    ],
+    "contacts": {
+      "emails": [],
+      "phones": []
+    },
+    "media": [],
+    "source_url": "https://www.ucd.ie/students/studentdesk/faqs/",
+    "section_order": 12,
+    "question_order": 1,
+    "id": "1535f7203d993fa6dfac1c2d8a25d886c3839426"
+  },
+  {
+    "section": "Staff Query",
+    "question": "Staff Query?",
+    "answer_text": "UCD Registry's staff connector is now live! Click here to access Registry's Connector a purpose-built form for UCD staff.",
+    "answer_html": "<div aria-labelledby=\"heading735402\" class=\"accordion-collapse collapse\" id=\"collapse735402\">\n<div class=\"accordion-body\">\n<p>UCD Registry's staff connector is now live!<span><br/><a href=\"https://www.ucd.ie/students/studentdesk/contact/ucdregistrysstaffconnector/\" title=\"Go to 'Click here to access Registry's Connector a purpose-built form for UCD staff.' page\">Click here to access Registry's Connector a purpose-built form for UCD staff.</a></span></p>\n</div>\n</div>",
+    "links": [
+      {
+        "url": "https://www.ucd.ie/students/studentdesk/contact/ucdregistrysstaffconnector/",
+        "text": "Click here to access Registry's Connector a purpose-built form for UCD staff.",
+        "target": null
+      }
+    ],
+    "contacts": {
+      "emails": [],
+      "phones": []
+    },
+    "media": [],
+    "source_url": "https://www.ucd.ie/students/studentdesk/faqs/",
+    "section_order": 13,
+    "question_order": 1,
+    "id": "90460b760499742189edfc402b56aa035993a134"
+  }
+]
