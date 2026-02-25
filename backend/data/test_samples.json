@@ -1,23 +1,22 @@
 {
-    "question": [
-        "When was the first super bowl?", 
-        "Who won the most super bowls?"
+  "question": [
+    "When was the first Super Bowl played?",
+    "Which team has won the most Super Bowls?"
+  ],
+  "answer": [
+    "The first Super Bowl was played on January 15, 1967.",
+    "The New England Patriots have won the most Super Bowls, with a record six titles."
+  ],
+  "contexts": [
+    [
+      "The First AFL–NFL World Championship Game (later known as Super Bowl I) was played on January 15, 1967, at the Los Angeles Memorial Coliseum in Los Angeles, California."
     ],
-    "answer": [
-        "The first superbowl was held on Jan 15, 1967", 
-        "The most super bowls have been won by The New England Patriots"
-    ],
-    "contexts": [
-        [
-            "The First AFL–NFL World Championship Game was an American football game played on January 15, 1967, at the Los Angeles Memorial Coliseum in Los Angeles,"
-        ], 
-        [
-            "The Green Bay Packers...Green Bay, Wisconsin.",
-            "The Packers compete...Football Conference"
-        ]
-    ],
-    "ground_truths": [
-        "The first superbowl was held on January 15, 1967", 
-        "The New England Patriots have won the Super Bowl a record six times"
+    [
+      "The New England Patriots have won the Super Bowl a record six times, the most by any team."
     ]
+  ],
+  "ground_truths": [
+    "The first Super Bowl was played on January 15, 1967.",
+    "The New England Patriots have won the Super Bowl a record six times."
+  ]
 }
