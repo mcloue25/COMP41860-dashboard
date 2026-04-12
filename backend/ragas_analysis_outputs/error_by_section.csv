@@ -1,0 +1,14 @@
+section,questions,low_correctness_cases,avg_correctness,low_correctness_rate
+Form Stamping,2,2,0.68925,1.0
+Staff Query,1,1,0.7,1.0
+Lost Property,1,1,0.7130000000000001,1.0
+Official Documents,14,14,0.7156428571428571,1.0
+Graduate Research Theses,8,8,0.7198125,1.0
+Conferring,2,2,0.72675,1.0
+Registration,10,10,0.7407,1.0
+Fees,21,21,0.7511190476190477,1.0
+Information for International Students,5,5,0.7533,1.0
+UCD Connect,6,6,0.7656666666666667,1.0
+Exams,8,8,0.7758125,1.0
+Garda Vetting,1,1,0.7989999999999999,1.0
+Accommodation,1,0,0.858,0.0

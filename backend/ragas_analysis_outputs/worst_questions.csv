@@ -1,0 +1,16 @@
+experiment_label,section,question,faithfulness,answer_correctness,answer_relevancy,context_precision,context_recall,latency_s
+First model,Fees,I think I should be on the EU Fees rate - what should I do?,0.661,0.416,0.559,0.595,0.62,2.133
+First model,Conferring,Where can I find further information about conferring?,0.603,0.418,0.489,0.442,0.448,2.083
+First model,Official Documents,Where can I get a Certificate of Attendance?,0.55,0.42,0.556,0.528,0.6,1.74
+First model,Graduate Research Theses,Can I submit my thesis electronically?,0.66,0.423,0.567,0.45,0.368,1.772
+First model,Graduate Research Theses,"If I submitted my thesis electronically, do I still need to submit a hardbound copy?",0.562,0.437,0.566,0.499,0.424,1.781
+First model,Graduate Research Theses,How many copies of my thesis do I need to submit?,0.626,0.444,0.537,0.506,0.417,2.103
+First model,Registration,Where can I find a syllabus/module descriptors of my course?,0.478,0.456,0.521,0.569,0.279,2.012
+First model,Registration,What is a substitute module?,0.568,0.459,0.471,0.481,0.51,1.887
+First model,Registration,How do I withdraw from my programme?,0.507,0.464,0.545,0.43,0.58,2.041
+First model,Form Stamping,How do I get a form stamped?,0.547,0.467,0.383,0.595,0.313,2.042
+First model,Registration,What are extenuating circumstances & how do I apply?,0.501,0.478,0.492,0.497,0.41,2.102
+First model,Graduate Research Theses,Where can I find guidelines/regulations about thesis formatting?,0.371,0.483,0.637,0.443,0.341,1.936
+First model,Official Documents,Are my Electronic Documents available to me throughout the year?,0.606,0.488,0.684,0.321,0.439,1.667
+First model,UCD Connect,Will I lose access to SISWeb when I graduate or if I leave UCD?,0.719,0.498,0.676,0.561,0.425,2.059
+First model,Official Documents,How can I submit academic documents for Qualification Check?,0.728,0.499,0.373,0.401,0.377,2.035
