@@ -1,3 +1,3 @@
 experiment_name,experiment_short,experiment_label,llm_model,embedding_model,retriever_k,faithfulness,answer_correctness,answer_relevancy,context_precision,context_recall,latency_ms,latency_s
-voyageai_512_64_contextual_hybrid_True,Exp 2,Best model,phi3:mini,mxbai-embed-large,6,0.87835,0.888475,0.9356875,0.8250500000000001,0.9446749999999999,1697.3,1.6972999999999998
-voyageai_512_64_basic_dense_False,Exp 1,First model,llama3.2:3b,nomic-embed-text,4,0.678875,0.4025625,0.445075,0.5363,0.5829,1901.5,1.9015
+voyageai_512_64_contextual_hybrid_True,Exp 2,Best model,phi3:mini,mxbai-embed-large,6,0.8145,0.7631249999999999,0.843975,0.7190125,0.80975,1697.3,1.6972999999999998
+voyageai_512_64_basic_dense_False,Exp 1,First model,llama3.2:3b,nomic-embed-text,4,0.6025625,0.4979125,0.5590375,0.4636,0.5049750000000001,1901.5,1.9015
