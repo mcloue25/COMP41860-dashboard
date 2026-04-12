@@ -1,0 +1,1460 @@
+{
+  "experiments": [
+    {
+      "experiment_name": "voyageai_512_64_basic_dense_False",
+      "llm_model": "llama3.2:3b",
+      "embedding_model": "nomic-embed-text",
+      "retriever_k": 4,
+      "results": [
+        {
+          "question": "How do I log in to UCD IT Systems including SISWeb, Brightspace or UCD Email?",
+          "faithfulness": 0.697,
+          "answer_correctness": 0.711,
+          "answer_relevancy": 0.649,
+          "context_precision": 0.604,
+          "context_recall": 0.544,
+          "latency_ms": 1861
+        },
+        {
+          "question": "What is SISWeb? What is Brightspace?",
+          "faithfulness": 0.766,
+          "answer_correctness": 0.705,
+          "answer_relevancy": 0.712,
+          "context_precision": 0.632,
+          "context_recall": 0.624,
+          "latency_ms": 1933
+        },
+        {
+          "question": "How do I reset my password?",
+          "faithfulness": 0.627,
+          "answer_correctness": 0.731,
+          "answer_relevancy": 0.685,
+          "context_precision": 0.645,
+          "context_recall": 0.499,
+          "latency_ms": 1586
+        },
+        {
+          "question": "How do I contact IT Support Hub?",
+          "faithfulness": 0.666,
+          "answer_correctness": 0.652,
+          "answer_relevancy": 0.675,
+          "context_precision": 0.618,
+          "context_recall": 0.631,
+          "latency_ms": 1784
+        },
+        {
+          "question": "Will I lose access to SISWeb when I graduate or if I leave UCD?",
+          "faithfulness": 0.725,
+          "answer_correctness": 0.704,
+          "answer_relevancy": 0.627,
+          "context_precision": 0.706,
+          "context_recall": 0.633,
+          "latency_ms": 2115
+        },
+        {
+          "question": "Will I lose access to my UCD email address if I graduate or if I leave UCD?",
+          "faithfulness": 0.679,
+          "answer_correctness": 0.636,
+          "answer_relevancy": 0.643,
+          "context_precision": 0.615,
+          "context_recall": 0.638,
+          "latency_ms": 1944
+        },
+        {
+          "question": "What do I need to know about my SUSI Grant?",
+          "faithfulness": 0.688,
+          "answer_correctness": 0.623,
+          "answer_relevancy": 0.634,
+          "context_precision": 0.681,
+          "context_recall": 0.552,
+          "latency_ms": 1944
+        },
+        {
+          "question": "Who is eligible for Free Fees?",
+          "faithfulness": 0.731,
+          "answer_correctness": 0.591,
+          "answer_relevancy": 0.662,
+          "context_precision": 0.685,
+          "context_recall": 0.479,
+          "latency_ms": 1842
+        },
+        {
+          "question": "Do I need to submit a new application for Free Fee Assessment each year?",
+          "faithfulness": 0.705,
+          "answer_correctness": 0.631,
+          "answer_relevancy": 0.685,
+          "context_precision": 0.617,
+          "context_recall": 0.512,
+          "latency_ms": 2049
+        },
+        {
+          "question": "Who is eligible for EU Fees?",
+          "faithfulness": 0.743,
+          "answer_correctness": 0.737,
+          "answer_relevancy": 0.732,
+          "context_precision": 0.638,
+          "context_recall": 0.607,
+          "latency_ms": 1666
+        },
+        {
+          "question": "Are UK applicants still eligible for EU Fees?",
+          "faithfulness": 0.741,
+          "answer_correctness": 0.643,
+          "answer_relevancy": 0.637,
+          "context_precision": 0.557,
+          "context_recall": 0.542,
+          "latency_ms": 1804
+        },
+        {
+          "question": "I think I should be on the EU Fees rate - what should I do?",
+          "faithfulness": 0.774,
+          "answer_correctness": 0.558,
+          "answer_relevancy": 0.587,
+          "context_precision": 0.632,
+          "context_recall": 0.687,
+          "latency_ms": 2004
+        },
+        {
+          "question": "How do I pay my fees?",
+          "faithfulness": 0.615,
+          "answer_correctness": 0.529,
+          "answer_relevancy": 0.678,
+          "context_precision": 0.583,
+          "context_recall": 0.533,
+          "latency_ms": 2075
+        },
+        {
+          "question": "Can I make a payment over the phone?",
+          "faithfulness": 0.765,
+          "answer_correctness": 0.689,
+          "answer_relevancy": 0.672,
+          "context_precision": 0.642,
+          "context_recall": 0.696,
+          "latency_ms": 2011
+        },
+        {
+          "question": "How do I get a receipt for payments made?",
+          "faithfulness": 0.736,
+          "answer_correctness": 0.713,
+          "answer_relevancy": 0.582,
+          "context_precision": 0.684,
+          "context_recall": 0.657,
+          "latency_ms": 1995
+        },
+        {
+          "question": "Can UCD send an invoice to my employers?",
+          "faithfulness": 0.611,
+          "answer_correctness": 0.642,
+          "answer_relevancy": 0.702,
+          "context_precision": 0.529,
+          "context_recall": 0.589,
+          "latency_ms": 2083
+        },
+        {
+          "question": "How do I request a Canadian Tax Form?",
+          "faithfulness": 0.644,
+          "answer_correctness": 0.777,
+          "answer_relevancy": 0.688,
+          "context_precision": 0.612,
+          "context_recall": 0.619,
+          "latency_ms": 2016
+        },
+        {
+          "question": "How do I request a Refund?",
+          "faithfulness": 0.716,
+          "answer_correctness": 0.749,
+          "answer_relevancy": 0.627,
+          "context_precision": 0.599,
+          "context_recall": 0.663,
+          "latency_ms": 1904
+        },
+        {
+          "question": "How much does it cost to resit/repeat a module?",
+          "faithfulness": 0.666,
+          "answer_correctness": 0.737,
+          "answer_relevancy": 0.733,
+          "context_precision": 0.598,
+          "context_recall": 0.517,
+          "latency_ms": 1875
+        },
+        {
+          "question": "How much does it cost to Substitute a Module?",
+          "faithfulness": 0.703,
+          "answer_correctness": 0.662,
+          "answer_relevancy": 0.73,
+          "context_precision": 0.569,
+          "context_recall": 0.676,
+          "latency_ms": 1671
+        },
+        {
+          "question": "What are the fee implications if I withdraw from my programme?",
+          "faithfulness": 0.671,
+          "answer_correctness": 0.718,
+          "answer_relevancy": 0.716,
+          "context_precision": 0.663,
+          "context_recall": 0.621,
+          "latency_ms": 1925
+        },
+        {
+          "question": "When are my fees due?",
+          "faithfulness": 0.718,
+          "answer_correctness": 0.715,
+          "answer_relevancy": 0.651,
+          "context_precision": 0.634,
+          "context_recall": 0.634,
+          "latency_ms": 1900
+        },
+        {
+          "question": "How do I process my American/Canadian Loan cheque?",
+          "faithfulness": 0.748,
+          "answer_correctness": 0.714,
+          "answer_relevancy": 0.761,
+          "context_precision": 0.636,
+          "context_recall": 0.574,
+          "latency_ms": 1832
+        },
+        {
+          "question": "How do I open a student Bank Account?",
+          "faithfulness": 0.709,
+          "answer_correctness": 0.735,
+          "answer_relevancy": 0.643,
+          "context_precision": 0.639,
+          "context_recall": 0.71,
+          "latency_ms": 1438
+        },
+        {
+          "question": "I need to provide term dates from previous academic years for SUSI. Where can I find these?",
+          "faithfulness": 0.654,
+          "answer_correctness": 0.695,
+          "answer_relevancy": 0.68,
+          "context_precision": 0.632,
+          "context_recall": 0.574,
+          "latency_ms": 2017
+        },
+        {
+          "question": "How do I submit my Financial Guarantee/Sponsorship letter?",
+          "faithfulness": 0.724,
+          "answer_correctness": 0.649,
+          "answer_relevancy": 0.782,
+          "context_precision": 0.638,
+          "context_recall": 0.567,
+          "latency_ms": 1882
+        },
+        {
+          "question": "How do I pay a disciplinary related fine?",
+          "faithfulness": 0.699,
+          "answer_correctness": 0.676,
+          "answer_relevancy": 0.524,
+          "context_precision": 0.596,
+          "context_recall": 0.661,
+          "latency_ms": 1689
+        },
+        {
+          "question": "Where can I access my online Electronic Documents?",
+          "faithfulness": 0.707,
+          "answer_correctness": 0.737,
+          "answer_relevancy": 0.703,
+          "context_precision": 0.695,
+          "context_recall": 0.498,
+          "latency_ms": 1836
+        },
+        {
+          "question": "Are my Electronic Documents available to me throughout the year?",
+          "faithfulness": 0.693,
+          "answer_correctness": 0.717,
+          "answer_relevancy": 0.715,
+          "context_precision": 0.486,
+          "context_recall": 0.665,
+          "latency_ms": 1639
+        },
+        {
+          "question": "Can UCD email/scan my official documents to me and/or a third party?",
+          "faithfulness": 0.744,
+          "answer_correctness": 0.59,
+          "answer_relevancy": 0.669,
+          "context_precision": 0.68,
+          "context_recall": 0.591,
+          "latency_ms": 1934
+        },
+        {
+          "question": "How can a Third Party verify my Electronic Documents?",
+          "faithfulness": 0.75,
+          "answer_correctness": 0.688,
+          "answer_relevancy": 0.656,
+          "context_precision": 0.697,
+          "context_recall": 0.663,
+          "latency_ms": 1847
+        },
+        {
+          "question": "How do I order a Hard Copy of my official documents?",
+          "faithfulness": 0.847,
+          "answer_correctness": 0.611,
+          "answer_relevancy": 0.706,
+          "context_precision": 0.607,
+          "context_recall": 0.608,
+          "latency_ms": 2026
+        },
+        {
+          "question": "How much do Hard Copies cost?",
+          "faithfulness": 0.721,
+          "answer_correctness": 0.718,
+          "answer_relevancy": 0.584,
+          "context_precision": 0.545,
+          "context_recall": 0.637,
+          "latency_ms": 1726
+        },
+        {
+          "question": "Where can I get a Certificate of Attendance?",
+          "faithfulness": 0.659,
+          "answer_correctness": 0.592,
+          "answer_relevancy": 0.723,
+          "context_precision": 0.657,
+          "context_recall": 0.688,
+          "latency_ms": 1731
+        },
+        {
+          "question": "What is the difference between a Statement of Results and a Transcript?",
+          "faithfulness": 0.71,
+          "answer_correctness": 0.612,
+          "answer_relevancy": 0.698,
+          "context_precision": 0.699,
+          "context_recall": 0.547,
+          "latency_ms": 2180
+        },
+        {
+          "question": "Why do my results say pending?",
+          "faithfulness": 0.759,
+          "answer_correctness": 0.669,
+          "answer_relevancy": 0.561,
+          "context_precision": 0.69,
+          "context_recall": 0.594,
+          "latency_ms": 1791
+        },
+        {
+          "question": "How do I send my UCD documents to WES?",
+          "faithfulness": 0.73,
+          "answer_correctness": 0.705,
+          "answer_relevancy": 0.735,
+          "context_precision": 0.569,
+          "context_recall": 0.668,
+          "latency_ms": 2167
+        },
+        {
+          "question": "Applying to the Teaching Council?",
+          "faithfulness": 0.783,
+          "answer_correctness": 0.669,
+          "answer_relevancy": 0.623,
+          "context_precision": 0.671,
+          "context_recall": 0.607,
+          "latency_ms": 1922
+        },
+        {
+          "question": "How can I submit academic documents for Qualification Check?",
+          "faithfulness": 0.781,
+          "answer_correctness": 0.664,
+          "answer_relevancy": 0.545,
+          "context_precision": 0.601,
+          "context_recall": 0.489,
+          "latency_ms": 2047
+        },
+        {
+          "question": "I've submitted my documents to a third party and they've told me that they're unable to verify them. How can I solve this?",
+          "faithfulness": 0.726,
+          "answer_correctness": 0.643,
+          "answer_relevancy": 0.66,
+          "context_precision": 0.662,
+          "context_recall": 0.605,
+          "latency_ms": 2138
+        },
+        {
+          "question": "I need a letter to confirm that I withdrew from UCD. Where do I go?",
+          "faithfulness": 0.707,
+          "answer_correctness": 0.742,
+          "answer_relevancy": 0.735,
+          "context_precision": 0.7,
+          "context_recall": 0.56,
+          "latency_ms": 2058
+        },
+        {
+          "question": "How do I get a form stamped?",
+          "faithfulness": 0.616,
+          "answer_correctness": 0.615,
+          "answer_relevancy": 0.562,
+          "context_precision": 0.673,
+          "context_recall": 0.526,
+          "latency_ms": 1897
+        },
+        {
+          "question": "Can the Student Desk stamp forms in place of the Gardaí?",
+          "faithfulness": 0.7,
+          "answer_correctness": 0.678,
+          "answer_relevancy": 0.63,
+          "context_precision": 0.632,
+          "context_recall": 0.707,
+          "latency_ms": 1907
+        },
+        {
+          "question": "Can I drop a module when online registration is 'closed'?",
+          "faithfulness": 0.737,
+          "answer_correctness": 0.74,
+          "answer_relevancy": 0.65,
+          "context_precision": 0.557,
+          "context_recall": 0.567,
+          "latency_ms": 2093
+        },
+        {
+          "question": "What are extenuating circumstances & how do I apply?",
+          "faithfulness": 0.628,
+          "answer_correctness": 0.644,
+          "answer_relevancy": 0.71,
+          "context_precision": 0.66,
+          "context_recall": 0.6,
+          "latency_ms": 2044
+        },
+        {
+          "question": "What is a substitute module?",
+          "faithfulness": 0.718,
+          "answer_correctness": 0.609,
+          "answer_relevancy": 0.582,
+          "context_precision": 0.588,
+          "context_recall": 0.655,
+          "latency_ms": 1798
+        },
+        {
+          "question": "Where can I find a syllabus/module descriptors of my course?",
+          "faithfulness": 0.665,
+          "answer_correctness": 0.634,
+          "answer_relevancy": 0.583,
+          "context_precision": 0.614,
+          "context_recall": 0.529,
+          "latency_ms": 1965
+        },
+        {
+          "question": "What is a Leave of Absence and how do I apply?",
+          "faithfulness": 0.592,
+          "answer_correctness": 0.7,
+          "answer_relevancy": 0.628,
+          "context_precision": 0.523,
+          "context_recall": 0.643,
+          "latency_ms": 1850
+        },
+        {
+          "question": "How do I withdraw from my programme?",
+          "faithfulness": 0.598,
+          "answer_correctness": 0.627,
+          "answer_relevancy": 0.675,
+          "context_precision": 0.597,
+          "context_recall": 0.647,
+          "latency_ms": 2034
+        },
+        {
+          "question": "Why have I not progressed to the next stage?",
+          "faithfulness": 0.743,
+          "answer_correctness": 0.7,
+          "answer_relevancy": 0.727,
+          "context_precision": 0.653,
+          "context_recall": 0.627,
+          "latency_ms": 1524
+        },
+        {
+          "question": "Where can I find more information on applying for Recognition of Prior Learning (RPL)?",
+          "faithfulness": 0.755,
+          "answer_correctness": 0.759,
+          "answer_relevancy": 0.645,
+          "context_precision": 0.597,
+          "context_recall": 0.716,
+          "latency_ms": 1583
+        },
+        {
+          "question": "Can I change my first name under the Gender ID & Expression policy?",
+          "faithfulness": 0.733,
+          "answer_correctness": 0.825,
+          "answer_relevancy": 0.614,
+          "context_precision": 0.654,
+          "context_recall": 0.713,
+          "latency_ms": 1878
+        },
+        {
+          "question": "I have a questions about UCD Micro-credentials",
+          "faithfulness": 0.738,
+          "answer_correctness": 0.734,
+          "answer_relevancy": 0.615,
+          "context_precision": 0.616,
+          "context_recall": 0.618,
+          "latency_ms": 2048
+        },
+        {
+          "question": "When are the end of term exams and when are results released?",
+          "faithfulness": 0.708,
+          "answer_correctness": 0.668,
+          "answer_relevancy": 0.609,
+          "context_precision": 0.602,
+          "context_recall": 0.654,
+          "latency_ms": 1918
+        },
+        {
+          "question": "How do I view my results?",
+          "faithfulness": 0.667,
+          "answer_correctness": 0.63,
+          "answer_relevancy": 0.793,
+          "context_precision": 0.677,
+          "context_recall": 0.638,
+          "latency_ms": 1433
+        },
+        {
+          "question": "Can I check a hold on my record?",
+          "faithfulness": 0.741,
+          "answer_correctness": 0.709,
+          "answer_relevancy": 0.744,
+          "context_precision": 0.641,
+          "context_recall": 0.596,
+          "latency_ms": 1994
+        },
+        {
+          "question": "What is the difference between a repeat and a resit?",
+          "faithfulness": 0.613,
+          "answer_correctness": 0.742,
+          "answer_relevancy": 0.676,
+          "context_precision": 0.585,
+          "context_recall": 0.68,
+          "latency_ms": 2225
+        },
+        {
+          "question": "Are final results for all programmes available online?",
+          "faithfulness": 0.64,
+          "answer_correctness": 0.64,
+          "answer_relevancy": 0.675,
+          "context_precision": 0.629,
+          "context_recall": 0.576,
+          "latency_ms": 1724
+        },
+        {
+          "question": "How do I calculate my Degree Award GPA?",
+          "faithfulness": 0.816,
+          "answer_correctness": 0.742,
+          "answer_relevancy": 0.6,
+          "context_precision": 0.553,
+          "context_recall": 0.702,
+          "latency_ms": 2078
+        },
+        {
+          "question": "Where can I access past exam papers?",
+          "faithfulness": 0.801,
+          "answer_correctness": 0.729,
+          "answer_relevancy": 0.616,
+          "context_precision": 0.633,
+          "context_recall": 0.47,
+          "latency_ms": 1765
+        },
+        {
+          "question": "How do I appeal a grade?",
+          "faithfulness": 0.707,
+          "answer_correctness": 0.711,
+          "answer_relevancy": 0.624,
+          "context_precision": 0.614,
+          "context_recall": 0.628,
+          "latency_ms": 1967
+        },
+        {
+          "question": "Can I submit my thesis electronically?",
+          "faithfulness": 0.742,
+          "answer_correctness": 0.693,
+          "answer_relevancy": 0.644,
+          "context_precision": 0.659,
+          "context_recall": 0.603,
+          "latency_ms": 1751
+        },
+        {
+          "question": "How do I submit my thesis electronically?",
+          "faithfulness": 0.679,
+          "answer_correctness": 0.68,
+          "answer_relevancy": 0.655,
+          "context_precision": 0.628,
+          "context_recall": 0.6,
+          "latency_ms": 1931
+        },
+        {
+          "question": "Where can I find guidelines/regulations about thesis formatting?",
+          "faithfulness": 0.703,
+          "answer_correctness": 0.604,
+          "answer_relevancy": 0.681,
+          "context_precision": 0.673,
+          "context_recall": 0.626,
+          "latency_ms": 1865
+        },
+        {
+          "question": "How many copies of my thesis do I need to submit?",
+          "faithfulness": 0.732,
+          "answer_correctness": 0.622,
+          "answer_relevancy": 0.565,
+          "context_precision": 0.623,
+          "context_recall": 0.544,
+          "latency_ms": 2033
+        },
+        {
+          "question": "If I submitted my thesis electronically, do I still need to submit a hardbound copy?",
+          "faithfulness": 0.656,
+          "answer_correctness": 0.522,
+          "answer_relevancy": 0.608,
+          "context_precision": 0.699,
+          "context_recall": 0.577,
+          "latency_ms": 1653
+        },
+        {
+          "question": "What is the ACCE?",
+          "faithfulness": 0.672,
+          "answer_correctness": 0.711,
+          "answer_relevancy": 0.685,
+          "context_precision": 0.629,
+          "context_recall": 0.689,
+          "latency_ms": 2027
+        },
+        {
+          "question": "Do I have to submit my thesis by a certain time of day?",
+          "faithfulness": 0.709,
+          "answer_correctness": 0.716,
+          "answer_relevancy": 0.743,
+          "context_precision": 0.669,
+          "context_recall": 0.661,
+          "latency_ms": 1705
+        },
+        {
+          "question": "How do I correct the title of my thesis?",
+          "faithfulness": 0.703,
+          "answer_correctness": 0.724,
+          "answer_relevancy": 0.645,
+          "context_precision": 0.673,
+          "context_recall": 0.636,
+          "latency_ms": 2063
+        },
+        {
+          "question": "Where can I find information on both on-campus and off-campus accommodation?",
+          "faithfulness": 0.699,
+          "answer_correctness": 0.833,
+          "answer_relevancy": 0.722,
+          "context_precision": 0.609,
+          "context_recall": 0.605,
+          "latency_ms": 2367
+        },
+        {
+          "question": "Where can I search for lost property?",
+          "faithfulness": 0.693,
+          "answer_correctness": 0.732,
+          "answer_relevancy": 0.709,
+          "context_precision": 0.62,
+          "context_recall": 0.53,
+          "latency_ms": 1933
+        },
+        {
+          "question": "How do I apply for a Scholarship?",
+          "faithfulness": 0.728,
+          "answer_correctness": 0.748,
+          "answer_relevancy": 0.699,
+          "context_precision": 0.621,
+          "context_recall": 0.651,
+          "latency_ms": 1997
+        },
+        {
+          "question": "Where can I get a letter to confirm course completion for my Stamp 1G visa application?",
+          "faithfulness": 0.72,
+          "answer_correctness": 0.683,
+          "answer_relevancy": 0.648,
+          "context_precision": 0.654,
+          "context_recall": 0.537,
+          "latency_ms": 1786
+        },
+        {
+          "question": "Who do I contact if I have questions about my visa/visa requirements?",
+          "faithfulness": 0.71,
+          "answer_correctness": 0.592,
+          "answer_relevancy": 0.638,
+          "context_precision": 0.52,
+          "context_recall": 0.559,
+          "latency_ms": 2002
+        },
+        {
+          "question": "I am an international student. Where can I find information about arriving in Ireland?",
+          "faithfulness": 0.738,
+          "answer_correctness": 0.677,
+          "answer_relevancy": 0.648,
+          "context_precision": 0.549,
+          "context_recall": 0.71,
+          "latency_ms": 1992
+        },
+        {
+          "question": "Where can I get a letter about QQI accreditation to support my PPSN application?",
+          "faithfulness": 0.765,
+          "answer_correctness": 0.627,
+          "answer_relevancy": 0.651,
+          "context_precision": 0.529,
+          "context_recall": 0.647,
+          "latency_ms": 2068
+        },
+        {
+          "question": "How do I complete my Garda Vetting Application?",
+          "faithfulness": 0.615,
+          "answer_correctness": 0.677,
+          "answer_relevancy": 0.692,
+          "context_precision": 0.532,
+          "context_recall": 0.49,
+          "latency_ms": 1708
+        },
+        {
+          "question": "Where can I find further information about conferring?",
+          "faithfulness": 0.679,
+          "answer_correctness": 0.596,
+          "answer_relevancy": 0.662,
+          "context_precision": 0.632,
+          "context_recall": 0.638,
+          "latency_ms": 2026
+        },
+        {
+          "question": "I am due to confer in September or December, what do I need to know?",
+          "faithfulness": 0.785,
+          "answer_correctness": 0.75,
+          "answer_relevancy": 0.594,
+          "context_precision": 0.595,
+          "context_recall": 0.536,
+          "latency_ms": 1706
+        },
+        {
+          "question": "Staff Query?",
+          "faithfulness": 0.706,
+          "answer_correctness": 0.68,
+          "answer_relevancy": 0.685,
+          "context_precision": 0.541,
+          "context_recall": 0.526,
+          "latency_ms": 1895
+        }
+      ]
+    },
+    {
+      "experiment_name": "voyageai_512_64_contextual_hybrid_True",
+      "llm_model": "phi3:mini",
+      "embedding_model": "mxbai-embed-large",
+      "retriever_k": 6,
+      "results": [
+        {
+          "question": "How do I log in to UCD IT Systems including SISWeb, Brightspace or UCD Email?",
+          "faithfulness": 0.922,
+          "answer_correctness": 0.85,
+          "answer_relevancy": 0.811,
+          "context_precision": 0.766,
+          "context_recall": 0.776,
+          "latency_ms": 1623
+        },
+        {
+          "question": "What is SISWeb? What is Brightspace?",
+          "faithfulness": 0.809,
+          "answer_correctness": 0.786,
+          "answer_relevancy": 0.78,
+          "context_precision": 0.749,
+          "context_recall": 0.69,
+          "latency_ms": 1814
+        },
+        {
+          "question": "How do I reset my password?",
+          "faithfulness": 0.795,
+          "answer_correctness": 0.87,
+          "answer_relevancy": 0.759,
+          "context_precision": 0.798,
+          "context_recall": 0.842,
+          "latency_ms": 1736
+        },
+        {
+          "question": "How do I contact IT Support Hub?",
+          "faithfulness": 0.823,
+          "answer_correctness": 0.833,
+          "answer_relevancy": 0.817,
+          "context_precision": 0.693,
+          "context_recall": 0.724,
+          "latency_ms": 1729
+        },
+        {
+          "question": "Will I lose access to SISWeb when I graduate or if I leave UCD?",
+          "faithfulness": 0.837,
+          "answer_correctness": 0.835,
+          "answer_relevancy": 0.847,
+          "context_precision": 0.818,
+          "context_recall": 0.814,
+          "latency_ms": 1805
+        },
+        {
+          "question": "Will I lose access to my UCD email address if I graduate or if I leave UCD?",
+          "faithfulness": 0.846,
+          "answer_correctness": 0.829,
+          "answer_relevancy": 0.796,
+          "context_precision": 0.764,
+          "context_recall": 0.749,
+          "latency_ms": 1389
+        },
+        {
+          "question": "What do I need to know about my SUSI Grant?",
+          "faithfulness": 0.843,
+          "answer_correctness": 0.829,
+          "answer_relevancy": 0.761,
+          "context_precision": 0.779,
+          "context_recall": 0.791,
+          "latency_ms": 1670
+        },
+        {
+          "question": "Who is eligible for Free Fees?",
+          "faithfulness": 0.964,
+          "answer_correctness": 0.674,
+          "answer_relevancy": 0.8,
+          "context_precision": 0.689,
+          "context_recall": 0.819,
+          "latency_ms": 2177
+        },
+        {
+          "question": "Do I need to submit a new application for Free Fee Assessment each year?",
+          "faithfulness": 0.735,
+          "answer_correctness": 0.838,
+          "answer_relevancy": 0.836,
+          "context_precision": 0.765,
+          "context_recall": 0.793,
+          "latency_ms": 1296
+        },
+        {
+          "question": "Who is eligible for EU Fees?",
+          "faithfulness": 0.903,
+          "answer_correctness": 0.852,
+          "answer_relevancy": 0.811,
+          "context_precision": 0.751,
+          "context_recall": 0.798,
+          "latency_ms": 1612
+        },
+        {
+          "question": "Are UK applicants still eligible for EU Fees?",
+          "faithfulness": 0.871,
+          "answer_correctness": 0.799,
+          "answer_relevancy": 0.698,
+          "context_precision": 0.778,
+          "context_recall": 0.772,
+          "latency_ms": 1835
+        },
+        {
+          "question": "I think I should be on the EU Fees rate - what should I do?",
+          "faithfulness": 0.816,
+          "answer_correctness": 0.828,
+          "answer_relevancy": 0.841,
+          "context_precision": 0.787,
+          "context_recall": 0.835,
+          "latency_ms": 2058
+        },
+        {
+          "question": "How do I pay my fees?",
+          "faithfulness": 0.815,
+          "answer_correctness": 0.715,
+          "answer_relevancy": 0.853,
+          "context_precision": 0.856,
+          "context_recall": 0.815,
+          "latency_ms": 1846
+        },
+        {
+          "question": "Can I make a payment over the phone?",
+          "faithfulness": 0.829,
+          "answer_correctness": 0.787,
+          "answer_relevancy": 0.854,
+          "context_precision": 0.734,
+          "context_recall": 0.651,
+          "latency_ms": 1520
+        },
+        {
+          "question": "How do I get a receipt for payments made?",
+          "faithfulness": 0.985,
+          "answer_correctness": 0.945,
+          "answer_relevancy": 0.776,
+          "context_precision": 0.744,
+          "context_recall": 0.774,
+          "latency_ms": 1565
+        },
+        {
+          "question": "Can UCD send an invoice to my employers?",
+          "faithfulness": 0.926,
+          "answer_correctness": 0.825,
+          "answer_relevancy": 0.756,
+          "context_precision": 0.845,
+          "context_recall": 0.725,
+          "latency_ms": 1739
+        },
+        {
+          "question": "How do I request a Canadian Tax Form?",
+          "faithfulness": 0.859,
+          "answer_correctness": 0.811,
+          "answer_relevancy": 0.826,
+          "context_precision": 0.745,
+          "context_recall": 0.649,
+          "latency_ms": 1302
+        },
+        {
+          "question": "How do I request a Refund?",
+          "faithfulness": 0.797,
+          "answer_correctness": 0.784,
+          "answer_relevancy": 0.809,
+          "context_precision": 0.783,
+          "context_recall": 0.793,
+          "latency_ms": 1721
+        },
+        {
+          "question": "How much does it cost to resit/repeat a module?",
+          "faithfulness": 0.82,
+          "answer_correctness": 0.787,
+          "answer_relevancy": 0.704,
+          "context_precision": 0.772,
+          "context_recall": 0.789,
+          "latency_ms": 1795
+        },
+        {
+          "question": "How much does it cost to Substitute a Module?",
+          "faithfulness": 0.854,
+          "answer_correctness": 0.82,
+          "answer_relevancy": 0.857,
+          "context_precision": 0.781,
+          "context_recall": 0.804,
+          "latency_ms": 1804
+        },
+        {
+          "question": "What are the fee implications if I withdraw from my programme?",
+          "faithfulness": 0.871,
+          "answer_correctness": 0.908,
+          "answer_relevancy": 0.781,
+          "context_precision": 0.762,
+          "context_recall": 0.712,
+          "latency_ms": 1556
+        },
+        {
+          "question": "When are my fees due?",
+          "faithfulness": 0.938,
+          "answer_correctness": 0.936,
+          "answer_relevancy": 0.811,
+          "context_precision": 0.808,
+          "context_recall": 0.831,
+          "latency_ms": 1845
+        },
+        {
+          "question": "How do I process my American/Canadian Loan cheque?",
+          "faithfulness": 0.92,
+          "answer_correctness": 0.754,
+          "answer_relevancy": 0.778,
+          "context_precision": 0.803,
+          "context_recall": 0.846,
+          "latency_ms": 1718
+        },
+        {
+          "question": "How do I open a student Bank Account?",
+          "faithfulness": 0.817,
+          "answer_correctness": 0.809,
+          "answer_relevancy": 0.777,
+          "context_precision": 0.737,
+          "context_recall": 0.85,
+          "latency_ms": 1587
+        },
+        {
+          "question": "I need to provide term dates from previous academic years for SUSI. Where can I find these?",
+          "faithfulness": 0.861,
+          "answer_correctness": 0.96,
+          "answer_relevancy": 0.869,
+          "context_precision": 0.797,
+          "context_recall": 0.723,
+          "latency_ms": 1773
+        },
+        {
+          "question": "How do I submit my Financial Guarantee/Sponsorship letter?",
+          "faithfulness": 0.941,
+          "answer_correctness": 0.867,
+          "answer_relevancy": 0.873,
+          "context_precision": 0.785,
+          "context_recall": 0.791,
+          "latency_ms": 1663
+        },
+        {
+          "question": "How do I pay a disciplinary related fine?",
+          "faithfulness": 0.881,
+          "answer_correctness": 0.908,
+          "answer_relevancy": 0.738,
+          "context_precision": 0.777,
+          "context_recall": 0.774,
+          "latency_ms": 1597
+        },
+        {
+          "question": "Where can I access my online Electronic Documents?",
+          "faithfulness": 0.845,
+          "answer_correctness": 0.877,
+          "answer_relevancy": 0.91,
+          "context_precision": 0.811,
+          "context_recall": 0.78,
+          "latency_ms": 1420
+        },
+        {
+          "question": "Are my Electronic Documents available to me throughout the year?",
+          "faithfulness": 0.956,
+          "answer_correctness": 0.835,
+          "answer_relevancy": 0.808,
+          "context_precision": 0.724,
+          "context_recall": 0.757,
+          "latency_ms": 1502
+        },
+        {
+          "question": "Can UCD email/scan my official documents to me and/or a third party?",
+          "faithfulness": 0.864,
+          "answer_correctness": 0.858,
+          "answer_relevancy": 0.812,
+          "context_precision": 0.794,
+          "context_recall": 0.709,
+          "latency_ms": 1957
+        },
+        {
+          "question": "How can a Third Party verify my Electronic Documents?",
+          "faithfulness": 0.827,
+          "answer_correctness": 0.721,
+          "answer_relevancy": 0.801,
+          "context_precision": 0.742,
+          "context_recall": 0.699,
+          "latency_ms": 1636
+        },
+        {
+          "question": "How do I order a Hard Copy of my official documents?",
+          "faithfulness": 0.875,
+          "answer_correctness": 0.759,
+          "answer_relevancy": 0.803,
+          "context_precision": 0.851,
+          "context_recall": 0.801,
+          "latency_ms": 1672
+        },
+        {
+          "question": "How much do Hard Copies cost?",
+          "faithfulness": 0.866,
+          "answer_correctness": 0.823,
+          "answer_relevancy": 0.808,
+          "context_precision": 0.817,
+          "context_recall": 0.754,
+          "latency_ms": 1267
+        },
+        {
+          "question": "Where can I get a Certificate of Attendance?",
+          "faithfulness": 0.859,
+          "answer_correctness": 0.777,
+          "answer_relevancy": 0.843,
+          "context_precision": 0.749,
+          "context_recall": 0.769,
+          "latency_ms": 2091
+        },
+        {
+          "question": "What is the difference between a Statement of Results and a Transcript?",
+          "faithfulness": 0.808,
+          "answer_correctness": 0.763,
+          "answer_relevancy": 0.739,
+          "context_precision": 0.66,
+          "context_recall": 0.647,
+          "latency_ms": 1765
+        },
+        {
+          "question": "Why do my results say pending?",
+          "faithfulness": 0.828,
+          "answer_correctness": 0.718,
+          "answer_relevancy": 0.736,
+          "context_precision": 0.811,
+          "context_recall": 0.713,
+          "latency_ms": 1633
+        },
+        {
+          "question": "How do I send my UCD documents to WES?",
+          "faithfulness": 0.877,
+          "answer_correctness": 0.911,
+          "answer_relevancy": 0.907,
+          "context_precision": 0.832,
+          "context_recall": 0.769,
+          "latency_ms": 1733
+        },
+        {
+          "question": "Applying to the Teaching Council?",
+          "faithfulness": 0.95,
+          "answer_correctness": 0.916,
+          "answer_relevancy": 0.794,
+          "context_precision": 0.803,
+          "context_recall": 0.777,
+          "latency_ms": 1709
+        },
+        {
+          "question": "How can I submit academic documents for Qualification Check?",
+          "faithfulness": 0.835,
+          "answer_correctness": 0.75,
+          "answer_relevancy": 0.783,
+          "context_precision": 0.703,
+          "context_recall": 0.833,
+          "latency_ms": 1796
+        },
+        {
+          "question": "I've submitted my documents to a third party and they've told me that they're unable to verify them. How can I solve this?",
+          "faithfulness": 0.8,
+          "answer_correctness": 0.914,
+          "answer_relevancy": 0.855,
+          "context_precision": 0.685,
+          "context_recall": 0.87,
+          "latency_ms": 1845
+        },
+        {
+          "question": "I need a letter to confirm that I withdrew from UCD. Where do I go?",
+          "faithfulness": 0.963,
+          "answer_correctness": 0.756,
+          "answer_relevancy": 0.837,
+          "context_precision": 0.801,
+          "context_recall": 0.772,
+          "latency_ms": 1730
+        },
+        {
+          "question": "How do I get a form stamped?",
+          "faithfulness": 0.913,
+          "answer_correctness": 0.74,
+          "answer_relevancy": 0.748,
+          "context_precision": 0.71,
+          "context_recall": 0.727,
+          "latency_ms": 1591
+        },
+        {
+          "question": "Can the Student Desk stamp forms in place of the Gardaí?",
+          "faithfulness": 0.878,
+          "answer_correctness": 0.846,
+          "answer_relevancy": 0.812,
+          "context_precision": 0.746,
+          "context_recall": 0.733,
+          "latency_ms": 1871
+        },
+        {
+          "question": "Can I drop a module when online registration is 'closed'?",
+          "faithfulness": 0.898,
+          "answer_correctness": 0.836,
+          "answer_relevancy": 0.794,
+          "context_precision": 0.858,
+          "context_recall": 0.724,
+          "latency_ms": 1816
+        },
+        {
+          "question": "What are extenuating circumstances & how do I apply?",
+          "faithfulness": 0.918,
+          "answer_correctness": 0.814,
+          "answer_relevancy": 0.851,
+          "context_precision": 0.724,
+          "context_recall": 0.821,
+          "latency_ms": 1735
+        },
+        {
+          "question": "What is a substitute module?",
+          "faithfulness": 0.781,
+          "answer_correctness": 0.87,
+          "answer_relevancy": 0.765,
+          "context_precision": 0.844,
+          "context_recall": 0.719,
+          "latency_ms": 1670
+        },
+        {
+          "question": "Where can I find a syllabus/module descriptors of my course?",
+          "faithfulness": 0.874,
+          "answer_correctness": 0.81,
+          "answer_relevancy": 0.823,
+          "context_precision": 0.752,
+          "context_recall": 0.8,
+          "latency_ms": 1700
+        },
+        {
+          "question": "What is a Leave of Absence and how do I apply?",
+          "faithfulness": 0.871,
+          "answer_correctness": 0.665,
+          "answer_relevancy": 0.868,
+          "context_precision": 0.782,
+          "context_recall": 0.653,
+          "latency_ms": 1717
+        },
+        {
+          "question": "How do I withdraw from my programme?",
+          "faithfulness": 0.883,
+          "answer_correctness": 0.894,
+          "answer_relevancy": 0.756,
+          "context_precision": 0.857,
+          "context_recall": 0.75,
+          "latency_ms": 2131
+        },
+        {
+          "question": "Why have I not progressed to the next stage?",
+          "faithfulness": 0.853,
+          "answer_correctness": 0.871,
+          "answer_relevancy": 0.792,
+          "context_precision": 0.724,
+          "context_recall": 0.826,
+          "latency_ms": 1863
+        },
+        {
+          "question": "Where can I find more information on applying for Recognition of Prior Learning (RPL)?",
+          "faithfulness": 0.937,
+          "answer_correctness": 0.881,
+          "answer_relevancy": 0.781,
+          "context_precision": 0.697,
+          "context_recall": 0.721,
+          "latency_ms": 1578
+        },
+        {
+          "question": "Can I change my first name under the Gender ID & Expression policy?",
+          "faithfulness": 0.819,
+          "answer_correctness": 0.865,
+          "answer_relevancy": 0.826,
+          "context_precision": 0.767,
+          "context_recall": 0.77,
+          "latency_ms": 1673
+        },
+        {
+          "question": "I have a questions about UCD Micro-credentials",
+          "faithfulness": 0.871,
+          "answer_correctness": 0.875,
+          "answer_relevancy": 0.858,
+          "context_precision": 0.746,
+          "context_recall": 0.67,
+          "latency_ms": 1956
+        },
+        {
+          "question": "When are the end of term exams and when are results released?",
+          "faithfulness": 0.866,
+          "answer_correctness": 0.896,
+          "answer_relevancy": 0.728,
+          "context_precision": 0.764,
+          "context_recall": 0.762,
+          "latency_ms": 1440
+        },
+        {
+          "question": "How do I view my results?",
+          "faithfulness": 0.834,
+          "answer_correctness": 0.873,
+          "answer_relevancy": 0.864,
+          "context_precision": 0.86,
+          "context_recall": 0.708,
+          "latency_ms": 1447
+        },
+        {
+          "question": "Can I check a hold on my record?",
+          "faithfulness": 0.886,
+          "answer_correctness": 0.886,
+          "answer_relevancy": 0.82,
+          "context_precision": 0.715,
+          "context_recall": 0.807,
+          "latency_ms": 1842
+        },
+        {
+          "question": "What is the difference between a repeat and a resit?",
+          "faithfulness": 0.888,
+          "answer_correctness": 0.801,
+          "answer_relevancy": 0.825,
+          "context_precision": 0.82,
+          "context_recall": 0.726,
+          "latency_ms": 1368
+        },
+        {
+          "question": "Are final results for all programmes available online?",
+          "faithfulness": 0.876,
+          "answer_correctness": 0.859,
+          "answer_relevancy": 0.811,
+          "context_precision": 0.824,
+          "context_recall": 0.725,
+          "latency_ms": 1685
+        },
+        {
+          "question": "How do I calculate my Degree Award GPA?",
+          "faithfulness": 0.845,
+          "answer_correctness": 0.864,
+          "answer_relevancy": 0.89,
+          "context_precision": 0.767,
+          "context_recall": 0.883,
+          "latency_ms": 1975
+        },
+        {
+          "question": "Where can I access past exam papers?",
+          "faithfulness": 0.9,
+          "answer_correctness": 0.865,
+          "answer_relevancy": 0.899,
+          "context_precision": 0.771,
+          "context_recall": 0.753,
+          "latency_ms": 1508
+        },
+        {
+          "question": "How do I appeal a grade?",
+          "faithfulness": 0.884,
+          "answer_correctness": 0.911,
+          "answer_relevancy": 0.837,
+          "context_precision": 0.801,
+          "context_recall": 0.748,
+          "latency_ms": 1730
+        },
+        {
+          "question": "Can I submit my thesis electronically?",
+          "faithfulness": 0.789,
+          "answer_correctness": 0.893,
+          "answer_relevancy": 0.79,
+          "context_precision": 0.725,
+          "context_recall": 0.715,
+          "latency_ms": 1551
+        },
+        {
+          "question": "How do I submit my thesis electronically?",
+          "faithfulness": 0.903,
+          "answer_correctness": 0.893,
+          "answer_relevancy": 0.742,
+          "context_precision": 0.826,
+          "context_recall": 0.813,
+          "latency_ms": 1595
+        },
+        {
+          "question": "Where can I find guidelines/regulations about thesis formatting?",
+          "faithfulness": 0.786,
+          "answer_correctness": 0.785,
+          "answer_relevancy": 0.778,
+          "context_precision": 0.797,
+          "context_recall": 0.739,
+          "latency_ms": 1334
+        },
+        {
+          "question": "How many copies of my thesis do I need to submit?",
+          "faithfulness": 0.872,
+          "answer_correctness": 0.738,
+          "answer_relevancy": 0.855,
+          "context_precision": 0.72,
+          "context_recall": 0.718,
+          "latency_ms": 1546
+        },
+        {
+          "question": "If I submitted my thesis electronically, do I still need to submit a hardbound copy?",
+          "faithfulness": 0.833,
+          "answer_correctness": 0.908,
+          "answer_relevancy": 0.853,
+          "context_precision": 0.81,
+          "context_recall": 0.779,
+          "latency_ms": 1421
+        },
+        {
+          "question": "What is the ACCE?",
+          "faithfulness": 0.834,
+          "answer_correctness": 0.797,
+          "answer_relevancy": 0.761,
+          "context_precision": 0.805,
+          "context_recall": 0.716,
+          "latency_ms": 1572
+        },
+        {
+          "question": "Do I have to submit my thesis by a certain time of day?",
+          "faithfulness": 0.808,
+          "answer_correctness": 0.707,
+          "answer_relevancy": 0.84,
+          "context_precision": 0.847,
+          "context_recall": 0.77,
+          "latency_ms": 1524
+        },
+        {
+          "question": "How do I correct the title of my thesis?",
+          "faithfulness": 0.725,
+          "answer_correctness": 0.84,
+          "answer_relevancy": 0.871,
+          "context_precision": 0.795,
+          "context_recall": 0.816,
+          "latency_ms": 1966
+        },
+        {
+          "question": "Where can I find information on both on-campus and off-campus accommodation?",
+          "faithfulness": 0.916,
+          "answer_correctness": 0.804,
+          "answer_relevancy": 0.863,
+          "context_precision": 0.819,
+          "context_recall": 0.668,
+          "latency_ms": 1627
+        },
+        {
+          "question": "Where can I search for lost property?",
+          "faithfulness": 0.789,
+          "answer_correctness": 0.823,
+          "answer_relevancy": 0.839,
+          "context_precision": 0.727,
+          "context_recall": 0.637,
+          "latency_ms": 1933
+        },
+        {
+          "question": "How do I apply for a Scholarship?",
+          "faithfulness": 0.879,
+          "answer_correctness": 0.918,
+          "answer_relevancy": 0.744,
+          "context_precision": 0.833,
+          "context_recall": 0.884,
+          "latency_ms": 2061
+        },
+        {
+          "question": "Where can I get a letter to confirm course completion for my Stamp 1G visa application?",
+          "faithfulness": 0.849,
+          "answer_correctness": 0.846,
+          "answer_relevancy": 0.802,
+          "context_precision": 0.83,
+          "context_recall": 0.822,
+          "latency_ms": 1715
+        },
+        {
+          "question": "Who do I contact if I have questions about my visa/visa requirements?",
+          "faithfulness": 0.792,
+          "answer_correctness": 0.874,
+          "answer_relevancy": 0.787,
+          "context_precision": 0.811,
+          "context_recall": 0.776,
+          "latency_ms": 1992
+        },
+        {
+          "question": "I am an international student. Where can I find information about arriving in Ireland?",
+          "faithfulness": 0.917,
+          "answer_correctness": 0.803,
+          "answer_relevancy": 0.827,
+          "context_precision": 0.868,
+          "context_recall": 0.728,
+          "latency_ms": 1778
+        },
+        {
+          "question": "Where can I get a letter about QQI accreditation to support my PPSN application?",
+          "faithfulness": 0.92,
+          "answer_correctness": 0.905,
+          "answer_relevancy": 0.836,
+          "context_precision": 0.714,
+          "context_recall": 0.684,
+          "latency_ms": 1744
+        },
+        {
+          "question": "How do I complete my Garda Vetting Application?",
+          "faithfulness": 0.879,
+          "answer_correctness": 0.983,
+          "answer_relevancy": 0.767,
+          "context_precision": 0.837,
+          "context_recall": 0.806,
+          "latency_ms": 1399
+        },
+        {
+          "question": "Where can I find further information about conferring?",
+          "faithfulness": 0.819,
+          "answer_correctness": 0.84,
+          "answer_relevancy": 0.785,
+          "context_precision": 0.772,
+          "context_recall": 0.788,
+          "latency_ms": 1554
+        },
+        {
+          "question": "I am due to confer in September or December, what do I need to know?",
+          "faithfulness": 0.883,
+          "answer_correctness": 0.792,
+          "answer_relevancy": 0.783,
+          "context_precision": 0.807,
+          "context_recall": 0.726,
+          "latency_ms": 1751
+        },
+        {
+          "question": "Staff Query?",
+          "faithfulness": 0.94,
+          "answer_correctness": 0.832,
+          "answer_relevancy": 0.803,
+          "context_precision": 0.817,
+          "context_recall": 0.738,
+          "latency_ms": 1894
+        }
+      ]
+    }
+  ]
+}

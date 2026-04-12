@@ -1,0 +1,81 @@
+experiment_name,question,faithfulness,answer_correctness,answer_relevancy,context_precision,context_recall,latency_ms,llm_model,embedding_model,retriever_k
+improved_chunks,"How do I log in to UCD IT Systems including SISWeb, Brightspace or UCD Email?",0.81,0.771,0.767,0.702,0.772,2263,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,What is SISWeb? What is Brightspace?,0.816,0.75,0.761,0.604,0.671,2206,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I reset my password?,0.745,0.802,0.777,0.671,0.715,2143,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I contact IT Support Hub?,0.843,0.827,0.768,0.697,0.721,2188,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Will I lose access to SISWeb when I graduate or if I leave UCD?,0.857,0.808,0.734,0.672,0.708,2066,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Will I lose access to my UCD email address if I graduate or if I leave UCD?,0.764,0.783,0.745,0.745,0.761,2125,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,What do I need to know about my SUSI Grant?,0.936,0.771,0.825,0.746,0.797,1772,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Who is eligible for Free Fees?,0.782,0.805,0.8,0.857,0.749,2430,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Do I need to submit a new application for Free Fee Assessment each year?,0.858,0.847,0.796,0.732,0.761,2005,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Who is eligible for EU Fees?,0.879,0.729,0.782,0.846,0.717,2203,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Are UK applicants still eligible for EU Fees?,0.878,0.792,0.73,0.753,0.765,2327,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,I think I should be on the EU Fees rate - what should I do?,0.781,0.895,0.853,0.741,0.746,2122,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I pay my fees?,0.891,0.748,0.804,0.716,0.688,2329,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Can I make a payment over the phone?,0.887,0.789,0.736,0.781,0.727,2255,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I get a receipt for payments made?,0.896,0.858,0.744,0.854,0.73,2341,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Can UCD send an invoice to my employers?,0.788,0.787,0.683,0.829,0.812,1981,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I request a Canadian Tax Form?,0.745,0.693,0.829,0.717,0.726,2143,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I request a Refund?,0.814,0.725,0.771,0.668,0.726,2255,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How much does it cost to resit/repeat a module?,0.843,0.776,0.725,0.748,0.701,2481,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How much does it cost to Substitute a Module?,0.858,0.783,0.746,0.705,0.674,2136,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,What are the fee implications if I withdraw from my programme?,0.835,0.821,0.798,0.845,0.688,2202,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,When are my fees due?,0.96,0.678,0.744,0.748,0.739,2273,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I process my American/Canadian Loan cheque?,0.808,0.812,0.773,0.779,0.616,2040,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I open a student Bank Account?,0.82,0.728,0.718,0.771,0.691,2314,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,I need to provide term dates from previous academic years for SUSI. Where can I find these?,0.857,0.808,0.795,0.735,0.645,2194,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I submit my Financial Guarantee/Sponsorship letter?,0.843,0.758,0.765,0.777,0.677,2315,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I pay a disciplinary related fine?,0.913,0.757,0.777,0.732,0.822,2256,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Where can I access my online Electronic Documents?,0.865,0.749,0.769,0.74,0.623,2459,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Are my Electronic Documents available to me throughout the year?,0.865,0.685,0.807,0.733,0.757,2265,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Can UCD email/scan my official documents to me and/or a third party?,0.745,0.777,0.845,0.711,0.669,1955,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How can a Third Party verify my Electronic Documents?,0.759,0.81,0.855,0.761,0.745,2602,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I order a Hard Copy of my official documents?,0.794,0.75,0.796,0.767,0.669,1989,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How much do Hard Copies cost?,0.835,0.805,0.705,0.73,0.697,2282,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Where can I get a Certificate of Attendance?,0.814,0.785,0.752,0.793,0.813,2133,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,What is the difference between a Statement of Results and a Transcript?,0.862,0.745,0.774,0.777,0.821,2131,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Why do my results say pending?,0.816,0.802,0.695,0.741,0.689,2266,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I send my UCD documents to WES?,0.764,0.671,0.772,0.753,0.697,2359,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Applying to the Teaching Council?,0.806,0.754,0.794,0.662,0.689,2196,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How can I submit academic documents for Qualification Check?,0.862,0.78,0.785,0.707,0.748,2499,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,I've submitted my documents to a third party and they've told me that they're unable to verify them. How can I solve this?,0.786,0.932,0.738,0.741,0.74,2384,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,I need a letter to confirm that I withdrew from UCD. Where do I go?,0.758,0.664,0.8,0.78,0.767,2673,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I get a form stamped?,0.83,0.805,0.816,0.758,0.83,1977,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Can the Student Desk stamp forms in place of the GardaÃ­?,0.801,0.583,0.811,0.721,0.785,2587,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Can I drop a module when online registration is 'closed'?,0.82,0.775,0.745,0.698,0.692,2315,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,What are extenuating circumstances & how do I apply?,0.822,0.794,0.761,0.786,0.76,2174,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,What is a substitute module?,0.853,0.781,0.712,0.813,0.758,2027,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Where can I find a syllabus/module descriptors of my course?,0.874,0.811,0.692,0.82,0.75,2360,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,What is a Leave of Absence and how do I apply?,0.83,0.781,0.693,0.789,0.732,2148,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I withdraw from my programme?,0.838,0.795,0.804,0.721,0.728,1814,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Why have I not progressed to the next stage?,0.799,0.831,0.837,0.722,0.723,2485,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Where can I find more information on applying for Recognition of Prior Learning (RPL)?,0.804,0.834,0.854,0.742,0.804,2072,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Can I change my first name under the Gender ID & Expression policy?,0.83,0.785,0.776,0.796,0.873,2080,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,I have a questions about UCD Micro-credentials,0.791,0.82,0.717,0.765,0.764,2150,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,When are the end of term exams and when are results released?,0.847,0.697,0.808,0.663,0.688,2099,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I view my results?,0.8,0.842,0.774,0.72,0.763,2484,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Can I check a hold on my record?,0.82,0.812,0.832,0.753,0.653,2648,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,What is the difference between a repeat and a resit?,0.93,0.671,0.768,0.761,0.788,2320,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Are final results for all programmes available online?,0.806,0.727,0.775,0.792,0.665,2015,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I calculate my Degree Award GPA?,0.819,0.674,0.757,0.718,0.757,2073,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Where can I access past exam papers?,0.776,0.766,0.768,0.707,0.731,2335,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I appeal a grade?,0.879,0.892,0.731,0.719,0.581,2541,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Can I submit my thesis electronically?,0.784,0.788,0.796,0.672,0.758,2195,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I submit my thesis electronically?,0.729,0.808,0.83,0.647,0.778,2237,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Where can I find guidelines/regulations about thesis formatting?,0.844,0.816,0.835,0.729,0.782,2126,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How many copies of my thesis do I need to submit?,0.856,0.741,0.765,0.827,0.757,2171,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,"If I submitted my thesis electronically, do I still need to submit a hardbound copy?",0.763,0.743,0.78,0.787,0.756,2294,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,What is the ACCE?,0.818,0.871,0.75,0.713,0.783,2211,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Do I have to submit my thesis by a certain time of day?,0.806,0.755,0.757,0.771,0.751,1982,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I correct the title of my thesis?,0.841,0.801,0.72,0.779,0.713,2139,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Where can I find information on both on-campus and off-campus accommodation?,0.86,0.869,0.736,0.762,0.677,2616,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Where can I search for lost property?,0.795,0.862,0.738,0.781,0.863,1742,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I apply for a Scholarship?,0.798,0.82,0.765,0.707,0.859,2214,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Where can I get a letter to confirm course completion for my Stamp 1G visa application?,0.738,0.841,0.684,0.798,0.695,2226,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Who do I contact if I have questions about my visa/visa requirements?,0.883,0.797,0.7,0.655,0.801,2333,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,I am an international student. Where can I find information about arriving in Ireland?,0.779,0.842,0.795,0.772,0.594,2145,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Where can I get a letter about QQI accreditation to support my PPSN application?,0.865,0.834,0.814,0.617,0.74,2288,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,How do I complete my Garda Vetting Application?,0.948,0.733,0.754,0.742,0.783,2120,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Where can I find further information about conferring?,0.877,0.743,0.783,0.714,0.739,2075,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,"I am due to confer in September or December, what do I need to know?",0.74,0.856,0.785,0.712,0.742,2378,llama3.2:3b,mxbai-embed-large,6
+improved_chunks,Staff Query?,0.771,0.783,0.797,0.766,0.71,1820,llama3.2:3b,mxbai-embed-large,6

@@ -1,0 +1,81 @@
+experiment_name,question,faithfulness,answer_correctness,answer_relevancy,context_precision,context_recall,latency_ms,llm_model,embedding_model,retriever_k
+voyageai_512_64_basic_dense_False,"How do I log in to UCD IT Systems including SISWeb, Brightspace or UCD Email?",0.697,0.711,0.649,0.604,0.544,1861,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,What is SISWeb? What is Brightspace?,0.766,0.705,0.712,0.632,0.624,1933,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I reset my password?,0.627,0.731,0.685,0.645,0.499,1586,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I contact IT Support Hub?,0.666,0.652,0.675,0.618,0.631,1784,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Will I lose access to SISWeb when I graduate or if I leave UCD?,0.725,0.704,0.627,0.706,0.633,2115,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Will I lose access to my UCD email address if I graduate or if I leave UCD?,0.679,0.636,0.643,0.615,0.638,1944,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,What do I need to know about my SUSI Grant?,0.688,0.623,0.634,0.681,0.552,1944,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Who is eligible for Free Fees?,0.731,0.591,0.662,0.685,0.479,1842,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Do I need to submit a new application for Free Fee Assessment each year?,0.705,0.631,0.685,0.617,0.512,2049,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Who is eligible for EU Fees?,0.743,0.737,0.732,0.638,0.607,1666,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Are UK applicants still eligible for EU Fees?,0.741,0.643,0.637,0.557,0.542,1804,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,I think I should be on the EU Fees rate - what should I do?,0.774,0.558,0.587,0.632,0.687,2004,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I pay my fees?,0.615,0.529,0.678,0.583,0.533,2075,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Can I make a payment over the phone?,0.765,0.689,0.672,0.642,0.696,2011,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I get a receipt for payments made?,0.736,0.713,0.582,0.684,0.657,1995,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Can UCD send an invoice to my employers?,0.611,0.642,0.702,0.529,0.589,2083,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I request a Canadian Tax Form?,0.644,0.777,0.688,0.612,0.619,2016,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I request a Refund?,0.716,0.749,0.627,0.599,0.663,1904,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How much does it cost to resit/repeat a module?,0.666,0.737,0.733,0.598,0.517,1875,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How much does it cost to Substitute a Module?,0.703,0.662,0.73,0.569,0.676,1671,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,What are the fee implications if I withdraw from my programme?,0.671,0.718,0.716,0.663,0.621,1925,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,When are my fees due?,0.718,0.715,0.651,0.634,0.634,1900,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I process my American/Canadian Loan cheque?,0.748,0.714,0.761,0.636,0.574,1832,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I open a student Bank Account?,0.709,0.735,0.643,0.639,0.71,1438,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,I need to provide term dates from previous academic years for SUSI. Where can I find these?,0.654,0.695,0.68,0.632,0.574,2017,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I submit my Financial Guarantee/Sponsorship letter?,0.724,0.649,0.782,0.638,0.567,1882,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I pay a disciplinary related fine?,0.699,0.676,0.524,0.596,0.661,1689,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Where can I access my online Electronic Documents?,0.707,0.737,0.703,0.695,0.498,1836,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Are my Electronic Documents available to me throughout the year?,0.693,0.717,0.715,0.486,0.665,1639,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Can UCD email/scan my official documents to me and/or a third party?,0.744,0.59,0.669,0.68,0.591,1934,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How can a Third Party verify my Electronic Documents?,0.75,0.688,0.656,0.697,0.663,1847,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I order a Hard Copy of my official documents?,0.847,0.611,0.706,0.607,0.608,2026,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How much do Hard Copies cost?,0.721,0.718,0.584,0.545,0.637,1726,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Where can I get a Certificate of Attendance?,0.659,0.592,0.723,0.657,0.688,1731,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,What is the difference between a Statement of Results and a Transcript?,0.71,0.612,0.698,0.699,0.547,2180,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Why do my results say pending?,0.759,0.669,0.561,0.69,0.594,1791,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I send my UCD documents to WES?,0.73,0.705,0.735,0.569,0.668,2167,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Applying to the Teaching Council?,0.783,0.669,0.623,0.671,0.607,1922,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How can I submit academic documents for Qualification Check?,0.781,0.664,0.545,0.601,0.489,2047,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,I've submitted my documents to a third party and they've told me that they're unable to verify them. How can I solve this?,0.726,0.643,0.66,0.662,0.605,2138,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,I need a letter to confirm that I withdrew from UCD. Where do I go?,0.707,0.742,0.735,0.7,0.56,2058,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I get a form stamped?,0.616,0.615,0.562,0.673,0.526,1897,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Can the Student Desk stamp forms in place of the GardaÃ­?,0.7,0.678,0.63,0.632,0.707,1907,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Can I drop a module when online registration is 'closed'?,0.737,0.74,0.65,0.557,0.567,2093,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,What are extenuating circumstances & how do I apply?,0.628,0.644,0.71,0.66,0.6,2044,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,What is a substitute module?,0.718,0.609,0.582,0.588,0.655,1798,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Where can I find a syllabus/module descriptors of my course?,0.665,0.634,0.583,0.614,0.529,1965,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,What is a Leave of Absence and how do I apply?,0.592,0.7,0.628,0.523,0.643,1850,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I withdraw from my programme?,0.598,0.627,0.675,0.597,0.647,2034,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Why have I not progressed to the next stage?,0.743,0.7,0.727,0.653,0.627,1524,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Where can I find more information on applying for Recognition of Prior Learning (RPL)?,0.755,0.759,0.645,0.597,0.716,1583,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Can I change my first name under the Gender ID & Expression policy?,0.733,0.825,0.614,0.654,0.713,1878,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,I have a questions about UCD Micro-credentials,0.738,0.734,0.615,0.616,0.618,2048,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,When are the end of term exams and when are results released?,0.708,0.668,0.609,0.602,0.654,1918,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I view my results?,0.667,0.63,0.793,0.677,0.638,1433,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Can I check a hold on my record?,0.741,0.709,0.744,0.641,0.596,1994,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,What is the difference between a repeat and a resit?,0.613,0.742,0.676,0.585,0.68,2225,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Are final results for all programmes available online?,0.64,0.64,0.675,0.629,0.576,1724,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I calculate my Degree Award GPA?,0.816,0.742,0.6,0.553,0.702,2078,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Where can I access past exam papers?,0.801,0.729,0.616,0.633,0.47,1765,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I appeal a grade?,0.707,0.711,0.624,0.614,0.628,1967,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Can I submit my thesis electronically?,0.742,0.693,0.644,0.659,0.603,1751,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I submit my thesis electronically?,0.679,0.68,0.655,0.628,0.6,1931,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Where can I find guidelines/regulations about thesis formatting?,0.703,0.604,0.681,0.673,0.626,1865,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How many copies of my thesis do I need to submit?,0.732,0.622,0.565,0.623,0.544,2033,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,"If I submitted my thesis electronically, do I still need to submit a hardbound copy?",0.656,0.522,0.608,0.699,0.577,1653,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,What is the ACCE?,0.672,0.711,0.685,0.629,0.689,2027,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Do I have to submit my thesis by a certain time of day?,0.709,0.716,0.743,0.669,0.661,1705,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I correct the title of my thesis?,0.703,0.724,0.645,0.673,0.636,2063,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Where can I find information on both on-campus and off-campus accommodation?,0.699,0.833,0.722,0.609,0.605,2367,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Where can I search for lost property?,0.693,0.732,0.709,0.62,0.53,1933,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I apply for a Scholarship?,0.728,0.748,0.699,0.621,0.651,1997,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Where can I get a letter to confirm course completion for my Stamp 1G visa application?,0.72,0.683,0.648,0.654,0.537,1786,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Who do I contact if I have questions about my visa/visa requirements?,0.71,0.592,0.638,0.52,0.559,2002,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,I am an international student. Where can I find information about arriving in Ireland?,0.738,0.677,0.648,0.549,0.71,1992,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Where can I get a letter about QQI accreditation to support my PPSN application?,0.765,0.627,0.651,0.529,0.647,2068,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,How do I complete my Garda Vetting Application?,0.615,0.677,0.692,0.532,0.49,1708,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Where can I find further information about conferring?,0.679,0.596,0.662,0.632,0.638,2026,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,"I am due to confer in September or December, what do I need to know?",0.785,0.75,0.594,0.595,0.536,1706,llama3.2:3b,nomic-embed-text,4
+voyageai_512_64_basic_dense_False,Staff Query?,0.706,0.68,0.685,0.541,0.526,1895,llama3.2:3b,nomic-embed-text,4

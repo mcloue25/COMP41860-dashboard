@@ -1,0 +1,81 @@
+experiment_name,question,faithfulness,answer_correctness,answer_relevancy,context_precision,context_recall,latency_ms,llm_model,embedding_model,retriever_k
+voyageai_512_64_contextual_hybrid_True,"How do I log in to UCD IT Systems including SISWeb, Brightspace or UCD Email?",0.922,0.85,0.811,0.766,0.776,1623,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,What is SISWeb? What is Brightspace?,0.809,0.786,0.78,0.749,0.69,1814,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I reset my password?,0.795,0.87,0.759,0.798,0.842,1736,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I contact IT Support Hub?,0.823,0.833,0.817,0.693,0.724,1729,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Will I lose access to SISWeb when I graduate or if I leave UCD?,0.837,0.835,0.847,0.818,0.814,1805,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Will I lose access to my UCD email address if I graduate or if I leave UCD?,0.846,0.829,0.796,0.764,0.749,1389,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,What do I need to know about my SUSI Grant?,0.843,0.829,0.761,0.779,0.791,1670,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Who is eligible for Free Fees?,0.964,0.674,0.8,0.689,0.819,2177,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Do I need to submit a new application for Free Fee Assessment each year?,0.735,0.838,0.836,0.765,0.793,1296,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Who is eligible for EU Fees?,0.903,0.852,0.811,0.751,0.798,1612,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Are UK applicants still eligible for EU Fees?,0.871,0.799,0.698,0.778,0.772,1835,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,I think I should be on the EU Fees rate - what should I do?,0.816,0.828,0.841,0.787,0.835,2058,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I pay my fees?,0.815,0.715,0.853,0.856,0.815,1846,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Can I make a payment over the phone?,0.829,0.787,0.854,0.734,0.651,1520,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I get a receipt for payments made?,0.985,0.945,0.776,0.744,0.774,1565,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Can UCD send an invoice to my employers?,0.926,0.825,0.756,0.845,0.725,1739,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I request a Canadian Tax Form?,0.859,0.811,0.826,0.745,0.649,1302,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I request a Refund?,0.797,0.784,0.809,0.783,0.793,1721,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How much does it cost to resit/repeat a module?,0.82,0.787,0.704,0.772,0.789,1795,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How much does it cost to Substitute a Module?,0.854,0.82,0.857,0.781,0.804,1804,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,What are the fee implications if I withdraw from my programme?,0.871,0.908,0.781,0.762,0.712,1556,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,When are my fees due?,0.938,0.936,0.811,0.808,0.831,1845,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I process my American/Canadian Loan cheque?,0.92,0.754,0.778,0.803,0.846,1718,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I open a student Bank Account?,0.817,0.809,0.777,0.737,0.85,1587,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,I need to provide term dates from previous academic years for SUSI. Where can I find these?,0.861,0.96,0.869,0.797,0.723,1773,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I submit my Financial Guarantee/Sponsorship letter?,0.941,0.867,0.873,0.785,0.791,1663,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I pay a disciplinary related fine?,0.881,0.908,0.738,0.777,0.774,1597,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Where can I access my online Electronic Documents?,0.845,0.877,0.91,0.811,0.78,1420,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Are my Electronic Documents available to me throughout the year?,0.956,0.835,0.808,0.724,0.757,1502,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Can UCD email/scan my official documents to me and/or a third party?,0.864,0.858,0.812,0.794,0.709,1957,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How can a Third Party verify my Electronic Documents?,0.827,0.721,0.801,0.742,0.699,1636,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I order a Hard Copy of my official documents?,0.875,0.759,0.803,0.851,0.801,1672,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How much do Hard Copies cost?,0.866,0.823,0.808,0.817,0.754,1267,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Where can I get a Certificate of Attendance?,0.859,0.777,0.843,0.749,0.769,2091,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,What is the difference between a Statement of Results and a Transcript?,0.808,0.763,0.739,0.66,0.647,1765,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Why do my results say pending?,0.828,0.718,0.736,0.811,0.713,1633,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I send my UCD documents to WES?,0.877,0.911,0.907,0.832,0.769,1733,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Applying to the Teaching Council?,0.95,0.916,0.794,0.803,0.777,1709,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How can I submit academic documents for Qualification Check?,0.835,0.75,0.783,0.703,0.833,1796,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,I've submitted my documents to a third party and they've told me that they're unable to verify them. How can I solve this?,0.8,0.914,0.855,0.685,0.87,1845,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,I need a letter to confirm that I withdrew from UCD. Where do I go?,0.963,0.756,0.837,0.801,0.772,1730,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I get a form stamped?,0.913,0.74,0.748,0.71,0.727,1591,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Can the Student Desk stamp forms in place of the GardaÃ­?,0.878,0.846,0.812,0.746,0.733,1871,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Can I drop a module when online registration is 'closed'?,0.898,0.836,0.794,0.858,0.724,1816,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,What are extenuating circumstances & how do I apply?,0.918,0.814,0.851,0.724,0.821,1735,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,What is a substitute module?,0.781,0.87,0.765,0.844,0.719,1670,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Where can I find a syllabus/module descriptors of my course?,0.874,0.81,0.823,0.752,0.8,1700,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,What is a Leave of Absence and how do I apply?,0.871,0.665,0.868,0.782,0.653,1717,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I withdraw from my programme?,0.883,0.894,0.756,0.857,0.75,2131,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Why have I not progressed to the next stage?,0.853,0.871,0.792,0.724,0.826,1863,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Where can I find more information on applying for Recognition of Prior Learning (RPL)?,0.937,0.881,0.781,0.697,0.721,1578,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Can I change my first name under the Gender ID & Expression policy?,0.819,0.865,0.826,0.767,0.77,1673,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,I have a questions about UCD Micro-credentials,0.871,0.875,0.858,0.746,0.67,1956,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,When are the end of term exams and when are results released?,0.866,0.896,0.728,0.764,0.762,1440,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I view my results?,0.834,0.873,0.864,0.86,0.708,1447,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Can I check a hold on my record?,0.886,0.886,0.82,0.715,0.807,1842,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,What is the difference between a repeat and a resit?,0.888,0.801,0.825,0.82,0.726,1368,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Are final results for all programmes available online?,0.876,0.859,0.811,0.824,0.725,1685,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I calculate my Degree Award GPA?,0.845,0.864,0.89,0.767,0.883,1975,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Where can I access past exam papers?,0.9,0.865,0.899,0.771,0.753,1508,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I appeal a grade?,0.884,0.911,0.837,0.801,0.748,1730,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Can I submit my thesis electronically?,0.789,0.893,0.79,0.725,0.715,1551,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I submit my thesis electronically?,0.903,0.893,0.742,0.826,0.813,1595,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Where can I find guidelines/regulations about thesis formatting?,0.786,0.785,0.778,0.797,0.739,1334,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How many copies of my thesis do I need to submit?,0.872,0.738,0.855,0.72,0.718,1546,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,"If I submitted my thesis electronically, do I still need to submit a hardbound copy?",0.833,0.908,0.853,0.81,0.779,1421,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,What is the ACCE?,0.834,0.797,0.761,0.805,0.716,1572,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Do I have to submit my thesis by a certain time of day?,0.808,0.707,0.84,0.847,0.77,1524,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I correct the title of my thesis?,0.725,0.84,0.871,0.795,0.816,1966,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Where can I find information on both on-campus and off-campus accommodation?,0.916,0.804,0.863,0.819,0.668,1627,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Where can I search for lost property?,0.789,0.823,0.839,0.727,0.637,1933,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I apply for a Scholarship?,0.879,0.918,0.744,0.833,0.884,2061,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Where can I get a letter to confirm course completion for my Stamp 1G visa application?,0.849,0.846,0.802,0.83,0.822,1715,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Who do I contact if I have questions about my visa/visa requirements?,0.792,0.874,0.787,0.811,0.776,1992,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,I am an international student. Where can I find information about arriving in Ireland?,0.917,0.803,0.827,0.868,0.728,1778,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Where can I get a letter about QQI accreditation to support my PPSN application?,0.92,0.905,0.836,0.714,0.684,1744,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,How do I complete my Garda Vetting Application?,0.879,0.983,0.767,0.837,0.806,1399,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Where can I find further information about conferring?,0.819,0.84,0.785,0.772,0.788,1554,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,"I am due to confer in September or December, what do I need to know?",0.883,0.792,0.783,0.807,0.726,1751,phi3:mini,mxbai-embed-large,6
+voyageai_512_64_contextual_hybrid_True,Staff Query?,0.94,0.832,0.803,0.817,0.738,1894,phi3:mini,mxbai-embed-large,6

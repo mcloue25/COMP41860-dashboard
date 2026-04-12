@@ -1,0 +1,58 @@
+{
+  "questions": [
+    "How do I reset my UCD Connect password?",
+    "Where can I find my exam timetable?",
+    "How do I apply for extenuating circumstances?",
+    "What are the library opening hours during term?",
+    "How do I pay my tuition fees?",
+    "Where do I request an academic transcript?",
+    "How can I book a meeting with student advisers?",
+    "What is the deadline for module registration?",
+    "How do I access Brightspace support?",
+    "Can international students work part-time during term?"
+  ],
+  "experiments": [
+    {
+      "experiment_name": "baseline_rag",
+      "llm_model": "llama3.2:3b",
+      "embedding_model": "nomic-embed-text",
+      "retriever_k": 4,
+      "means": {
+        "faithfulness": 0.71,
+        "answer_correctness": 0.68,
+        "answer_relevancy": 0.66,
+        "context_precision": 0.62,
+        "context_recall": 0.60,
+        "latency_ms": 1900
+      }
+    },
+    {
+      "experiment_name": "improved_chunks",
+      "llm_model": "llama3.2:3b",
+      "embedding_model": "mxbai-embed-large",
+      "retriever_k": 6,
+      "means": {
+        "faithfulness": 0.82,
+        "answer_correctness": 0.79,
+        "answer_relevancy": 0.77,
+        "context_precision": 0.74,
+        "context_recall": 0.73,
+        "latency_ms": 2200
+      }
+    },
+    {
+      "experiment_name": "best_prompting",
+      "llm_model": "phi3:mini",
+      "embedding_model": "mxbai-embed-large",
+      "retriever_k": 6,
+      "means": {
+        "faithfulness": 0.86,
+        "answer_correctness": 0.83,
+        "answer_relevancy": 0.81,
+        "context_precision": 0.78,
+        "context_recall": 0.76,
+        "latency_ms": 1700
+      }
+    }
+  ]
+}
