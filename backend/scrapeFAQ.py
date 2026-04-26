@@ -8,16 +8,14 @@ from collections import defaultdict
 from bs4 import BeautifulSoup, Tag, NavigableString
 
 
-# ------------------------------------------------------------
+
 # Source page containing the Student Desk FAQ sections
-# ------------------------------------------------------------
 SOURCE_URL = "https://www.ucd.ie/students/studentdesk/faqs/"
 
 
-# ------------------------------------------------------------
+
 # Sections of the FAQ page we want to scrape
 # Used to filter <h2> headings to only the relevant sections
-# ------------------------------------------------------------
 ALLOWED_SECTIONS = {
     "UCD Connect",
     "Fees",
@@ -35,18 +33,16 @@ ALLOWED_SECTIONS = {
 }
 
 
-# ------------------------------------------------------------
+
 # Regex patterns used to extract contact information
-# ------------------------------------------------------------
 EMAIL_RE = re.compile(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}")
 
 # Loose phone matcher (Ireland +353 / 01 / spaces etc.)
 PHONE_RE = re.compile(r"(\+?\d[\d\s().-]{6,}\d)")
 
 
-# ------------------------------------------------------------
+
 # Normalize heading text so comparisons are consistent
-# ------------------------------------------------------------
 def normalize_heading(s: str) -> str:
     # Replace curly apostrophes and clean whitespace
     s = (s or "").replace("’", "'")
@@ -54,25 +50,22 @@ def normalize_heading(s: str) -> str:
     return s
 
 
-# ------------------------------------------------------------
+
 # Create a deterministic ID for each FAQ
 # Used for deduplication and stable referencing
-# ------------------------------------------------------------
 def sha1_id(section: str, question: str) -> str:
     raw = f"{section.strip()}|{question.strip()}".encode("utf-8")
     return hashlib.sha1(raw).hexdigest()
 
 
-# ------------------------------------------------------------
+
 # Clean whitespace from text
-# ------------------------------------------------------------
 def clean_text(s: str) -> str:
     return re.sub(r"\s+", " ", (s or "").strip())
 
 
-# ------------------------------------------------------------
+
 # Extract hyperlinks from an answer block
-# ------------------------------------------------------------
 def extract_links(answer_node: Tag, base_url: str):
 
     links = []
@@ -109,9 +102,8 @@ def extract_links(answer_node: Tag, base_url: str):
     return out
 
 
-# ------------------------------------------------------------
+
 # Extract contact information (emails + phone numbers)
-# ------------------------------------------------------------
 def extract_contacts(answer_text: str):
 
     emails = sorted(set(EMAIL_RE.findall(answer_text or "")))
@@ -133,9 +125,8 @@ def extract_contacts(answer_text: str):
     return {"emails": emails, "phones": phones}
 
 
-# ------------------------------------------------------------
+
 # Extract images and embedded media from answers
-# ------------------------------------------------------------
 def extract_media(answer_node: Tag, base_url: str):
 
     media = []
@@ -183,9 +174,8 @@ def extract_media(answer_node: Tag, base_url: str):
     return out
 
 
-# ------------------------------------------------------------
+
 # Helper function to detect section headings
-# ------------------------------------------------------------
 def looks_like_section_heading(tag: Tag) -> bool:
 
     return (
@@ -195,10 +185,9 @@ def looks_like_section_heading(tag: Tag) -> bool:
     )
 
 
-# ------------------------------------------------------------
+
 # Build HTML fragment representing one FAQ section
 # (content between two <h2> headings)
-# ------------------------------------------------------------
 def build_section_fragment_between(h2_start: Tag, h2_end: Tag | None) -> BeautifulSoup:
 
     parts = []
@@ -216,10 +205,9 @@ def build_section_fragment_between(h2_start: Tag, h2_end: Tag | None) -> Beautif
     return BeautifulSoup("".join(parts), "html.parser")
 
 
-# ------------------------------------------------------------
+
 # Attempt to extract FAQ items from a section
 # Supports multiple markup patterns
-# ------------------------------------------------------------
 def find_faq_items_within(section_root: Tag):
 
     items = []
@@ -315,9 +303,8 @@ def find_faq_items_within(section_root: Tag):
     return items
 
 
-# ------------------------------------------------------------
+
 # Main scraping function
-# ------------------------------------------------------------
 def scrape_FAQ_questions():
 
     # HTTP headers to mimic a real browser request
@@ -422,9 +409,8 @@ def scrape_FAQ_questions():
     return records, dict(section_counts)
 
 
-# ------------------------------------------------------------
+
 # Utility printing helpers
-# ------------------------------------------------------------
 def pretty_print_json(data):
     print(json.dumps(data, indent=2, ensure_ascii=False))
 
@@ -434,9 +420,8 @@ def load_JSON_object(path):
         return json.load(f)
 
 
-# ------------------------------------------------------------
+
 # Wrapper function to scrape + save dataset
-# ------------------------------------------------------------
 def scrape_helpdesk_data(output_path):
 
     data, counts = scrape_FAQ_questions()
@@ -449,9 +434,8 @@ def scrape_helpdesk_data(output_path):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-# ------------------------------------------------------------
+
 # Script entry point
-# ------------------------------------------------------------
 if __name__ == "__main__":
 
     scrape_helpdesk_data('data/datasets/ucd_studentdesk_faqs.json')
@@ -459,8 +443,6 @@ if __name__ == "__main__":
     data = load_JSON_object('data/datasets/ucd_studentdesk_faqs.json')
 
     pretty_print_json(data[0])
-
-    a-b
 
     print("-"*30)
 
